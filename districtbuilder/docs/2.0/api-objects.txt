@@ -17,6 +17,7 @@ publicmapping.redistricting.management.commands.numusers	publicmapping.redistric
 publicmapping.redistricting.management.commands.reaggregate	publicmapping.redistricting.management.commands.reaggregate-module.html
 publicmapping.redistricting.management.commands.removescoreconfig	publicmapping.redistricting.management.commands.removescoreconfig-module.html
 publicmapping.redistricting.management.commands.setup	publicmapping.redistricting.management.commands.setup-module.html
+publicmapping.redistricting.management.commands.setup.logger	publicmapping.redistricting.management.commands.setup-module.html#logger
 publicmapping.redistricting.models	publicmapping.redistricting.models-module.html
 publicmapping.redistricting.models.UploadedState	publicmapping.redistricting.models-module.html#UploadedState
 publicmapping.redistricting.models.update_profile	publicmapping.redistricting.models-module.html#update_profile
@@ -36,12 +37,13 @@ publicmapping.redistricting.models.can_edit	publicmapping.redistricting.models-m
 publicmapping.redistricting.models.safe_union	publicmapping.redistricting.models-module.html#safe_union
 publicmapping.redistricting.reportcalculators	publicmapping.redistricting.reportcalculators-module.html
 publicmapping.redistricting.tasks	publicmapping.redistricting.tasks-module.html
+publicmapping.redistricting.tasks.validate_plan	publicmapping.redistricting.tasks-module.html#validate_plan
 publicmapping.redistricting.tasks.update_vacant_characteristics	publicmapping.redistricting.tasks-module.html#update_vacant_characteristics
 publicmapping.redistricting.tasks.cleanup	publicmapping.redistricting.tasks-module.html#cleanup
 publicmapping.redistricting.tasks.clean_quarantined	publicmapping.redistricting.tasks-module.html#clean_quarantined
 publicmapping.redistricting.tasks.reaggregate_plan	publicmapping.redistricting.tasks-module.html#reaggregate_plan
-publicmapping.redistricting.tasks.renest_uploaded_subject	publicmapping.redistricting.tasks-module.html#renest_uploaded_subject
 publicmapping.redistricting.tasks.logger	publicmapping.redistricting.tasks-module.html#logger
+publicmapping.redistricting.tasks.renest_uploaded_subject	publicmapping.redistricting.tasks-module.html#renest_uploaded_subject
 publicmapping.redistricting.tasks.copy_to_characteristics	publicmapping.redistricting.tasks-module.html#copy_to_characteristics
 publicmapping.redistricting.tasks.verify_count	publicmapping.redistricting.tasks-module.html#verify_count
 publicmapping.redistricting.tasks.create_views_and_styles	publicmapping.redistricting.tasks-module.html#create_views_and_styles
@@ -50,7 +52,6 @@ publicmapping.redistricting.templatetags	publicmapping.redistricting.templatetag
 publicmapping.redistricting.templatetags.redistricting_extras	publicmapping.redistricting.templatetags.redistricting_extras-module.html
 publicmapping.redistricting.templatetags.redistricting_extras.avg_report_column	publicmapping.redistricting.templatetags.redistricting_extras-module.html#avg_report_column
 publicmapping.redistricting.templatetags.redistricting_extras.spellnumber	publicmapping.redistricting.templatetags.redistricting_extras-module.html#spellnumber
-publicmapping.redistricting.templatetags.redistricting_extras.truncate	publicmapping.redistricting.templatetags.redistricting_extras-module.html#truncate
 publicmapping.redistricting.templatetags.redistricting_extras.register	publicmapping.redistricting.templatetags.redistricting_extras-module.html#register
 publicmapping.redistricting.templatetags.redistricting_extras.count_report_row_elements	publicmapping.redistricting.templatetags.redistricting_extras-module.html#count_report_row_elements
 publicmapping.redistricting.templatetags.redistricting_extras.count_true_values	publicmapping.redistricting.templatetags.redistricting_extras-module.html#count_true_values
@@ -76,7 +77,6 @@ publicmapping.redistricting.views.addtodistrict	publicmapping.redistricting.view
 publicmapping.redistricting.views.combine_districts	publicmapping.redistricting.views-module.html#combine_districts
 publicmapping.redistricting.views.fix_unassigned	publicmapping.redistricting.views-module.html#fix_unassigned
 publicmapping.redistricting.views.add_districts_to_plan	publicmapping.redistricting.views-module.html#add_districts_to_plan
-publicmapping.redistricting.views.get_user_info	publicmapping.redistricting.views-module.html#get_user_info
 publicmapping.redistricting.views.getdistrictfilestatus	publicmapping.redistricting.views-module.html#getdistrictfilestatus
 publicmapping.redistricting.views.using_unique_session	publicmapping.redistricting.views-module.html#using_unique_session
 publicmapping.redistricting.views.viewplan	publicmapping.redistricting.views-module.html#viewplan
@@ -108,6 +108,7 @@ publicmapping.redistricting.views.emaildistrictindexfile	publicmapping.redistric
 publicmapping.redistricting.views.UNASSIGNED_DISTRICT_ID	publicmapping.redistricting.views-module.html#UNASSIGNED_DISTRICT_ID
 publicmapping.redistricting.views.uploadfile	publicmapping.redistricting.views-module.html#uploadfile
 publicmapping.redistricting.views.unloadplan	publicmapping.redistricting.views-module.html#unloadplan
+publicmapping.redistricting.views.get_user_info	publicmapping.redistricting.views-module.html#get_user_info
 publicmapping.redistricting.views.is_session_available	publicmapping.redistricting.views-module.html#is_session_available
 publicmapping.redistricting.views.reaggregateplan	publicmapping.redistricting.views-module.html#reaggregateplan
 publicmapping.redistricting.views.editplanattributes	publicmapping.redistricting.views-module.html#editplanattributes
@@ -115,6 +116,7 @@ publicmapping.redistricting.views.setdistrictlock	publicmapping.redistricting.vi
 publicmapping.setup	publicmapping.setup-module.html
 publicmapping.setup.setup_logging	publicmapping.setup-module.html#setup_logging
 publicmapping.setup.main	publicmapping.setup-module.html#main
+publicmapping.setup.logger	publicmapping.setup-module.html#logger
 publicmapping.views	publicmapping.views-module.html
 publicmapping.views.session	publicmapping.views-module.html#session
 publicmapping.views.emailpassword	publicmapping.views-module.html#emailpassword
@@ -191,6 +193,7 @@ publicmapping.redistricting.admin.PlanAdmin	publicmapping.redistricting.admin.Pl
 publicmapping.redistricting.admin.PlanAdmin.ordering	publicmapping.redistricting.admin.PlanAdmin-class.html#ordering
 publicmapping.redistricting.admin.PlanAdmin.inlines	publicmapping.redistricting.admin.PlanAdmin-class.html#inlines
 publicmapping.redistricting.admin.PlanAdmin.list_display	publicmapping.redistricting.admin.PlanAdmin-class.html#list_display
+publicmapping.redistricting.admin.PlanAdmin.validate_selected_plans	publicmapping.redistricting.admin.PlanAdmin-class.html#validate_selected_plans
 publicmapping.redistricting.admin.PlanAdmin.actions	publicmapping.redistricting.admin.PlanAdmin-class.html#actions
 publicmapping.redistricting.admin.PlanAdmin.reaggregate_selected_plans	publicmapping.redistricting.admin.PlanAdmin-class.html#reaggregate_selected_plans
 publicmapping.redistricting.admin.PlanAdmin.list_filter	publicmapping.redistricting.admin.PlanAdmin-class.html#list_filter

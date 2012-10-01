@@ -74,7 +74,7 @@ This file is part of The Public Mapping Project
 https://github.com/PublicMapping/
 
 License:
-    Copyright 2010 Micah Altman, Michael McDonald
+    Copyright 2010-2012 Micah Altman, Michael McDonald
 
     Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
     you may not use this file except in compliance with the License.
@@ -223,7 +223,7 @@ session.</td>
         <tr>
           <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#scoreplan" class="summary-sig-name">scoreplan</a>(<span class="summary-sig-arg">request</span>,
         <span class="summary-sig-arg">planid</span>)</span><br />
-      Validate a plan to allow for it to be shown in the leaaderboard</td>
+      Validate a plan to allow for it to be shown in the leaderboard</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#scoreplan">source&nbsp;code</a></span>
             
@@ -1061,16 +1061,19 @@ plan into another plan</td>
 <p class="indent-wrapped-lines"><b>Imports:</b>
   <span title="django.http.urlencode">urlencode</span>,
   <span title="django.http.force_unicode">force_unicode</span>,
+  <span title="django.http.signing">signing</span>,
   <span title="django.http.HttpResponseNotFound">HttpResponseNotFound</span>,
+  <span title="django.http.HttpResponseForbidden">HttpResponseForbidden</span>,
   <span title="django.http.HttpResponseNotModified">HttpResponseNotModified</span>,
   <span title="django.http.SimpleCookie">SimpleCookie</span>,
   <span title="django.http.HttpResponseNotAllowed">HttpResponseNotAllowed</span>,
   <span title="django.http.fix_IE_for_vary">fix_IE_for_vary</span>,
-  <span title="django.http.HttpResponseForbidden">HttpResponseForbidden</span>,
   <span title="django.http.HttpResponse">HttpResponse</span>,
+  <span title="django.http.timezone">timezone</span>,
   <span title="django.http.CompatCookie">CompatCookie</span>,
   <span title="django.http.MultiPartParser">MultiPartParser</span>,
   <span title="django.http.HttpRequest">HttpRequest</span>,
+  <span title="django.http.iri_to_uri">iri_to_uri</span>,
   <span title="django.http.QueryDict">QueryDict</span>,
   <span title="django.http.smart_str">smart_str</span>,
   <span title="django.http.ImmutableList">ImmutableList</span>,
@@ -1079,23 +1082,27 @@ plan into another plan</td>
   <span title="django.http.re">re</span>,
   <span title="django.http.Cookie">Cookie</span>,
   <span title="django.http.get_host">get_host</span>,
+  <span title="django.http.UnreadablePostError">UnreadablePostError</span>,
   <span title="django.http.MultiValueDict">MultiValueDict</span>,
   <span title="django.http.urljoin">urljoin</span>,
   <span title="django.http.str_to_unicode">str_to_unicode</span>,
   <span title="django.http.BadHeaderError">BadHeaderError</span>,
   <span title="django.http.HttpResponseGone">HttpResponseGone</span>,
-  <span title="django.http.HttpResponseServerError">HttpResponseServerError</span>,
+  <span title="django.http.warnings">warnings</span>,
+  <span title="django.http.RAISE_ERROR">RAISE_ERROR</span>,
   <span title="django.http.quote">quote</span>,
-  <span title="django.http.fix_location_header">fix_location_header</span>,
+  <span title="django.http.HttpResponseRedirect">HttpResponseRedirect</span>,
+  <span title="django.http.build_request_repr">build_request_repr</span>,
   <span title="django.http.HttpResponseBadRequest">HttpResponseBadRequest</span>,
   <span title="django.http.Http404">Http404</span>,
-  <span title="django.http.iri_to_uri">iri_to_uri</span>,
-  <span title="django.http.HttpResponseRedirect">HttpResponseRedirect</span>,
+  <span title="django.http.HttpResponseServerError">HttpResponseServerError</span>,
+  <span title="django.http.HttpResponsePermanentRedirect">HttpResponsePermanentRedirect</span>,
+  <span title="django.http.fix_location_header">fix_location_header</span>,
   <span title="django.http.parse_qsl">parse_qsl</span>,
   <span title="django.http.conditional_content_removal">conditional_content_removal</span>,
   <span title="django.http.Morsel">Morsel</span>,
   <span title="django.http.uploadhandler">uploadhandler</span>,
-  <span title="django.http.HttpResponsePermanentRedirect">HttpResponsePermanentRedirect</span>,
+  <span title="django.http.ImproperlyConfigured">ImproperlyConfigured</span>,
   <span title="django.http.fix_IE_for_attach">fix_IE_for_attach</span>,
   <span title="django.http.pformat">pformat</span>,
   <span title="django.http.RESERVED_CHARS">RESERVED_CHARS</span>,
@@ -1141,6 +1148,7 @@ plan into another plan</td>
   <span title="django.contrib.humanize">humanize</span>,
   <span title="django.template.loader">loader</span>,
   <span title="django.template.Context">DjangoContext</span>,
+  <span title="django.template.RequestContext">RequestContext</span>,
   <span title="django.utils.simplejson">json</span>,
   <span title="django.utils.translation">translation</span>,
   <span title="django.utils.translation.ungettext">_n</span>,
@@ -1434,7 +1442,7 @@ Returns:
   
   <pre class="literalblock">
 
-Validate a plan to allow for it to be shown in the leaaderboard
+Validate a plan to allow for it to be shown in the leaderboard
 
 Parameters:
     request -- The HttpRequest, which includes the user.
@@ -2425,7 +2433,7 @@ Parameters:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Feb 29 14:54:45 2012
+    Generated by Epydoc 3.0.1 on Fri Sep 28 17:22:14 2012
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
