@@ -1,0 +1,2455 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>publicmapping.redistricting.views</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="publicmapping-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="http://publicmapping.github.com/districtbuilder/">Publicmapping on GitHub</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="publicmapping-module.html">Package&nbsp;publicmapping</a> ::
+        <a href="publicmapping.redistricting-module.html">Package&nbsp;redistricting</a> ::
+        Module&nbsp;views
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="publicmapping.redistricting.views-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module views</h1><p class="nomargin-top"><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+
+Django views used by the redistricting application.
+
+The methods in redistricting.views define the views used to interact with
+the models in the redistricting application. Each method relates to one 
+type of output url. There are views that return GeoJSON, JSON, and HTML.
+
+This file is part of The Public Mapping Project
+https://github.com/PublicMapping/
+
+License:
+    Copyright 2010-2012 Micah Altman, Michael McDonald
+
+    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+Author: 
+    Andrew Jennings, David Zwarg, Kenny Shepard
+
+</pre>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#using_unique_session" class="summary-sig-name">using_unique_session</a>(<span class="summary-sig-arg">u</span>)</span><br />
+      A test to determine if the user of the application is using a unique 
+session.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#using_unique_session">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#unique_session_or_json_redirect" class="summary-sig-name">unique_session_or_json_redirect</a>(<span class="summary-sig-arg">function</span>)</span><br />
+      A decorator method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#unique_session_or_json_redirect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#is_session_available" class="summary-sig-name">is_session_available</a>(<span class="summary-sig-arg">req</span>)</span><br />
+      Determine if a session is available.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#is_session_available">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#note_session_activity" class="summary-sig-name">note_session_activity</a>(<span class="summary-sig-arg">req</span>)</span><br />
+      Add a session 'timeout' whenever a user performs an action.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#note_session_activity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#unloadplan" class="summary-sig-name">unloadplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Unload a plan.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#unloadplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#copyplan" class="summary-sig-name">copyplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Copy a plan to a new, editable plan.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#copyplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#scoreplan" class="summary-sig-name">scoreplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Validate a plan to allow for it to be shown in the leaderboard</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#scoreplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#get_user_info" class="summary-sig-name">get_user_info</a>(<span class="summary-sig-arg">user</span>)</span><br />
+      Get extended user information for the current user.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_user_info">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#commonplan" class="summary-sig-name">commonplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      A common method that gets the same data structures for viewing
+and editing.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#commonplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_plan_ready"></a><span class="summary-sig-name">is_plan_ready</span>(<span class="summary-sig-arg">planid</span>)</span><br />
+      Determines if a plan is in a Ready state</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#is_plan_ready">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#viewplan" class="summary-sig-name">viewplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      View a plan.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#viewplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#editplan" class="summary-sig-name">editplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Edit a plan.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#editplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#printplan" class="summary-sig-name">printplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Print a static map of a plan.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#printplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#createplan" class="summary-sig-name">createplan</a>(<span class="summary-sig-arg">request</span>)</span><br />
+      Create a plan.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#createplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#uploadfile" class="summary-sig-name">uploadfile</a>(<span class="summary-sig-arg">request</span>)</span><br />
+      Accept a block equivalency file, and create a plan based on that
+file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#uploadfile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="generate_report_hash"></a><span class="summary-sig-name">generate_report_hash</span>(<span class="summary-sig-arg">qdict</span>)</span><br />
+      Generate a hash based on the query items passed to this report 
+      request.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#generate_report_hash">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#getreport" class="summary-sig-name">getreport</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Get a BARD report.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getreport">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#getcalculatorreport" class="summary-sig-name">getcalculatorreport</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Get a report which is generated by using calculators.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getcalculatorreport">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#newdistrict" class="summary-sig-name">newdistrict</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Create a new district.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#newdistrict">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#add_districts_to_plan" class="summary-sig-name">add_districts_to_plan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      This handler is used to paste existing districts from one
+plan into another plan</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#add_districts_to_plan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#assign_district_members" class="summary-sig-name">assign_district_members</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      This handler is used to assign members to districts</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#assign_district_members">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#combine_districts" class="summary-sig-name">combine_districts</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Take the contents of one district and add them to another districts</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#combine_districts">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#fix_unassigned" class="summary-sig-name">fix_unassigned</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Assign unassigned base geounits that are fully contained or adjacent 
+      to another district</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#fix_unassigned">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#get_splits" class="summary-sig-name">get_splits</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>,
+        <span class="summary-sig-arg">otherid</span>,
+        <span class="summary-sig-arg">othertype</span>)</span><br />
+      Find all splits between this plan and another plan</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_splits">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_processing_status"></a><span class="summary-sig-name">get_processing_status</span>(<span class="summary-sig-arg">request</span>)</span><br />
+      Get the processing status for a list of plan ids</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_processing_status">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_splits_report"></a><span class="summary-sig-name">get_splits_report</span>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Get the rendered splits report</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_splits_report">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#addtodistrict" class="summary-sig-name">addtodistrict</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>,
+        <span class="summary-sig-arg">districtid</span>)</span><br />
+      Add geounits to a district.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#addtodistrict">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#setdistrictlock" class="summary-sig-name">setdistrictlock</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>,
+        <span class="summary-sig-arg">district_id</span>)</span><br />
+      Set whether this district is locked for editing.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#setdistrictlock">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#getdistricts" class="summary-sig-name">getdistricts</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Get the districts in a plan at a specific version.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getdistricts">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#simple_district_versioned" class="summary-sig-name">simple_district_versioned</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>,
+        <span class="summary-sig-arg">district_ids</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Emulate a WFS service for versioned districts.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#simple_district_versioned">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#get_unlocked_simple_geometries" class="summary-sig-name">get_unlocked_simple_geometries</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Emulate a WFS service for selecting unlocked geometries.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_unlocked_simple_geometries">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#get_statistics" class="summary-sig-name">get_statistics</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_statistics">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getutc"></a><span class="summary-sig-name">getutc</span>(<span class="summary-sig-arg">t</span>)</span><br />
+      Given a datetime object, translate to a datetime object for UTC time.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getutc">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#getdistrictfilestatus" class="summary-sig-name">getdistrictfilestatus</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Given a plan id, return the status of the district index file</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getdistrictfilestatus">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#getdistrictfile" class="summary-sig-name">getdistrictfile</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Given a plan id, email the user a zipped copy of the district index 
+      file</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getdistrictfile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#emaildistrictindexfile" class="summary-sig-name">emaildistrictindexfile</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Given a plan id, email a zipped copy of the district index file to a 
+      specified address</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#emaildistrictindexfile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getvalidplans"></a><span class="summary-sig-name">getvalidplans</span>(<span class="summary-sig-arg">leg_body</span>,
+        <span class="summary-sig-arg">owner</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns the valid plans for a given legislative body and owner 
+      (optional)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getvalidplans">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getleaderboarddisplay"></a><span class="summary-sig-name">getleaderboarddisplay</span>(<span class="summary-sig-arg">leg_body</span>,
+        <span class="summary-sig-arg">owner_filter</span>)</span><br />
+      Returns the leaderboard ScoreDisplay given a legislative body and 
+      owner</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getleaderboarddisplay">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getleaderboard"></a><span class="summary-sig-name">getleaderboard</span>(<span class="summary-sig-arg">request</span>)</span><br />
+      Get the rendered leaderboard</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getleaderboard">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getleaderboardcsv"></a><span class="summary-sig-name">getleaderboardcsv</span>(<span class="summary-sig-arg">request</span>)</span><br />
+      Get the leaderboard scores in csv form</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getleaderboardcsv">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getplans"></a><span class="summary-sig-name">getplans</span>(<span class="summary-sig-arg">request</span>)</span><br />
+      Get the plans for the given user and return the data in a format 
+      readable by the jqgrid</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getplans">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_shared_districts"></a><span class="summary-sig-name">get_shared_districts</span>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Get the shared districts in a given plan and return the data in a 
+      format readable by the jqgrid</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_shared_districts">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#editplanattributes" class="summary-sig-name">editplanattributes</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Edit the attributes of a plan.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#editplanattributes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#deleteplan" class="summary-sig-name">deleteplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Delete a plan</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#deleteplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#reaggregateplan" class="summary-sig-name">reaggregateplan</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span><br />
+      Reaggregate a plan</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#reaggregateplan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_health"></a><span class="summary-sig-name">get_health</span>(<span class="summary-sig-arg">request</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_health">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="statistics_sets"></a><span class="summary-sig-name">statistics_sets</span>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#statistics_sets">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="purge_plan_clear_cache"></a><span class="summary-sig-name">purge_plan_clear_cache</span>(<span class="summary-sig-arg">district</span>,
+        <span class="summary-sig-arg">version</span>)</span><br />
+      This is a helper method that purges a plan after a version, and 
+      clears any pre-computed scores at the specified version.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#purge_plan_clear_cache">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.views-module.html#district_info" class="summary-sig-name">district_info</a>(<span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">planid</span>,
+        <span class="summary-sig-arg">district_id</span>)</span><br />
+      Get the comments that are attached to a district.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#district_info">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="plan_feed"></a><span class="summary-sig-name">plan_feed</span>(<span class="summary-sig-arg">request</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#plan_feed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="share_feed"></a><span class="summary-sig-name">share_feed</span>(<span class="summary-sig-arg">request</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#share_feed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="logger"></a><span class="summary-name">logger</span> = <code title="logging.getLogger(__name__)">logging.getLogger(__name__)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="UNASSIGNED_DISTRICT_ID"></a><span class="summary-name">UNASSIGNED_DISTRICT_ID</span> = <code title="0">0</code>
+    </td>
+  </tr>
+</table>
+<p class="indent-wrapped-lines"><b>Imports:</b>
+  <span title="django.http.urlencode">urlencode</span>,
+  <span title="django.http.force_unicode">force_unicode</span>,
+  <span title="django.http.signing">signing</span>,
+  <span title="django.http.HttpResponseNotFound">HttpResponseNotFound</span>,
+  <span title="django.http.HttpResponseForbidden">HttpResponseForbidden</span>,
+  <span title="django.http.HttpResponseNotModified">HttpResponseNotModified</span>,
+  <span title="django.http.SimpleCookie">SimpleCookie</span>,
+  <span title="django.http.HttpResponseNotAllowed">HttpResponseNotAllowed</span>,
+  <span title="django.http.fix_IE_for_vary">fix_IE_for_vary</span>,
+  <span title="django.http.HttpResponse">HttpResponse</span>,
+  <span title="django.http.timezone">timezone</span>,
+  <span title="django.http.CompatCookie">CompatCookie</span>,
+  <span title="django.http.MultiPartParser">MultiPartParser</span>,
+  <span title="django.http.HttpRequest">HttpRequest</span>,
+  <span title="django.http.iri_to_uri">iri_to_uri</span>,
+  <span title="django.http.QueryDict">QueryDict</span>,
+  <span title="django.http.smart_str">smart_str</span>,
+  <span title="django.http.ImmutableList">ImmutableList</span>,
+  <span title="django.http.absolute_http_url_re">absolute_http_url_re</span>,
+  <span title="django.http.cookie_date">cookie_date</span>,
+  <span title="django.http.re">re</span>,
+  <span title="django.http.Cookie">Cookie</span>,
+  <span title="django.http.get_host">get_host</span>,
+  <span title="django.http.UnreadablePostError">UnreadablePostError</span>,
+  <span title="django.http.MultiValueDict">MultiValueDict</span>,
+  <span title="django.http.urljoin">urljoin</span>,
+  <span title="django.http.str_to_unicode">str_to_unicode</span>,
+  <span title="django.http.BadHeaderError">BadHeaderError</span>,
+  <span title="django.http.HttpResponseGone">HttpResponseGone</span>,
+  <span title="django.http.warnings">warnings</span>,
+  <span title="django.http.RAISE_ERROR">RAISE_ERROR</span>,
+  <span title="django.http.quote">quote</span>,
+  <span title="django.http.HttpResponseRedirect">HttpResponseRedirect</span>,
+  <span title="django.http.build_request_repr">build_request_repr</span>,
+  <span title="django.http.HttpResponseBadRequest">HttpResponseBadRequest</span>,
+  <span title="django.http.Http404">Http404</span>,
+  <span title="django.http.HttpResponseServerError">HttpResponseServerError</span>,
+  <span title="django.http.HttpResponsePermanentRedirect">HttpResponsePermanentRedirect</span>,
+  <span title="django.http.fix_location_header">fix_location_header</span>,
+  <span title="django.http.parse_qsl">parse_qsl</span>,
+  <span title="django.http.conditional_content_removal">conditional_content_removal</span>,
+  <span title="django.http.Morsel">Morsel</span>,
+  <span title="django.http.uploadhandler">uploadhandler</span>,
+  <span title="django.http.ImproperlyConfigured">ImproperlyConfigured</span>,
+  <span title="django.http.fix_IE_for_attach">fix_IE_for_attach</span>,
+  <span title="django.http.pformat">pformat</span>,
+  <span title="django.http.RESERVED_CHARS">RESERVED_CHARS</span>,
+  <span title="django.http.parse_cookie">parse_cookie</span>,
+  <span title="django.core.serializers">serializers</span>,
+  <span title="django.core.exceptions.ValidationError">ValidationError</span>,
+  <span title="django.core.exceptions.SuspiciousOperation">SuspiciousOperation</span>,
+  <span title="django.core.exceptions.ObjectDoesNotExist">ObjectDoesNotExist</span>,
+  <span title="django.db.IntegrityError">IntegrityError</span>,
+  <span title="django.db.connection">connection</span>,
+  <span title="django.db.transaction">transaction</span>,
+  <span title="django.shortcuts.render_to_response">render_to_response</span>,
+  <span title="django.core.urlresolvers.reverse">reverse</span>,
+  <span title="django.core.context_processors.csrf">csrf</span>,
+  <span title="django.contrib.comments.models.Comment">Comment</span>,
+  <span title="django.contrib.comments.forms.CommentForm">CommentForm</span>,
+  <span title="django.contrib.contenttypes.models.ContentType">ContentType</span>,
+  <span title="django.contrib.auth.decorators.login_required">login_required</span>,
+  <span title="django.contrib.auth.decorators.user_passes_test">user_passes_test</span>,
+  <span title="django.contrib.sessions.models.Session">Session</span>,
+  <span title="django.contrib.sessions.backends.db.SessionStore">SessionStore</span>,
+  <span title="django.contrib.gis.geos.collections.MultiPolygon">MultiPolygon</span>,
+  <span title="django.contrib.gis.geos.GEOSGeometry">GEOSGeometry</span>,
+  <span title="django.contrib.gis.gdal.gdal_version">gdal_version</span>,
+  <span title="django.contrib.gis.gdal.Envelope">Envelope</span>,
+  <span title="django.contrib.gis.gdal.OGRGeomType">OGRGeomType</span>,
+  <span title="django.contrib.gis.gdal.OGRException">OGRException</span>,
+  <span title="django.contrib.gis.gdal.Driver">Driver</span>,
+  <span title="django.contrib.gis.gdal.check_err">check_err</span>,
+  <span title="django.contrib.gis.gdal.GEOJSON">GEOJSON</span>,
+  <span title="django.contrib.gis.gdal.SpatialReference">SpatialReference</span>,
+  <span title="django.contrib.gis.gdal.HAS_GDAL">HAS_GDAL</span>,
+  <span title="django.contrib.gis.gdal.SRSException">SRSException</span>,
+  <span title="django.contrib.gis.gdal.GDAL_VERSION">GDAL_VERSION</span>,
+  <span title="django.contrib.gis.gdal.OGRIndexError">OGRIndexError</span>,
+  <span title="django.contrib.gis.gdal.DataSource">DataSource</span>,
+  <span title="django.contrib.gis.gdal.OGRGeometry">OGRGeometry</span>,
+  <span title="django.contrib.gis.gdal.gdal_release_date">gdal_release_date</span>,
+  <span title="django.contrib.gis.gdal.CoordTransform">CoordTransform</span>,
+  <span title="django.contrib.gis.gdal.gdal_full_version">gdal_full_version</span>,
+  <span title="django.contrib.gis.gdal.libgdal.lgdal">lgdal</span>,
+  <span title="django.contrib.sites.models.Site">Site</span>,
+  <span title="django.contrib.humanize">humanize</span>,
+  <span title="django.template.loader">loader</span>,
+  <span title="django.template.Context">DjangoContext</span>,
+  <span title="django.template.RequestContext">RequestContext</span>,
+  <span title="django.utils.simplejson">json</span>,
+  <span title="django.utils.translation">translation</span>,
+  <span title="django.utils.translation.ungettext">_n</span>,
+  <span title="django.views.decorators.cache.cache_control">cache_control</span>,
+  <span title="django.template.defaultfilters.slugify">slugify</span>,
+  <span title="django.template.defaultfilters.force_escape">force_escape</span>,
+  <span title="django.utils.translation.ugettext">_</span>,
+  <span title="django.conf.settings">settings</span>,
+  <span title="tagging.utils.parse_tag_input">parse_tag_input</span>,
+  <span title="tagging.models.Tag">Tag</span>,
+  <span title="tagging.models.TaggedItem">TaggedItem</span>,
+  <span title="datetime.datetime">datetime</span>,
+  <span title="datetime.timedelta">timedelta</span>,
+  <span title="decimal.BasicContext">BasicContext</span>,
+  <span title="decimal.Underflow">Underflow</span>,
+  <span title="decimal.DecimalException">DecimalException</span>,
+  <span title="decimal.DivisionByZero">DivisionByZero</span>,
+  <span title="decimal.localcontext">localcontext</span>,
+  <span title="decimal.InvalidOperation">InvalidOperation</span>,
+  <span title="decimal.ROUND_DOWN">ROUND_DOWN</span>,
+  <span title="decimal.ROUND_HALF_EVEN">ROUND_HALF_EVEN</span>,
+  <span title="decimal.ROUND_HALF_UP">ROUND_HALF_UP</span>,
+  <span title="decimal.ROUND_UP">ROUND_UP</span>,
+  <span title="decimal.Inexact">Inexact</span>,
+  <span title="decimal.getcontext">getcontext</span>,
+  <span title="decimal.ROUND_FLOOR">ROUND_FLOOR</span>,
+  <span title="decimal.Overflow">Overflow</span>,
+  <span title="decimal.ROUND_HALF_DOWN">ROUND_HALF_DOWN</span>,
+  <span title="decimal.Decimal">Decimal</span>,
+  <span title="decimal.DefaultContext">DefaultContext</span>,
+  <span title="decimal.Context">Context</span>,
+  <span title="decimal.ROUND_05UP">ROUND_05UP</span>,
+  <span title="decimal.ROUND_CEILING">ROUND_CEILING</span>,
+  <span title="decimal.Subnormal">Subnormal</span>,
+  <span title="decimal.Rounded">Rounded</span>,
+  <span title="decimal.ExtendedContext">ExtendedContext</span>,
+  <span title="decimal.setcontext">setcontext</span>,
+  <span title="decimal.Clamped">Clamped</span>,
+  <span title="functools.wraps">wraps</span>,
+  <span title="random">random</span>,
+  <span title="string">string</span>,
+  <span title="math">math</span>,
+  <span title="types">types</span>,
+  <span title="copy">copy</span>,
+  <span title="time">time</span>,
+  <span title="threading">threading</span>,
+  <span title="traceback">traceback</span>,
+  <span title="os">os</span>,
+  <span title="commands">commands</span>,
+  <span title="sys">sys</span>,
+  <span title="tempfile">tempfile</span>,
+  <span title="csv">csv</span>,
+  <span title="hashlib">hashlib</span>,
+  <span title="inflect">inflect</span>,
+  <span title="logging">logging</span>,
+  <span title="ModestMaps">ModestMaps</span>,
+  <span title="PIL.Image">Image</span>,
+  <span title="PIL.ImageChops">ImageChops</span>,
+  <span title="PIL.ImageMath">ImageMath</span>,
+  <span title="urllib">urllib</span>,
+  <span title="urllib2">urllib2</span>,
+  <span title="xhtml2pdf.pisa.CreatePDF">CreatePDF</span>,
+  <span title="StringIO">StringIO</span>
+</p><br />
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="using_unique_session"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">using_unique_session</span>(<span class="sig-arg">u</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#using_unique_session">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+A test to determine if the user of the application is using a unique 
+session. Each user is permitted one unique session (one session in the
+django_session table that has not yet expired). If the user exceeds
+this quota, this test fails, and the user will get bounced to the login
+url.
+
+Parameters:
+    u - The user. May be anonymous or registered.
+
+Returns:
+    True - the user is an AnonymousUser or the number of sessions open
+           by the user is only 1 (one must be open to make the request)
+    False - the user is registered and has more than one open session.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="unique_session_or_json_redirect"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">unique_session_or_json_redirect</span>(<span class="sig-arg">function</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#unique_session_or_json_redirect">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A decorator method.  Any method that accepts this decorator should 
+  have an HttpRequest as a parameter called &quot;request&quot;. That 
+  request will be checked for a unique session.  If the test passes, the 
+  original method is returned.  If the session is not unique, then a JSON 
+  response is returned and the client is redirected to log off.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="is_session_available"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_session_available</span>(<span class="sig-arg">req</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#is_session_available">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Determine if a session is available. This is similar to a user test,
+but requires access to the user's session, so it cannot be used in the
+user_passes_test decorator.
+
+Parameters:
+    req - The HttpRequest object, with user and session information.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="note_session_activity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">note_session_activity</span>(<span class="sig-arg">req</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#note_session_activity">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Add a session 'timeout' whenever a user performs an action. This is 
+required to keep dormant (not yet expired, but inactive) sessions
+from maxing out the concurrent session limit.
+
+Parameters:
+    req - An HttpRequest, with a session attribute
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="unloadplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">unloadplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#unloadplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Unload a plan.
+
+This view is called anytime a plan is unloaded. Example: navigating
+away from the page, or selecting a new plan. This method allows
+for any required plan cleanup such as purging temporary versions.
+
+Parameters:
+    request -- The HttpRequest, which includes the user.
+    planid -- The plan to unload.
+
+Returns:
+    A JSON HttpResponse which includes a status.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="copyplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">copyplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#copyplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Copy a plan to a new, editable plan.
+
+This view is called by the plan chooser and the share plan tab. These
+actions take a template or shared plan, and copy the plan without its
+history into an editable plan in the current user's account.
+
+Parameters:
+    request -- The HttpRequest, which includes the user.
+    planid -- The original plan to copy.
+
+Returns:
+    A JSON HttpResponse which includes either an error message or the
+    copied plan ID.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="scoreplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">scoreplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#scoreplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Validate a plan to allow for it to be shown in the leaderboard
+
+Parameters:
+    request -- The HttpRequest, which includes the user.
+    planid -- The plan to score.
+
+Returns:
+    A JSON HttpResponse which includes a status, and if applicable,
+    a reason why the plan couldn't be validated
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_user_info"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_user_info</span>(<span class="sig-arg">user</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_user_info">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Get extended user information for the current user.
+
+Parameters:
+    user -- The user attached to the HttpRequest
+
+Returns:
+    A dict with user information, including profile information.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="commonplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">commonplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#commonplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+A common method that gets the same data structures for viewing
+and editing. This method is called by the viewplan and editplan 
+views.
+
+Parameters:
+    request -- An HttpRequest
+    planid -- The plan ID to fetch.
+    
+Returns:
+    A python dict with common plan attributes set to the plan's values.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="viewplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">viewplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#viewplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+View a plan. 
+
+This template has no editing capability.
+
+Parameters:
+    request -- An HttpRequest, which includes the current user.
+    planid -- The plan to view
+
+Returns:
+    A rendered HTML page for viewing a plan.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@user_passes_test(using_unique_session)</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="editplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">editplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#editplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Edit a plan. 
+
+This template enables editing tools and functionality.
+
+Parameters:
+    request -- An HttpRequest, which includes the current user.
+    planid -- The plan to edit.
+
+Returns:
+    A rendered HTML page for editing a plan.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@user_passes_test(using_unique_session)</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="printplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">printplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#printplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Print a static map of a plan.
+
+This template renders a static HTML document for use with xhtml2pdf.
+
+Parameters:
+    request -- An HttpRequest, which includes the current user.
+    planid -- The plan to edit.
+    
+Returns:
+    A rendered HTML page suitable for conversion to a PDF.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@user_passes_test(using_unique_session)</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="createplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">createplan</span>(<span class="sig-arg">request</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#createplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Create a plan.
+
+Create a plan from a POST request. This plan will be 'blank', and will
+contain only the Unassigned district initially.
+
+Parameters:
+    request -- An HttpRequest, which contains the current user.
+
+Returns:
+    A JSON HttpResponse, including the new plan's information, or an
+    error describing why the plan could not be created.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="uploadfile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">uploadfile</span>(<span class="sig-arg">request</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#uploadfile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Accept a block equivalency file, and create a plan based on that
+file.
+
+Parameters:
+    request -- An HttpRequest, with a file upload and plan name.
+
+Returns:
+    A plan view, with additional information about the upload status.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getreport"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getreport</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getreport">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Get a BARD report.
+
+This view will write out an HTML-formatted BARD report to the directory
+given in the settings.
+
+Parameters:
+    request -- An HttpRequest
+    planid -- The plan to be reported.
+
+Returns:
+    The HTML for use as a preview in the web application, along with 
+    the web address of the BARD report.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getcalculatorreport"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getcalculatorreport</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getcalculatorreport">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Get a report which is generated by using calculators.
+
+This view will write out an HTML-formatted report to the directory
+given in the settings.
+
+Parameters:
+    request -- An HttpRequest
+    planid -- The plan to be reported.
+
+Returns:
+    The HTML for use as a preview in the web application, along with 
+    the web address of the report.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="newdistrict"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">newdistrict</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#newdistrict">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Create a new district.
+
+The 'geolevel' parameter is required to create a new district. Geounits
+may be added to this new district by setting the 'geounits' key in the
+request.  
+
+Parameters:
+    request - An HttpRequest, with the current user.
+    planid - The plan id to which the district should be added.
+
+Returns:
+    The new District's name and district_id.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_districts_to_plan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_districts_to_plan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#add_districts_to_plan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+This handler is used to paste existing districts from one
+plan into another plan
+
+Parameters:
+    request -- An HttpRequest object including a list of districtids and
+        a version
+    planid -- The plan into which to paste the districts
+
+Returns:
+    Some JSON explaining the success or failure of the paste operation
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+        <li><code>@transaction.commit_manually</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="assign_district_members"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">assign_district_members</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#assign_district_members">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+This handler is used to assign members to districts
+
+Parameters:
+    request -- An HttpRequest object including a version,
+               and a mapping of districtids to num_members
+    planid -- The plan into which to assign district members
+
+Returns:
+    Some JSON explaining the success or failure of the paste operation
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+        <li><code>@transaction.commit_manually</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="combine_districts"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">combine_districts</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#combine_districts">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Take the contents of one district and add them to another 
+  districts</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fix_unassigned"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fix_unassigned</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#fix_unassigned">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Assign unassigned base geounits that are fully contained or adjacent 
+  to another district</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_splits"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_splits</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>,
+        <span class="sig-arg">otherid</span>,
+        <span class="sig-arg">othertype</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_splits">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Find all splits between this plan and another plan
+
+Parameters:
+    request -- An HttpRequest optionally containing version and/or otherversion
+    planid -- The plan ID
+    otherid -- The plan ID or geolevel ID to find splits with
+    othertype -- One of: 'plan' or 'geolevel'. For specifying otherid
+
+Returns:
+    A JSON HttpResponse that contains an array of splits, given as arrays,
+    where the first item is the district_id of the district in this plan
+    which causes the split, and the second item is the district_id of the
+    district in the other plan or geolevel. When a geolevel is specified,
+    the portable_id will be used, rather than the district_id.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addtodistrict"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addtodistrict</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>,
+        <span class="sig-arg">districtid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#addtodistrict">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Add geounits to a district.
+
+This method requires both &quot;geolevel&quot; and &quot;geounits&quot; URL parameters. 
+The geolevel must be a valid geolevel name and the geounits parameters 
+should be a pipe-separated list of geounit ids.
+
+Parameters:
+    request -- An HttpRequest, with the current user, the geolevel, and
+    the pipe-separated geounit list.
+    planid -- The plan ID that contains the district.
+    districtid -- The district ID to which the geounits will be added.
+
+Returns:
+    A JSON HttpResponse that contains the number of districts modified,
+    or an error message if adding fails.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setdistrictlock"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setdistrictlock</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>,
+        <span class="sig-arg">district_id</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#setdistrictlock">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Set whether this district is locked for editing.
+
+Parameters:
+    request -- An HttpRequest, with a boolean that indicates whether the district
+    should be locked or unlocked
+    planid -- The plan ID that contains the district.
+    district_id -- The district_id to lock or unlock
+
+Returns:
+    A JSON HttpResponse that contains a boolean of whether the district is locked.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+        <li><code>@login_required</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getdistricts"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getdistricts</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getdistricts">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Get the districts in a plan at a specific version.
+
+Parameters:
+    request - An HttpRequest, with the current user.
+    planid - The plan id to query for the districts.
+Returns:
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@cache_control(private= True)</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="simple_district_versioned"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">simple_district_versioned</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>,
+        <span class="sig-arg">district_ids</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#simple_district_versioned">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Emulate a WFS service for versioned districts.
+
+This function retrieves one version of the districts in a plan, with
+the value of the subject attached to the feature. This function is
+necessary because a traditional view could not be used to get the
+districts in a versioned fashion.
+
+This method accepts 'version__eq' and 'subjects__eq' URL parameters.
+
+This method accepts an optional 'district_ids__eq' parameter, which is
+a comma-separated list of district_ids to filter by
+
+Parameters:
+    request -- An HttpRequest, with the current user.
+    planid -- The plan ID from which to get the districts.
+
+Returns:
+    A GeoJSON HttpResponse, describing the districts in the plan.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@cache_control(private= True)</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_unlocked_simple_geometries"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_unlocked_simple_geometries</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_unlocked_simple_geometries">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Emulate a WFS service for selecting unlocked geometries.</p>
+  <p>This function retrieves all unlocked geometries within a geolevel for 
+  a given plan. This function is necessary because a traditional view could
+  not be used to obtain the geometries in a versioned fashion.</p>
+  <p>This method accepts 'version__eq', 'level__eq', and 'geom__eq' URL 
+  parameters.</p>
+  <p>Parameters: request -- An HttpRequest, with the current user. planid 
+  -- The plan ID from which to get the districts.</p>
+  <p>Returns: A GeoJSON HttpResponse, describing the unlocked simplified 
+  geometries</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@cache_control(private= True)</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_statistics"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_statistics</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#get_statistics">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getdistrictfilestatus"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getdistrictfilestatus</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getdistrictfilestatus">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a plan id, return the status of the district index file</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getdistrictfile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getdistrictfile</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#getdistrictfile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a plan id, email the user a zipped copy of the district index 
+  file</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="emaildistrictindexfile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">emaildistrictindexfile</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#emaildistrictindexfile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a plan id, email a zipped copy of the district index file to a 
+  specified address</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="editplanattributes"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">editplanattributes</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#editplanattributes">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Edit the attributes of a plan. Attributes of a plan are the name 
+  and/or description.</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="deleteplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">deleteplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#deleteplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete a plan</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="reaggregateplan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">reaggregateplan</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#reaggregateplan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reaggregate a plan</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@login_required</code></li>
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="district_info"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">district_info</span>(<span class="sig-arg">request</span>,
+        <span class="sig-arg">planid</span>,
+        <span class="sig-arg">district_id</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.views-pysrc.html#district_info">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Get the comments that are attached to a district.
+
+Parameters:
+    request -- An HttpRequest
+    planid -- The plan ID
+    district_id -- The district ID, this is the district number in a plan, and NOT the id of a district.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@unique_session_or_json_redirect</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="publicmapping-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="http://publicmapping.github.com/districtbuilder/">Publicmapping on GitHub</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Oct  1 16:33:45 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
