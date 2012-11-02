@@ -170,7 +170,7 @@ a.case_study {
 	position: relative;
 	border: 1px #AAA solid;
 }
-a.case_study:hover span {
+a.case_study[target="_blank"]:hover span {
 	background: #51579E;
 	background: rgba(61,63,129,.85);
 }
