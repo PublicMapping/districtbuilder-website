@@ -74,7 +74,7 @@
 <a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">https://github.com/PublicMapping/</tt> </tt>
 <a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
 <a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">License:</tt> </tt>
-<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    Copyright 2011 Micah Altman, Michael McDonald</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    Copyright 2011-2012 Micah Altman, Michael McDonald</tt> </tt>
 <a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
 <a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">    Licensed under the Apache License, Version 2.0 (the "License");</tt> </tt>
 <a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">    you may not use this file except in compliance with the License.</tt> </tt>
@@ -100,11 +100,13 @@
 <a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Package publicmapping.redistricting=publicmapping.redistricting-module.html"><a title="publicmapping.redistricting" class="py-name" href="#" onclick="return doclink('link-2', 'redistricting', 'link-2');">redistricting</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Module publicmapping.redistricting.models=publicmapping.redistricting.models-module.html"><a title="publicmapping.redistricting.models" class="py-name" href="#" onclick="return doclink('link-3', 'models', 'link-3');">models</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
 <a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="publicmapping.redistricting" class="py-name" href="#" onclick="return doclink('link-4', 'redistricting', 'link-2');">redistricting</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Module publicmapping.redistricting.config=publicmapping.redistricting.config-module.html"><a title="publicmapping.redistricting.config" class="py-name" href="#" onclick="return doclink('link-5', 'config', 'link-5');">config</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
 <a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
-<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable publicmapping.redistricting.config.logger=publicmapping.redistricting.config-module.html#logger,Variable publicmapping.redistricting.management.commands.database_i18n.logger=publicmapping.redistricting.management.commands.database_i18n-module.html#logger,Variable publicmapping.redistricting.models.logger=publicmapping.redistricting.models-module.html#logger,Variable publicmapping.redistricting.tasks.logger=publicmapping.redistricting.tasks-module.html#logger,Variable publicmapping.redistricting.views.logger=publicmapping.redistricting.views-module.html#logger,Variable publicmapping.views.logger=publicmapping.views-module.html#logger"><a title="publicmapping.redistricting.config.logger
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable publicmapping.redistricting.config.logger=publicmapping.redistricting.config-module.html#logger,Variable publicmapping.redistricting.management.commands.database_i18n.logger=publicmapping.redistricting.management.commands.database_i18n-module.html#logger,Variable publicmapping.redistricting.management.commands.setup.logger=publicmapping.redistricting.management.commands.setup-module.html#logger,Variable publicmapping.redistricting.models.logger=publicmapping.redistricting.models-module.html#logger,Variable publicmapping.redistricting.tasks.logger=publicmapping.redistricting.tasks-module.html#logger,Variable publicmapping.redistricting.views.logger=publicmapping.redistricting.views-module.html#logger,Variable publicmapping.setup.logger=publicmapping.setup-module.html#logger,Variable publicmapping.views.logger=publicmapping.views-module.html#logger"><a title="publicmapping.redistricting.config.logger
 publicmapping.redistricting.management.commands.database_i18n.logger
+publicmapping.redistricting.management.commands.setup.logger
 publicmapping.redistricting.models.logger
 publicmapping.redistricting.tasks.logger
 publicmapping.redistricting.views.logger
+publicmapping.setup.logger
 publicmapping.views.logger" class="py-name" href="#" onclick="return doclink('link-6', 'logger', 'link-6');">logger</a></tt> <tt class="py-op">=</tt> <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">getLogger</tt><tt class="py-op">(</tt><tt class="py-name">__name__</tt><tt class="py-op">)</tt> </tt>
 <a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
 <a name="Command"></a><div id="Command-def"><a name="L39"></a><tt class="py-lineno"> 39</tt> <a class="py-toggle" href="#" id="Command-toggle" onclick="return toggle('Command');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="publicmapping.redistricting.management.commands.database_i18n.Command-class.html">Command</a><tt class="py-op">(</tt><tt class="py-base-class">BaseCommand</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -178,9 +180,11 @@ publicmapping.setup.setup_logging" class="py-name" href="#" onclick="return docl
 <a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">locale</tt> <tt class="py-keyword">in</tt> <tt class="py-name">locales</tt><tt class="py-op">:</tt> </tt>
 <a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">            <tt id="link-13" class="py-name"><a title="publicmapping.redistricting.config.logger
 publicmapping.redistricting.management.commands.database_i18n.logger
+publicmapping.redistricting.management.commands.setup.logger
 publicmapping.redistricting.models.logger
 publicmapping.redistricting.tasks.logger
 publicmapping.redistricting.views.logger
+publicmapping.setup.logger
 publicmapping.views.logger" class="py-name" href="#" onclick="return doclink('link-13', 'logger', 'link-6');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">'Processing locale %(locale)s'</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'locale'</tt><tt class="py-op">:</tt><tt class="py-name">locale</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
 <a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"> </tt>
 <a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">            <tt class="py-name">poutil</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name" targets="Class publicmapping.redistricting.config.PoUtils=publicmapping.redistricting.config.PoUtils-class.html"><a title="publicmapping.redistricting.config.PoUtils" class="py-name" href="#" onclick="return doclink('link-14', 'PoUtils', 'link-14');">PoUtils</a></tt><tt class="py-op">(</tt><tt class="py-name">locale</tt><tt class="py-op">)</tt> </tt>
@@ -618,7 +622,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Feb 29 14:54:49 2012
+    Generated by Epydoc 3.0.1 on Mon Oct  1 16:33:55 2012
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -71,7 +71,7 @@ This file is part of The Public Mapping Project
 https://github.com/PublicMapping/
 
 License:
-    Copyright 2010 Micah Altman, Michael McDonald
+    Copyright 2010-2012 Micah Altman, Michael McDonald
 
     Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
     you may not use this file except in compliance with the License.
@@ -197,6 +197,23 @@ Author:
       district in the plan.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="publicmapping.redistricting.tasks-pysrc.html#reaggregate_plan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.tasks-module.html#validate_plan" class="summary-sig-name">validate_plan</a>(<span class="summary-sig-arg">plan_id</span>)</span><br />
+      Asynchronously validate a plan.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.tasks-pysrc.html#validate_plan">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -366,6 +383,7 @@ the given upload.</td>
 <p class="indent-wrapped-lines"><b>Imports:</b>
   <span title="celery.task.task">task</span>,
   <span title="celery.task.http.HttpDispatchTask">HttpDispatchTask</span>,
+  <span title="codecs.open">open</span>,
   <span title="django.core.management">management</span>,
   <span title="django.contrib.comments.models.Comment">Comment</span>,
   <span title="django.contrib.sessions.models.Session">Session</span>,
@@ -389,6 +407,10 @@ the given upload.</td>
   <span title="tagging.utils.parse_tag_input">parse_tag_input</span>,
   <span title="tagging.models.Tag">Tag</span>,
   <span title="tagging.models.TaggedItem">TaggedItem</span>,
+  <span title="datetime.datetime">datetime</span>,
+  <span title="lxml.etree">etree</span>,
+  <span title="lxml.objectify">objectify</span>,
+  <span title="djsld.generator">generator</span>,
   <span title="csv">csv</span>,
   <span title="zipfile">zipfile</span>,
   <span title="tempfile">tempfile</span>,
@@ -396,15 +418,10 @@ the given upload.</td>
   <span title="sys">sys</span>,
   <span title="traceback">traceback</span>,
   <span title="time">time</span>,
-  <span title="datetime.datetime">datetime</span>,
   <span title="socket">socket</span>,
   <span title="urllib2">urllib2</span>,
   <span title="logging">logging</span>,
   <span title="re">re</span>,
-  <span title="inflect">inflect</span>,
-  <span title="lxml.etree">etree</span>,
-  <span title="lxml.objectify">objectify</span>,
-  <span title="djsld.generator">generator</span>,
   <span title="glob.glob">glob</span>,
   <span title="django.contrib.gis.gdal.gdal_version">gdal_version</span>,
   <span title="django.contrib.gis.gdal.Envelope">Envelope</span>,
@@ -487,10 +504,39 @@ the given upload.</td>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>plan</code></strong> - The plan to reaggregate</li>
+        <li><strong class="pname"><code>plan_id</code></strong> - The plan to reaggregate</li>
     </ul></dd>
     <dt>Returns:</dt>
         <dd>An integer count of the number of districts reaggregated</dd>
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@task</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="validate_plan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">validate_plan</span>(<span class="sig-arg">plan_id</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.tasks-pysrc.html#validate_plan">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Asynchronously validate a plan.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>plan_id</code></strong> - The plan_id to reaggregate</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>A flag indicating if the plan is valid</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@task</code></li>
@@ -522,7 +568,7 @@ method is called.
 
 Parameters:
     upload_id - The id of the SubjectUpload record.
-    localstore - a temporary file that will get deleted when it is closed
+    localstore - a new subject file that remains when the task is complete
     language - Optional. If provided, translate the status messages
         into the specified language (if message files are complete).
 
@@ -779,7 +825,7 @@ Parameters:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Feb 29 14:54:45 2012
+    Generated by Epydoc 3.0.1 on Mon Oct  1 16:33:45 2012
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
