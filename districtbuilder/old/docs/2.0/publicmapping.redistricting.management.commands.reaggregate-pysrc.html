@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>publicmapping.redistricting.management.commands.reaggregate</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="publicmapping-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="http://publicmapping.github.com/districtbuilder/">Publicmapping on GitHub</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="publicmapping-module.html">Package&nbsp;publicmapping</a> ::
+        <a href="publicmapping.redistricting-module.html">Package&nbsp;redistricting</a> ::
+        <a href="publicmapping.redistricting.management-module.html">Package&nbsp;management</a> ::
+        <a href="publicmapping.redistricting.management.commands-module.html">Package&nbsp;commands</a> ::
+        Module&nbsp;reaggregate
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="publicmapping.redistricting.management.commands.reaggregate-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="publicmapping.redistricting.management.commands.reaggregate-module.html">Module publicmapping.redistricting.management.commands.reaggregate</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">Reaggregate one or more plans in the DistrictBuilder web application.</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">This file is part of The Public Mapping Project</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">https://github.com/PublicMapping/</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">License:</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">    Copyright 2010-2012 Micah Altman, Michael McDonald</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    Licensed under the Apache License, Version 2.0 (the "License");</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">    you may not use this file except in compliance with the License.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">    You may obtain a copy of the License at</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">        http://www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">    Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">    distributed under the License is distributed on an "AS IS" BASIS,</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">    See the License for the specific language governing permissions and</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring">    limitations under the License.</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">    Author:</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">        Andrew Jennings, David Zwarg</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">datetime</tt> <tt class="py-keyword">import</tt> <tt class="py-name">datetime</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">core</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Package publicmapping.redistricting.management=publicmapping.redistricting.management-module.html"><a title="publicmapping.redistricting.management" class="py-name" href="#" onclick="return doclink('link-0', 'management', 'link-0');">management</a></tt><tt class="py-op">.</tt><tt class="py-name">base</tt> <tt class="py-keyword">import</tt> <tt class="py-name">BaseCommand</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">optparse</tt> <tt class="py-keyword">import</tt> <tt class="py-name">make_option</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Package publicmapping.redistricting=publicmapping.redistricting-module.html"><a title="publicmapping.redistricting" class="py-name" href="#" onclick="return doclink('link-1', 'redistricting', 'link-1');">redistricting</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module publicmapping.redistricting.models=publicmapping.redistricting.models-module.html"><a title="publicmapping.redistricting.models" class="py-name" href="#" onclick="return doclink('link-2', 'models', 'link-2');">models</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="Command"></a><div id="Command-def"><a name="L32"></a><tt class="py-lineno"> 32</tt> <a class="py-toggle" href="#" id="Command-toggle" onclick="return toggle('Command');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="publicmapping.redistricting.management.commands.reaggregate.Command-class.html">Command</a><tt class="py-op">(</tt><tt class="py-base-class">BaseCommand</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Command-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Command-expanded"><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">    This command reaggregates the data for given plans or district</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt id="link-3" class="py-name" targets="Variable publicmapping.redistricting.management.commands.database_i18n.Command.args=publicmapping.redistricting.management.commands.database_i18n.Command-class.html#args,Variable publicmapping.redistricting.management.commands.exportplans.Command.args=publicmapping.redistricting.management.commands.exportplans.Command-class.html#args,Variable publicmapping.redistricting.management.commands.makelanguagefiles.Command.args=publicmapping.redistricting.management.commands.makelanguagefiles.Command-class.html#args,Variable publicmapping.redistricting.management.commands.numusers.Command.args=publicmapping.redistricting.management.commands.numusers.Command-class.html#args,Variable publicmapping.redistricting.management.commands.reaggregate.Command.args=publicmapping.redistricting.management.commands.reaggregate.Command-class.html#args,Variable publicmapping.redistricting.management.commands.removescoreconfig.Command.args=publicmapping.redistricting.management.commands.removescoreconfig.Command-class.html#args,Variable publicmapping.redistricting.management.commands.setup.Command.args=publicmapping.redistricting.management.commands.setup.Command-class.html#args"><a title="publicmapping.redistricting.management.commands.database_i18n.Command.args
+publicmapping.redistricting.management.commands.exportplans.Command.args
+publicmapping.redistricting.management.commands.makelanguagefiles.Command.args
+publicmapping.redistricting.management.commands.numusers.Command.args
+publicmapping.redistricting.management.commands.reaggregate.Command.args
+publicmapping.redistricting.management.commands.removescoreconfig.Command.args
+publicmapping.redistricting.management.commands.setup.Command.args" class="py-name" href="#" onclick="return doclink('link-3', 'args', 'link-3');">args</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">    <tt id="link-4" class="py-name" targets="Variable publicmapping.redistricting.management.commands.database_i18n.Command.help=publicmapping.redistricting.management.commands.database_i18n.Command-class.html#help,Variable publicmapping.redistricting.management.commands.exportplans.Command.help=publicmapping.redistricting.management.commands.exportplans.Command-class.html#help,Variable publicmapping.redistricting.management.commands.makelanguagefiles.Command.help=publicmapping.redistricting.management.commands.makelanguagefiles.Command-class.html#help,Variable publicmapping.redistricting.management.commands.numusers.Command.help=publicmapping.redistricting.management.commands.numusers.Command-class.html#help,Variable publicmapping.redistricting.management.commands.reaggregate.Command.help=publicmapping.redistricting.management.commands.reaggregate.Command-class.html#help,Variable publicmapping.redistricting.management.commands.removescoreconfig.Command.help=publicmapping.redistricting.management.commands.removescoreconfig.Command-class.html#help,Variable publicmapping.redistricting.management.commands.setup.Command.help=publicmapping.redistricting.management.commands.setup.Command-class.html#help"><a title="publicmapping.redistricting.management.commands.database_i18n.Command.help
+publicmapping.redistricting.management.commands.exportplans.Command.help
+publicmapping.redistricting.management.commands.makelanguagefiles.Command.help
+publicmapping.redistricting.management.commands.numusers.Command.help
+publicmapping.redistricting.management.commands.reaggregate.Command.help
+publicmapping.redistricting.management.commands.removescoreconfig.Command.help
+publicmapping.redistricting.management.commands.setup.Command.help" class="py-name" href="#" onclick="return doclink('link-4', 'help', 'link-4');">help</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'Reaggregate data for a give district or plan'</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">    <tt id="link-5" class="py-name" targets="Variable publicmapping.redistricting.management.commands.database_i18n.Command.option_list=publicmapping.redistricting.management.commands.database_i18n.Command-class.html#option_list,Variable publicmapping.redistricting.management.commands.exportplans.Command.option_list=publicmapping.redistricting.management.commands.exportplans.Command-class.html#option_list,Variable publicmapping.redistricting.management.commands.makelanguagefiles.Command.option_list=publicmapping.redistricting.management.commands.makelanguagefiles.Command-class.html#option_list,Variable publicmapping.redistricting.management.commands.numusers.Command.option_list=publicmapping.redistricting.management.commands.numusers.Command-class.html#option_list,Variable publicmapping.redistricting.management.commands.reaggregate.Command.option_list=publicmapping.redistricting.management.commands.reaggregate.Command-class.html#option_list,Variable publicmapping.redistricting.management.commands.setup.Command.option_list=publicmapping.redistricting.management.commands.setup.Command-class.html#option_list"><a title="publicmapping.redistricting.management.commands.database_i18n.Command.option_list
+publicmapping.redistricting.management.commands.exportplans.Command.option_list
+publicmapping.redistricting.management.commands.makelanguagefiles.Command.option_list
+publicmapping.redistricting.management.commands.numusers.Command.option_list
+publicmapping.redistricting.management.commands.reaggregate.Command.option_list
+publicmapping.redistricting.management.commands.setup.Command.option_list" class="py-name" href="#" onclick="return doclink('link-5', 'option_list', 'link-5');">option_list</a></tt> <tt class="py-op">=</tt> <tt class="py-name">BaseCommand</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="publicmapping.redistricting.management.commands.database_i18n.Command.option_list
+publicmapping.redistricting.management.commands.exportplans.Command.option_list
+publicmapping.redistricting.management.commands.makelanguagefiles.Command.option_list
+publicmapping.redistricting.management.commands.numusers.Command.option_list
+publicmapping.redistricting.management.commands.reaggregate.Command.option_list
+publicmapping.redistricting.management.commands.setup.Command.option_list" class="py-name" href="#" onclick="return doclink('link-6', 'option_list', 'link-5');">option_list</a></tt> <tt class="py-op">+</tt> <tt class="py-op">(</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">make_option</tt><tt class="py-op">(</tt><tt class="py-string">'-d'</tt><tt class="py-op">,</tt> <tt class="py-string">'--district'</tt><tt class="py-op">,</tt> <tt class="py-name">dest</tt><tt class="py-op">=</tt><tt class="py-string">'district_id'</tt><tt class="py-op">,</tt> <tt class="py-name">default</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">action</tt><tt class="py-op">=</tt><tt class="py-string">'store'</tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name"><a title="publicmapping.redistricting.management.commands.database_i18n.Command.help
+publicmapping.redistricting.management.commands.exportplans.Command.help
+publicmapping.redistricting.management.commands.makelanguagefiles.Command.help
+publicmapping.redistricting.management.commands.numusers.Command.help
+publicmapping.redistricting.management.commands.reaggregate.Command.help
+publicmapping.redistricting.management.commands.removescoreconfig.Command.help
+publicmapping.redistricting.management.commands.setup.Command.help" class="py-name" href="#" onclick="return doclink('link-7', 'help', 'link-4');">help</a></tt><tt class="py-op">=</tt><tt class="py-string">'Choose a single district to update'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-name">make_option</tt><tt class="py-op">(</tt><tt class="py-string">'-p'</tt><tt class="py-op">,</tt> <tt class="py-string">'--plan'</tt><tt class="py-op">,</tt> <tt class="py-name">dest</tt><tt class="py-op">=</tt><tt class="py-string">'plan_id'</tt><tt class="py-op">,</tt> <tt class="py-name">default</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">action</tt><tt class="py-op">=</tt><tt class="py-string">'store'</tt><tt class="py-op">,</tt> <tt id="link-8" class="py-name"><a title="publicmapping.redistricting.management.commands.database_i18n.Command.help
+publicmapping.redistricting.management.commands.exportplans.Command.help
+publicmapping.redistricting.management.commands.makelanguagefiles.Command.help
+publicmapping.redistricting.management.commands.numusers.Command.help
+publicmapping.redistricting.management.commands.reaggregate.Command.help
+publicmapping.redistricting.management.commands.removescoreconfig.Command.help
+publicmapping.redistricting.management.commands.setup.Command.help" class="py-name" href="#" onclick="return doclink('link-8', 'help', 'link-4');">help</a></tt><tt class="py-op">=</tt><tt class="py-string">'Choose a single plan to update'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">make_option</tt><tt class="py-op">(</tt><tt class="py-string">'-t'</tt><tt class="py-op">,</tt> <tt class="py-string">'--thread'</tt><tt class="py-op">,</tt> <tt class="py-name">dest</tt><tt class="py-op">=</tt><tt class="py-string">'thread'</tt><tt class="py-op">,</tt> <tt class="py-name">default</tt><tt class="py-op">=</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name" targets="Variable publicmapping.redistricting.models.ScoreArgument.type=publicmapping.redistricting.models.ScoreArgument-class.html#type,Variable publicmapping.redistricting.models.ScorePanel.type=publicmapping.redistricting.models.ScorePanel-class.html#type"><a title="publicmapping.redistricting.models.ScoreArgument.type
+publicmapping.redistricting.models.ScorePanel.type" class="py-name" href="#" onclick="return doclink('link-9', 'type', 'link-9');">type</a></tt><tt class="py-op">=</tt><tt class="py-string">'int'</tt><tt class="py-op">,</tt> <tt class="py-name">action</tt><tt class="py-op">=</tt><tt class="py-string">'store'</tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name"><a title="publicmapping.redistricting.management.commands.database_i18n.Command.help
+publicmapping.redistricting.management.commands.exportplans.Command.help
+publicmapping.redistricting.management.commands.makelanguagefiles.Command.help
+publicmapping.redistricting.management.commands.numusers.Command.help
+publicmapping.redistricting.management.commands.reaggregate.Command.help
+publicmapping.redistricting.management.commands.removescoreconfig.Command.help
+publicmapping.redistricting.management.commands.setup.Command.help" class="py-name" href="#" onclick="return doclink('link-10', 'help', 'link-4');">help</a></tt><tt class="py-op">=</tt><tt class="py-string">'Which thread to use? 1-4'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="Command.handle"></a><div id="Command.handle-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="Command.handle-toggle" onclick="return toggle('Command.handle');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="publicmapping.redistricting.management.commands.reaggregate.Command-class.html#handle">handle</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">*</tt><tt class="py-param">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">options</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Command.handle-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Command.handle-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">        Reaggregate the district stats</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-keyword">global</tt> <tt class="py-name">verbosity</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">global</tt> <tt id="link-11" class="py-name" targets="Variable publicmapping.redistricting.models.Geounit.geolevel=publicmapping.redistricting.models.Geounit-class.html#geolevel,Variable publicmapping.redistricting.models.LegislativeLevel.geolevel=publicmapping.redistricting.models.LegislativeLevel-class.html#geolevel"><a title="publicmapping.redistricting.models.Geounit.geolevel
+publicmapping.redistricting.models.LegislativeLevel.geolevel" class="py-name" href="#" onclick="return doclink('link-11', 'geolevel', 'link-11');">geolevel</a></tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-keyword">global</tt> <tt class="py-name">geounit_ids</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">verbosity</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'verbosity'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">plan_id</tt> <tt class="py-op">=</tt> <tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'plan_id'</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt id="link-12" class="py-name" targets="Variable publicmapping.redistricting.models.District.district_id=publicmapping.redistricting.models.District-class.html#district_id"><a title="publicmapping.redistricting.models.District.district_id" class="py-name" href="#" onclick="return doclink('link-12', 'district_id', 'link-12');">district_id</a></tt> <tt class="py-op">=</tt> <tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'district_id'</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">verbosity</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">'Reaggregating data - start at %s\n'</tt> <tt class="py-op">%</tt> <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">now</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-comment"># Grab all of the plans from the database</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-op">(</tt><tt class="py-name">plan_id</tt> <tt class="py-op">!=</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">            <tt class="py-name">plans</tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name" targets="Class publicmapping.redistricting.models.Plan=publicmapping.redistricting.models.Plan-class.html"><a title="publicmapping.redistricting.models.Plan" class="py-name" href="#" onclick="return doclink('link-13', 'Plan', 'link-13');">Plan</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Variable publicmapping.redistricting.models.ContiguityOverride.objects=publicmapping.redistricting.models.ContiguityOverride-class.html#objects,Variable publicmapping.redistricting.models.District.objects=publicmapping.redistricting.models.District-class.html#objects,Variable publicmapping.redistricting.models.Geounit.objects=publicmapping.redistricting.models.Geounit-class.html#objects"><a title="publicmapping.redistricting.models.ContiguityOverride.objects
+publicmapping.redistricting.models.District.objects
+publicmapping.redistricting.models.Geounit.objects" class="py-name" href="#" onclick="return doclink('link-14', 'objects', 'link-14');">objects</a></tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-name">pk</tt><tt class="py-op">=</tt><tt class="py-name">plan_id</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">plans</tt><tt class="py-op">.</tt><tt class="py-name">count</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt> <tt class="py-keyword">and</tt> <tt class="py-name">verbosity</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">'Sorry, no plan with ID %s\n'</tt> <tt class="py-op">%</tt> <tt class="py-name">plan_id</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-op">(</tt><tt id="link-15" class="py-name"><a title="publicmapping.redistricting.models.District.district_id" class="py-name" href="#" onclick="return doclink('link-15', 'district_id', 'link-12');">district_id</a></tt> <tt class="py-op">!=</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">            <tt class="py-name">districts</tt> <tt class="py-op">=</tt> <tt id="link-16" class="py-name" targets="Class publicmapping.redistricting.models.District=publicmapping.redistricting.models.District-class.html"><a title="publicmapping.redistricting.models.District" class="py-name" href="#" onclick="return doclink('link-16', 'District', 'link-16');">District</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="publicmapping.redistricting.models.ContiguityOverride.objects
+publicmapping.redistricting.models.District.objects
+publicmapping.redistricting.models.Geounit.objects" class="py-name" href="#" onclick="return doclink('link-17', 'objects', 'link-14');">objects</a></tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-name">pk</tt><tt class="py-op">=</tt><tt id="link-18" class="py-name"><a title="publicmapping.redistricting.models.District.district_id" class="py-name" href="#" onclick="return doclink('link-18', 'district_id', 'link-12');">district_id</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">districts</tt><tt class="py-op">.</tt><tt class="py-name">count</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt> <tt class="py-keyword">and</tt> <tt class="py-name">verbosity</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">'Sorry, no district with ID %s\n'</tt> <tt class="py-op">%</tt> <tt id="link-19" class="py-name"><a title="publicmapping.redistricting.models.District.district_id" class="py-name" href="#" onclick="return doclink('link-19', 'district_id', 'link-12');">district_id</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">            <tt class="py-name">plans</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">districts</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Variable publicmapping.redistricting.models.ComputedPlanScore.plan=publicmapping.redistricting.models.ComputedPlanScore-class.html#plan,Variable publicmapping.redistricting.models.District.plan=publicmapping.redistricting.models.District-class.html#plan"><a title="publicmapping.redistricting.models.ComputedPlanScore.plan
+publicmapping.redistricting.models.District.plan" class="py-name" href="#" onclick="return doclink('link-20', 'plan', 'link-20');">plan</a></tt><tt class="py-op">,</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">            <tt class="py-name">plans</tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="publicmapping.redistricting.models.Plan" class="py-name" href="#" onclick="return doclink('link-21', 'Plan', 'link-13');">Plan</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="publicmapping.redistricting.models.ContiguityOverride.objects
+publicmapping.redistricting.models.District.objects
+publicmapping.redistricting.models.Geounit.objects" class="py-name" href="#" onclick="return doclink('link-22', 'objects', 'link-14');">objects</a></tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">            <tt class="py-name">plancount</tt> <tt class="py-op">=</tt> <tt class="py-name">plans</tt><tt class="py-op">.</tt><tt class="py-name">count</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">            <tt class="py-name">begin</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'thread'</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-name">plancount</tt><tt class="py-op">/</tt><tt class="py-number">4</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">            <tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">'thread'</tt><tt class="py-op">)</tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-name">plancount</tt><tt class="py-op">/</tt><tt class="py-number">4</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">            <tt class="py-name">plans</tt> <tt class="py-op">=</tt> <tt class="py-name">plans</tt><tt class="py-op">[</tt><tt class="py-name">begin</tt><tt class="py-op">:</tt><tt class="py-name">end</tt><tt class="py-op">]</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt class="py-comment"># Counts of the updated geounits</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">updated_plans</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt><tt class="py-op">;</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-name">updated_districts</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt><tt class="py-op">;</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">p</tt> <tt class="py-keyword">in</tt> <tt class="py-name">plans</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt id="link-23" class="py-name"><a title="publicmapping.redistricting.models.District.district_id" class="py-name" href="#" onclick="return doclink('link-23', 'district_id', 'link-12');">district_id</a></tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                <tt class="py-name">all_districts</tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt class="py-name">district_set</tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                <tt class="py-name">all_districts</tt> <tt class="py-op">=</tt> <tt id="link-24" class="py-name"><a title="publicmapping.redistricting.models.District" class="py-name" href="#" onclick="return doclink('link-24', 'District', 'link-16');">District</a></tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="publicmapping.redistricting.models.ContiguityOverride.objects
+publicmapping.redistricting.models.District.objects
+publicmapping.redistricting.models.Geounit.objects" class="py-name" href="#" onclick="return doclink('link-25', 'objects', 'link-14');">objects</a></tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-name">pk</tt><tt class="py-op">=</tt><tt id="link-26" class="py-name"><a title="publicmapping.redistricting.models.District.district_id" class="py-name" href="#" onclick="return doclink('link-26', 'district_id', 'link-12');">district_id</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">verbosity</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">'Plan ID: %d; %d districts in %s\n'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">p</tt><tt class="py-op">.</tt><tt class="py-name">id</tt><tt class="py-op">,</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">all_districts</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Variable publicmapping.redistricting.models.Geolevel.name=publicmapping.redistricting.models.Geolevel-class.html#name,Variable publicmapping.redistricting.models.Geounit.name=publicmapping.redistricting.models.Geounit-class.html#name,Variable publicmapping.redistricting.models.LegislativeBody.name=publicmapping.redistricting.models.LegislativeBody-class.html#name,Variable publicmapping.redistricting.models.Plan.name=publicmapping.redistricting.models.Plan-class.html#name,Variable publicmapping.redistricting.models.Region.name=publicmapping.redistricting.models.Region-class.html#name,Variable publicmapping.redistricting.models.ScoreDisplay.name=publicmapping.redistricting.models.ScoreDisplay-class.html#name,Variable publicmapping.redistricting.models.ScoreFunction.name=publicmapping.redistricting.models.ScoreFunction-class.html#name,Variable publicmapping.redistricting.models.ScorePanel.name=publicmapping.redistricting.models.ScorePanel-class.html#name,Variable publicmapping.redistricting.models.Subject.name=publicmapping.redistricting.models.Subject-class.html#name,Variable publicmapping.redistricting.models.ValidationCriteria.name=publicmapping.redistricting.models.ValidationCriteria-class.html#name"><a title="publicmapping.redistricting.models.Geolevel.name
+publicmapping.redistricting.models.Geounit.name
+publicmapping.redistricting.models.LegislativeBody.name
+publicmapping.redistricting.models.Plan.name
+publicmapping.redistricting.models.Region.name
+publicmapping.redistricting.models.ScoreDisplay.name
+publicmapping.redistricting.models.ScoreFunction.name
+publicmapping.redistricting.models.ScorePanel.name
+publicmapping.redistricting.models.Subject.name
+publicmapping.redistricting.models.ValidationCriteria.name" class="py-name" href="#" onclick="return doclink('link-27', 'name', 'link-27');">name</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt id="link-28" class="py-name"><a title="publicmapping.redistricting.models.District.district_id" class="py-name" href="#" onclick="return doclink('link-28', 'district_id', 'link-12');">district_id</a></tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">                <tt id="link-29" class="py-name" targets="Variable publicmapping.redistricting.calculators.CalculatorBase.result=publicmapping.redistricting.calculators.CalculatorBase-class.html#result"><a title="publicmapping.redistricting.calculators.CalculatorBase.result" class="py-name" href="#" onclick="return doclink('link-29', 'result', 'link-29');">result</a></tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Module publicmapping.redistricting.management.commands.reaggregate=publicmapping.redistricting.management.commands.reaggregate-module.html,Method publicmapping.redistricting.models.District.reaggregate()=publicmapping.redistricting.models.District-class.html#reaggregate,Method publicmapping.redistricting.models.Plan.reaggregate()=publicmapping.redistricting.models.Plan-class.html#reaggregate"><a title="publicmapping.redistricting.management.commands.reaggregate
+publicmapping.redistricting.models.District.reaggregate
+publicmapping.redistricting.models.Plan.reaggregate" class="py-name" href="#" onclick="return doclink('link-30', 'reaggregate', 'link-30');">reaggregate</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                <tt class="py-name">updated_districts</tt> <tt class="py-op">+=</tt> <tt id="link-31" class="py-name"><a title="publicmapping.redistricting.calculators.CalculatorBase.result" class="py-name" href="#" onclick="return doclink('link-31', 'result', 'link-29');">result</a></tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                <tt class="py-name">updated_plans</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt>  </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">verbosity</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">'Fixed %d districts in plan: "%s"\n'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-32" class="py-name"><a title="publicmapping.redistricting.calculators.CalculatorBase.result" class="py-name" href="#" onclick="return doclink('link-32', 'result', 'link-29');">result</a></tt><tt class="py-op">,</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="publicmapping.redistricting.models.Geolevel.name
+publicmapping.redistricting.models.Geounit.name
+publicmapping.redistricting.models.LegislativeBody.name
+publicmapping.redistricting.models.Plan.name
+publicmapping.redistricting.models.Region.name
+publicmapping.redistricting.models.ScoreDisplay.name
+publicmapping.redistricting.models.ScoreFunction.name
+publicmapping.redistricting.models.ScorePanel.name
+publicmapping.redistricting.models.Subject.name
+publicmapping.redistricting.models.ValidationCriteria.name" class="py-name" href="#" onclick="return doclink('link-33', 'name', 'link-27');">name</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-name">all_districts</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="publicmapping.redistricting.management.commands.reaggregate
+publicmapping.redistricting.models.District.reaggregate
+publicmapping.redistricting.models.Plan.reaggregate" class="py-name" href="#" onclick="return doclink('link-34', 'reaggregate', 'link-30');">reaggregate</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                <tt class="py-name">updated_districts</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                <tt class="py-name">updated_plans</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt>  </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">verbosity</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">'Fixed 1 district in plan: "%s"\n'</tt> <tt class="py-op">%</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="publicmapping.redistricting.models.Geolevel.name
+publicmapping.redistricting.models.Geounit.name
+publicmapping.redistricting.models.LegislativeBody.name
+publicmapping.redistricting.models.Plan.name
+publicmapping.redistricting.models.Region.name
+publicmapping.redistricting.models.ScoreDisplay.name
+publicmapping.redistricting.models.ScoreFunction.name
+publicmapping.redistricting.models.ScorePanel.name
+publicmapping.redistricting.models.Subject.name
+publicmapping.redistricting.models.ValidationCriteria.name" class="py-name" href="#" onclick="return doclink('link-35', 'name', 'link-27');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">verbosity</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">'Fixed %d districts in %d plans - '</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">updated_districts</tt><tt class="py-op">,</tt> <tt class="py-name">updated_plans</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">'finished at %s\n'</tt> <tt class="py-op">%</tt> <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">now</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="publicmapping-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="http://publicmapping.github.com/districtbuilder/">Publicmapping on GitHub</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Oct  1 16:33:53 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

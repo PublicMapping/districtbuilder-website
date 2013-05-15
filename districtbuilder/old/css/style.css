@@ -1,0 +1,223 @@
+/*  ----------------------
+	PAGE STYLING
+	---------------------- */
+	
+body {
+	border-top: 8px #3D3F81 solid;
+	color: #444;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 21px;
+}
+
+.wrapper {
+	width: 970px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header {
+	padding: 20px 0;
+	border-bottom: 1px #CCC solid;
+}
+
+.content_area {
+	padding: 20px 20px;
+	
+}
+.content_area .columns {
+	width: 70%;
+	float: left;
+}
+.content_area .columns .column {
+	width: 47%;
+	float: left;
+}
+.content_area .column a.webinar_thumb {
+	position: relative;
+	clear: both;
+}
+.content_area .column a.webinar_thumb:hover span {
+	background-position: 0 -85px;
+}
+.content_area .column a.webinar_thumb img {
+	border: 2px #FFF solid;
+	-moz-box-shadow: 0 0 5px #AAA;
+	-webkit-box-shadow: 0 0 5px #AAA;
+	box-shadow: 0 0 5px #AAA;
+	position: relative;
+}
+.content_area .column a.webinar_thumb span {
+	text-indent: -9999px;
+	width: 86px;
+	height: 86px;
+	position: absolute;
+	top: -150px;
+	left: 130px;
+	display: block;
+	background: url(../images/overlay_play_btn.png) no-repeat;
+}
+
+.content_area .sidebar {
+	width: 25%;
+	margin-left: 5%;
+	float: left
+}
+.content_area .sidebar .services {
+	background: #FFF;
+	border-left: 3px #3D3F81 solid;
+	margin: 10px 0 0;
+	padding: 20px 20px;
+	width: 184px;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+
+}
+
+.footer {
+	clear: both;
+	background: #BCBEC0;
+	line-height: 16px;
+	height: 250px;
+	margin: 10px 0 0;
+	padding: 20px 20px 25px;
+	position: relative;
+	color: #FFF;
+}
+.footer .column {
+	width: 20%;
+	margin-right: 5%;
+	padding-left: 15px;
+	float: left;
+	border-left: 1px #DDD solid;
+}
+.footer .column:first-child {
+	padding-left: 5px;
+	border: none;
+}
+.footer .column:nth-child(3) {
+	width: 45%;
+	margin-right: 0px;
+}
+.footer .column h4 {
+	color: #FFF;
+}
+.footer .column a {
+	color: #3D3F81;
+}
+.footer .column img {
+	margin: 0 5px 5px 0;
+}
+
+/*  ----------------------
+	TEXT STYLING
+	---------------------- */
+	
+h2 {
+	color: #000;
+	font-family: "Trebuchet MS", "Helvetica Neue", sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	margin: 10px 0 30px;
+}
+h3 {
+	font-family: "Trebuchet MS", "Helvetica Neue", sans-serif;
+	font-size: 16px;
+	margin: 15px 0 20px;
+	color: #3D3F81;
+}
+h3:first-child {
+	margin: 0 0 20px;
+}
+h4 {
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0 0 10px;
+	color: #AAA;
+	text-transform: uppercase;
+}
+a {
+	color: #F68C21;
+	text-decoration: none;
+}
+li {
+	list-style: disc;
+	margin-left: 25px;
+}
+ul.requirements li:nth-child(even) {
+	margin: -22px 0 0 50%;
+}
+
+/*  ----------------------
+	CASE STUDY STYLING
+	---------------------- */
+
+.case_studies {
+	float: left;
+	margin: 20px 0 20px -20px;
+	padding: 20px 0 0 20px;
+	border-top: 1px #CCC solid;
+}
+a.case_study {
+	width: 198px;
+	height: 198px;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 15px;
+	float: left;
+	position: relative;
+	border: 1px #AAA solid;
+}
+a.case_study[target="_blank"]:hover span {
+	background: #51579E;
+	background: rgba(61,63,129,.85);
+}
+a.case_study span {
+	width: 198px;
+	height: 50px;
+	background: #3D3F81;
+	background: rgba(61,63,129,.65);
+	position: absolute;
+	bottom: 0px;
+	z-index: 99;
+	color: #FFF;
+}
+a.case_study span h5 {
+	font-family: "Trebuchet MS", "Helvetica Neue", sans-serif;
+	font-size: 18px;
+	padding: 15px;
+	float: left;
+}
+a.case_study span p {
+	line-height: 16px;
+	padding: 8px 0 0;
+}
+
+/*  ----------------------
+	MISCELLANEOUS STYLING
+	---------------------- */
+	
+.border-top {
+	margin: 10px -20px;
+	padding: 10px 0 0 20px;
+	border-top: 1px #CCC dotted;
+}
+.margin-right {
+	margin-right: 6%;
+}
+.margin-right-15 {
+	margin-right: 15px;
+}
+.modal {
+	display: none;
+	width: 640px;
+	height: 480px;
+	background: #FFF;
+	padding: 10px;
+	border: 1px #000 solid;
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+}

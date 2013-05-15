@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>publicmapping.redistricting.models.District</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="publicmapping-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="http://publicmapping.github.com/districtbuilder/">Publicmapping on GitHub</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="publicmapping-module.html">Package&nbsp;publicmapping</a> ::
+        <a href="publicmapping.redistricting-module.html">Package&nbsp;redistricting</a> ::
+        <a href="publicmapping.redistricting.models-module.html">Module&nbsp;models</a> ::
+        Class&nbsp;District
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="publicmapping.redistricting.models.District-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class District</h1><p class="nomargin-top"><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_publicma_57" name="uml_class_diagram_for_publicma_57">
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District.Meta-class.html" title="A helper class that describes the District class." alt="" coords="17,31,433,49"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#district_id" title="publicmapping.redistricting.models.District.district_id" alt="" coords="17,49,433,68"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#short_label" title="publicmapping.redistricting.models.District.short_label" alt="" coords="17,68,433,87"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#long_label" title="publicmapping.redistricting.models.District.long_label" alt="" coords="17,87,433,105"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#plan" title="publicmapping.redistricting.models.District.plan" alt="" coords="17,105,433,124"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#geom" title="publicmapping.redistricting.models.District.geom" alt="" coords="17,124,433,143"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#simple" title="publicmapping.redistricting.models.District.simple" alt="" coords="17,143,433,161"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#version" title="publicmapping.redistricting.models.District.version" alt="" coords="17,161,433,180"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#is_locked" title="publicmapping.redistricting.models.District.is_locked" alt="" coords="17,180,433,199"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#num_members" title="publicmapping.redistricting.models.District.num_members" alt="" coords="17,199,433,217"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#objects" title="publicmapping.redistricting.models.District.objects" alt="" coords="17,217,433,236"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#sortKey" title="Sort districts by name, with numbered districts first." alt="" coords="17,239,433,257"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#sortVer" title="Sort a list of districts first by district_id, then by &#160;version number." alt="" coords="17,257,433,276"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#is_latest_version" title="Determine if this district is the latest version of the district stored." alt="" coords="17,276,433,295"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#is_unassigned" title="Convenience property for readability (or a change in the district_id of &#160;Unassigned)" alt="" coords="17,295,433,313"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#__unicode__" title="Represent the District as a unicode string." alt="" coords="17,313,433,332"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#delta_stats" title="Update the stats for this district incrementally." alt="" coords="17,332,433,351"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#reset_stats" title="Reset the statistics to zero for this district." alt="" coords="17,351,433,369"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#clone_relations_from" title="Copy the computed characteristics, comments, and tags from one &#160;district to another." alt="" coords="17,369,433,388"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#get_base_geounits" title="Get a list of the geounit ids of the geounits that comprise &#160;this district at the base level." alt="" coords="17,388,433,407"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#get_contiguity_overrides" title="Retrieve any contiguity overrides that are applicable to this district." alt="" coords="17,407,433,425"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#simplify" title="Simplify the geometry into a geometry collection in the simple &#160;field." alt="" coords="17,425,433,444"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#count_community_type_union" title="Count the number of distinct types of communities in the provided community map." alt="" coords="17,444,433,463"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#get_community_type_union" title="Get the union of all the types of communities in this district." alt="" coords="17,463,433,481"/>
+<area shape="rect" id="node88" href="publicmapping.redistricting.models.District-class.html#reaggregate" title="Reaggregate all computed characteristics for this district." alt="" coords="17,481,433,500"/>
+<area shape="rect" id="node1" href="publicmapping.redistricting.models.District-class.html" title="A collection of Geounits, aggregated together." alt="" coords="5,6,445,506"/>
+</map>
+  <img src="uml_class_diagram_for_publicma_57.gif" alt='' usemap="#uml_class_diagram_for_publicma_57" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>A collection of Geounits, aggregated together.</p>
+  <p>A District is a part of a Plan, and is composed of many Geounits. 
+  Districts have geometry, simplified geometry, and pre-computed data 
+  values for Characteristics.</p>
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="publicmapping.redistricting.models.District.Meta-class.html" class="summary-name">Meta</a><br />
+      A helper class that describes the District class.
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#sortKey" class="summary-sig-name">sortKey</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Sort districts by name, with numbered districts first.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.sortKey">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#sortVer" class="summary-sig-name">sortVer</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Sort a list of districts first by district_id, then by 
+version number.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.sortVer">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#is_latest_version" class="summary-sig-name">is_latest_version</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Determine if this district is the latest version of the district 
+      stored.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.is_latest_version">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#is_unassigned" class="summary-sig-name">is_unassigned</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Convenience property for readability (or a change in the district_id 
+      of Unassigned)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.is_unassigned">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#__unicode__" class="summary-sig-name">__unicode__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Represent the District as a unicode string.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.__unicode__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#delta_stats" class="summary-sig-name">delta_stats</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">geounits</span>,
+        <span class="summary-sig-arg">combine</span>)</span><br />
+      Update the stats for this district incrementally.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.delta_stats">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#reset_stats" class="summary-sig-name">reset_stats</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Reset the statistics to zero for this district.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.reset_stats">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#clone_relations_from" class="summary-sig-name">clone_relations_from</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">origin</span>)</span><br />
+      Copy the computed characteristics, comments, and tags from one 
+district to another.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.clone_relations_from">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#get_base_geounits" class="summary-sig-name">get_base_geounits</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">threshold</span>=<span class="summary-sig-default">100</span>)</span><br />
+      Get a list of the geounit ids of the geounits that comprise 
+this district at the base level.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.get_base_geounits">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#get_contiguity_overrides" class="summary-sig-name">get_contiguity_overrides</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Retrieve any contiguity overrides that are applicable to this 
+      district.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.get_contiguity_overrides">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#simplify" class="summary-sig-name">simplify</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">attempts_allowed</span>=<span class="summary-sig-default">5</span>,
+        <span class="summary-sig-arg">attempt_step</span>=<span class="summary-sig-default">.80</span>)</span><br />
+      Simplify the geometry into a geometry collection in the simple 
+field.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.simplify">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#count_community_type_union" class="summary-sig-name">count_community_type_union</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">community_map_id</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Count the number of distinct types of communities in the provided 
+      community map.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.count_community_type_union">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#get_community_type_union" class="summary-sig-name">get_community_type_union</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">community_map_id</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Get the union of all the types of communities in this district.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.get_community_type_union">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="publicmapping.redistricting.models.District-class.html#reaggregate" class="summary-sig-name">reaggregate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">geounit_ids</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Reaggregate all computed characteristics for this district.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.reaggregate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="district_id"></a><span class="summary-name">district_id</span> = <code title="models.PositiveIntegerField(default= None)">models.PositiveIntegerField(default= None)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="short_label"></a><span class="summary-name">short_label</span> = <code title="models.CharField(max_length= 10)">models.CharField(max_length= 10)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="long_label"></a><span class="summary-name">long_label</span> = <code title="models.CharField(max_length= 256)">models.CharField(max_length= 256)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="plan"></a><span class="summary-name">plan</span> = <code title="models.ForeignKey(Plan)">models.ForeignKey(Plan)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="publicmapping.redistricting.models.District-class.html#geom" class="summary-name">geom</a> = <code title="models.MultiPolygonField(srid= 3785, default= MultiPolygon([]))">models.MultiPolygonField(srid= 3785, default= MultiPoly<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="publicmapping.redistricting.models.District-class.html#simple" class="summary-name">simple</a> = <code title="models.GeometryCollectionField(srid= 3785, default= GeometryCollection\
+([]))">models.GeometryCollectionField(srid= 3785, default= G<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="version"></a><span class="summary-name">version</span> = <code title="models.PositiveIntegerField(default= 0)">models.PositiveIntegerField(default= 0)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="is_locked"></a><span class="summary-name">is_locked</span> = <code title="models.BooleanField(default= False)">models.BooleanField(default= False)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="num_members"></a><span class="summary-name">num_members</span> = <code title="models.PositiveIntegerField(default= 1)">models.PositiveIntegerField(default= 1)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="objects"></a><span class="summary-name">objects</span> = <code title="models.GeoManager()">models.GeoManager()</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="sortKey"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sortKey</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.sortKey">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Sort districts by name, with numbered districts first.
+
+Returns:
+    The Districts, sorted in numerical order.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="sortVer"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sortVer</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.sortVer">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Sort a list of districts first by district_id, then by 
+version number.
+
+Returns:
+    district_id * 1000 + self.version
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="is_latest_version"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_latest_version</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.is_latest_version">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Determine if this district is the latest version of the district 
+  stored. If a district is not assigned to a plan, it is always considered 
+  the latest version.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="is_unassigned"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_unassigned</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.is_unassigned">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Convenience property for readability (or a change in the district_id 
+  of Unassigned)</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__unicode__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__unicode__</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.__unicode__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Represent the District as a unicode string. This is the District's 
+  name.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="delta_stats"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">delta_stats</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">geounits</span>,
+        <span class="sig-arg">combine</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.delta_stats">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Update the stats for this district incrementally. This method
+iterates over all the computed characteristics and adds or removes
+the characteristic values for the specific geounits only.
+
+Parameters:
+    geounits -- The Geounits to add or remove to this districts
+        ComputedCharacteristic value.
+    combine -- The aggregate value computed should be added or
+        removed from the ComputedCharacteristicValue
+
+Returns:
+    True if the stats for this district have changed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="reset_stats"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">reset_stats</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.reset_stats">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Reset the statistics to zero for this district. This method walks
+through all available subjects, and sets the computed 
+characteristic for this district to zero.
+
+Returns:
+    True if the district stats were changed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="clone_relations_from"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">clone_relations_from</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">origin</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.clone_relations_from">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Copy the computed characteristics, comments, and tags from one 
+district to another.
+
+Cloning District Characteristics, Comments and Tags are required when 
+cloning, copying, or instantiating a template district.
+
+Parameters:
+    origin -- The source District.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_base_geounits"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_base_geounits</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">threshold</span>=<span class="sig-default">100</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.get_base_geounits">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Get a list of the geounit ids of the geounits that comprise 
+this district at the base level.  
+
+We'll check this by seeing whether the centroid of each geounits 
+fits within the simplified geometry of this district.
+
+Parameters:
+    threshold - distance threshold used for buffer in/out optimization
+
+Returns:
+    A list of tuples containing Geounit IDs, portable ids, and num_members
+    that lie within this District. 
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_contiguity_overrides"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_contiguity_overrides</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.get_contiguity_overrides">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve any contiguity overrides that are applicable to this 
+  district. This is defined by any ContiguityOverride objects whose two 
+  referenced geounits both fall within the geometry of this district.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="simplify"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">simplify</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">attempts_allowed</span>=<span class="sig-default">5</span>,
+        <span class="sig-arg">attempt_step</span>=<span class="sig-default">.80</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.simplify">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Simplify the geometry into a geometry collection in the simple 
+field.
+
+Parameters:
+    self - The district
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="count_community_type_union"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">count_community_type_union</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">community_map_id</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.count_community_type_union">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Count the number of distinct types of communities in the provided 
+  community map. Only the community types of the communities that intersect
+  this district are counted.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>community_map_id</code></strong> - A <a href="publicmapping.redistricting.models.Plan-class.html" 
+          class="link">Plan</a> ID linked to the community-mapping <a 
+          href="publicmapping.redistricting.models.LegislativeBody-class.html"
+          class="link">LegislativeBody</a>.</li>
+        <li><strong class="pname"><code>version</code></strong> - The version of the community_map to examine. Defaults to the 
+          current plan version.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>An integer count of the number of distinct community types 
+          intersecting this district.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_community_type_union"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_community_type_union</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">community_map_id</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.get_community_type_union">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the union of all the types of communities in this district. Only 
+  the community types of the communities that intersect this district are 
+  counted.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>community_map_id</code></strong> - A <a href="publicmapping.redistricting.models.Plan-class.html" 
+          class="link">Plan</a> ID linked to the community-mapping <a 
+          href="publicmapping.redistricting.models.LegislativeBody-class.html"
+          class="link">LegislativeBody</a>.</li>
+        <li><strong class="pname"><code>version</code></strong> - The version of the community_map to examine. Defaults to the 
+          current plan version.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>The set of all community types in this district.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="reaggregate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">reaggregate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">geounit_ids</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="publicmapping.redistricting.models-pysrc.html#District.reaggregate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reaggregate all computed characteristics for this district.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>geounit_ids</code></strong> - Optional set of geounits to filter on. If this is not provided, 
+          it will be calculatated by using all geounits in the largest 
+          geolevel of the plan.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>True if reaggregation was successfull, False otherwise.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="geom"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">geom</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+models.MultiPolygonField(srid= 3785, default= MultiPolygon([]))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="simple"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">simple</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+models.GeometryCollectionField(srid= 3785, default= GeometryCollection<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+([]))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="publicmapping-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="http://publicmapping.github.com/districtbuilder/">Publicmapping on GitHub</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Oct  1 16:33:49 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
