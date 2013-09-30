@@ -60,37 +60,6 @@ $( document ).tooltip({
 			<div id="featured"> 
 				<img src="img/header-img.png" alt="Fix Philly Districts" />
 			</div>
-			<div id="contact-box">
-			<h2>Contact us about your DistrictBuilder project and our 10% non-profit and government discount.</h2>
-				<form id="form-5949" class="contactForm" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" novalidate="novalidate">
-					<input type="hidden" name="oid" value="00D30000000efK8">
-					<input type="hidden" name="retURL" value="http://www.azavea.com/ok/thank-you/">
-					<input id="Campaign_ID" name="Campaign_ID" type="hidden" value="">
-					<input type="hidden" id="member_status" name="member_status" value="">
-					<input type="hidden" id="00N30000004RyN1" name="00N30000004RyN1" value="1">
-					<input type="hidden" id="00N30000007wqex" name="00N30000007wqex" value="1">
-					<div class="cform1">
-						<span>
-							<label for="first_name">First Name*</label><input id="first_name" maxlength="40" name="first_name" size="20" value="" required="required" pattern=".*[^ ].*"/>
-						</span>
-						<span>
-							<label for="last_name">Last Name*</label><input id="last_name" maxlength="80" name="last_name" size="20" value="" required="required" pattern=".*[^ ].*"/>
-						</span>
-					</div>
-					<div class="form-other">
-					<label for="email" class="clearLeft">Email*</label><input id="email" maxlength="80" name="email" size="20" value="" type="email" required="required"/>
-					<label for="description">Message</label><textarea id="description" name="description" value=""></textarea>
-					<input id="lead_source" name="lead_source" type="hidden" value="Web"/>
-					<input id="00N30000009Hz7V" name="00N30000009Hz7V" type="hidden" value="1"/>
-					</div>
-					<div class="center">
-					<button type="submit" class="about-usBg siteButton"><span>Contact Us</span></button>
-					</div>
-					<input type="hidden" name="sfga" value=""/>
-				</form>
-			
-				<script type="text/javascript">$(function(){var formId='#form-5949';$(formId).validator({messageClass:'validation-error',errorClass:'field-error'}).bind("onSuccess",function(e,els){var form=this;var numSucceeded=els.length,numExpected=$(this).data('validator').getInputs().length;if(numSucceeded===numExpected){var formProduct='opentreemap';$('#00N30000009Hz7V').val('MwR6IuFGE6oTIdTFHYgGyYfrkiEUi6w9DN2');e.preventDefault();setTimeout(function(){form.submit();},500);}});});</script>						
-			</div>
 			<div class="leftCol main-content"> <!-- start: main-content -->
 	
 				<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
@@ -101,7 +70,8 @@ $( document ).tooltip({
 				<div id="my-tab-content" class="tab-content">
 				<div class="tab-pane active" id="red">
 					<h2>DistrictBuilder is web-based, open source software for collaborative redistricting.</h2>
-					<p>DistrictBuilder was developed in collaboration with leading redistricting experts at the Public Mapping Project. Whether you work for a state or local government agency, an advocacy group or you are a legislator, DistrictBuilder has been designed to provide you with affordable, easy-to-use, customizable redistricting tools that make the redistricting process more open and collaborative across agencies and with the public.</p>
+					<h3>Customizable open source software built by experts</h3>
+					<p>DistrictBuilder was developed in collaboration with leading redistricting experts at the Public Mapping Project.  Whether you work for a state or local government agency, an advocacy group or you are a legislator, DistrictBuilder has been designed to provide you with affordable, easy-to-use, customizable redistricting tools that make the redistricting process more open and collaborative across agencies and with the public.</p>
 					<h3>Main Features</h3>
 		              <ul>
 		                <li>Create and edit district plans</li>
@@ -118,7 +88,8 @@ $( document ).tooltip({
 		                <li>Save and share your plans via a URL link</li>
 		                <li>Support public competitions, scoring and leaderboards</li>
 		              </ul>
-
+		            <h2>Open source license means it's both affordable and part of a community</h2>
+					<p>Unlike proprietary solutions, DistrictBuilder is open source so you don't have to pay a license fee.  If your team has the expertise, you can download the source code and build your own redistricting application.  Or our dedicated DistrictBuilder implementation team can work hand-in-hand with you to create the perfect application for your needs.  And if we built a new feature for your application, it is immediately contributed back to the community of users.  The more you add, the more we give back.</p>
 					<h3>System Requirements</h3>
 					<p>The software is built using several open source technologies including:</p>
 		              <ul>
@@ -190,7 +161,7 @@ $( document ).tooltip({
 				<h2>Open Source</h2>
 				<p>Unlike proprietary solutions, DistrictBuilder is open source so you don't have to pay a license fee. If your team has the expertise, you can download the source code and build your own redistricting application. Or our dedicated DistrictBuilder implementation team can work hand-in-hand with you to create the perfect application for your needs. And if we built a new feature for your application, it is immediately contributed back to the community of users. The more you add, the more we give back.</p>
 				
-					<h2>Services</h2>
+				  <h2>Services</h2>
 	              <p>Open source code base can be daunting if you do not have the technical expertise on your team to build the application. Implementation usually requires:</p>
 	              <ul>
 	                <li>Database development</li>
@@ -229,33 +200,29 @@ $( document ).tooltip({
 				</script> 
 	
 			</div> <!-- end: main-content -->
+			<div class="clear"></div>
+		</div>
+		<div class="rightCol" id="sidebar">
 			
-			<div class="clear"> </div>
-			
+			<ul id="sidebar-nav">
+				<a href="https://github.com/PublicMapping/DistrictBuilder" target="_blank"><li>Get Started on Github <span>&rsaquo;</span></li></a>
+			</ul>
+		
+			<div id="subscribeBox">
+				<h2>Acknowledgements</h2>
+	            <strong>Principal Investigators:</strong><br>
+	              	Michael P. McDonald and Dr. Micah Altman, <br>as part of the <a href="http://publicmapping.org/" target="_blank">Public Mapping Project</a><br><br>
+	              	<strong>Software Development:</strong><br>
+	            <a href="http://www.azavea.com/" target="_blank">Azavea</a>
+	            <h2 class="tab-heading">Funded in part by:</h2>
+	            <ul id="funders">
+	                <li><a href="http://www.joycefdn.org/" target="_blank"><img src="img/funders/joyce_funder.png"></a></li>
+	                <li><a href="http://www.sloan.org/" target="_blank"><img src="img/funders/sloan_funder.png"></a></li>
+	                <li><a href="http://cpp.cnu.edu/" target="_blank"><img src="img/funders/newport_funder.png"></a></li>
+	                <li><a href="http://www.azavea.com/" target="_blank"><img src="img/funders/azavea_funder.png"></a></li>
+	                <li><a href="http://aws.amazon.com/" target="_blank"><img src="img/funders/aws_funder.png"></a></li>
+	            </ul>	
 			</div>
-			
-			<div class="rightCol" id="sidebar">
-			
-							<ul id="sidebar-nav">
-					<a href="https://github.com/PublicMapping/DistrictBuilder" target="_blank"><li>Get Started on Github <span>&rsaquo;</span></li></a>
-					</ul>
-			
-				<div id="subscribeBox">
-				
-					<h2>Acknowledgements</h2>
-		              <strong>Principal Investigators:</strong><br>
-		              Michael P. McDonald and Dr. Micah Altman, <br>as part of the <a href="http://publicmapping.org/" target="_blank">Public Mapping Project</a><br><br>
-		              <strong>Software Development:</strong><br>
-		              <a href="http://www.azavea.com/" target="_blank">Azavea</a>
-		              <h2 class="tab-heading">Funded in part by:</h2>
-		              <ul id="funders">
-		                <li><a href="http://www.joycefdn.org/" target="_blank"><img src="img/funders/joyce_funder.png"></a></li>
-		                <li><a href="http://www.sloan.org/" target="_blank"><img src="img/funders/sloan_funder.png"></a></li>
-		                <li><a href="http://cpp.cnu.edu/" target="_blank"><img src="img/funders/newport_funder.png"></a></li>
-		                <li><a href="http://www.azavea.com/" target="_blank"><img src="img/funders/azavea_funder.png"></a></li>
-		                <li><a href="http://aws.amazon.com/" target="_blank"><img src="img/funders/aws_funder.png"></a></li>
-		              </ul>	
-				</div>
 
 				
 			</div>
