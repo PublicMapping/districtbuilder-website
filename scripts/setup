@@ -18,5 +18,6 @@ if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
         usage
     else
         vagrant up --provision
+        rm -rf deployment/ansible/roles/azavea.*
     fi
 fi
