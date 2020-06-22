@@ -1,0 +1,27 @@
+[Settings]
+  ID = "publicmapping"
+
+[build]
+  base = "."
+  publish = "_site/"
+  command = "jekyll build"
+
+[context.production.environment]
+  JEKYLL_ENV = "production"
+
+[context.deploy-preview.environment]
+  JEKYLL_ENV = "development"
+
+[context.branch-deploy.environment]
+  JEKYLL_ENV = "development"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = """
+      default-src 'self';
+      """
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
