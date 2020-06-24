@@ -12,9 +12,6 @@
 [context.deploy-preview.environment]
   JEKYLL_ENV = "development"
 
-[context.branch-deploy.environment]
-  JEKYLL_ENV = "development"
-
 [[headers]]
   for = "/*"
   [headers.values]
