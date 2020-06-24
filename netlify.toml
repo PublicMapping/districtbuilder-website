@@ -1,5 +1,5 @@
 [Settings]
-  ID = "publicmapping"
+  ID = "districtbuilder"
 
 [build]
   base = "."
