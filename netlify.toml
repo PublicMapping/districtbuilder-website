@@ -17,7 +17,9 @@
   [headers.values]
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self' 'unsafe-inline';
+      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com use.typekit.net;
+      style-src 'self' 'unsafe-inline' use.typekit.net;
+      img-src 'self' www.googletagmanager.com p.typekit.net;
       """
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
