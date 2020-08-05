@@ -16,7 +16,7 @@
             </div>
             <div class="section__action-buttons">
             {% for button in page.community.buttons %}
-                <a class="button 
+                <a id="g-{{ button.text | replace: ' ', '-'  | downcase }}" class="button 
                 {% if button.style %}
                     button--{{ button.style }}
                 {% else %}
@@ -80,7 +80,7 @@
                     <div class="card__prompt">
                         What have you been building?
                     </div>
-                    <a class="button button--ghost" href="mailto:{{ site.email }}">
+                    <a id="g-community-share-cta" class="button button--ghost" href="mailto:{{ site.email }}">
                         Share
                     </a>
                 </div>
@@ -88,6 +88,7 @@
         </div>
 
         {% include call-to-action.html 
+            id="community"
             cta-blurb="**Ask the right questions.** DistrictBuilder helps you understand the impact of partisan gerrymandering on redistricting"
             cta-button-text="Sign up"
             cta-button-style="blue"

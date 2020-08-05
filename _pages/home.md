@@ -71,7 +71,7 @@ community:
     - text: "Draw your own"
       url: "https://app.districtbuilder.org/register"
     - text: "Share your project"
-      url: "mailto: info@districtbuilder.com"
+      url: "mailto:support@districtbuilder.com"
       icon: "fas fa-paper-plane"
       style: "secondary"
 # community section

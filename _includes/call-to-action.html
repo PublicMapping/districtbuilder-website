@@ -1,8 +1,13 @@
-<div class="call-to-action 
-            {% if include.style %}
-                call-to-action--{{ include.style }}
-            {% endif %}
-            ">
+<div id="
+    {% if include.id %}
+        g-{{ include.id }}-cta
+    {% endif %}
+    " 
+     class="call-to-action 
+        {% if include.style %}
+            call-to-action--{{ include.style }}
+        {% endif %}
+        ">
     <div class="call-to-action__inner">
         <i class="call-to-action__icon {{ include.cta-icon }} fa-2x"></i>
         <p class="call-to-action__blurb" markdown="1">
