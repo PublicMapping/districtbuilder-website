@@ -1,0 +1,60 @@
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $bp-large) {
+        margin-top: $pad-normal;
+    }
+}
+
+.testimonial {
+    display: flex;
+    margin-bottom: $pad-normal;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $bp-med) {
+        padding-right: 2%;
+        margin-bottom: 0;
+        flex: 1 0 48%;
+
+        &:nth-child(even) {
+            padding-right: 0;
+        }
+    }
+
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 60px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: $pad-normal;
+        border-radius: 100%;
+        border: 1px solid #EDE7E0;
+    }
+
+    &__quote {
+        @include text(300);
+
+        @media screen and (min-width: $bp-large-2) {
+            @include text(400);
+        }
+    }
+
+    &__credit {
+        display: inline-flex;
+        @include heading(200);
+
+        > .divider {
+            padding: 0 $pad-small;
+        }
+
+        > p {
+            @include heading(200);
+            margin-bottom: 0;
+        }
+    }
+}

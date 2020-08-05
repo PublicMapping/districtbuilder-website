@@ -1,0 +1,65 @@
+.p-contact {
+    .content {
+        &__inner {
+            max-width: $main-max-width;
+            margin: 0 auto;
+        }
+    }
+
+    .section--hero {
+        background-image: url(../assets/images/photo-journalists-taking-notes.jpg);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        
+
+        &::after {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            z-index: 1;
+            background-image: linear-gradient(transparent, rgba(black, 0.2));
+        }
+
+        .section__inner {
+            position: relative;
+            padding: $pad-comfortable;
+            border-radius: $border-radius;
+            z-index: 2;
+        }
+
+        .section__title {
+            margin-bottom: 0;
+        }
+
+        .section__mini-title,
+        .section__blurb,
+        .section__icon {
+            color: white;
+            fill: white;
+        }
+    }
+
+    .section:not(.section--hero) {
+        padding: 0 $pad-normal $pad-spacious;
+
+        @media screen and (min-width: $bp-small-3) {
+            
+        }
+    }
+
+    .contact-card {
+        margin-top: -5rem;
+        z-index: 2;
+
+        @media screen and (min-width: $bp-large-2) {
+            margin-top: -8rem;
+        }
+    }
+}

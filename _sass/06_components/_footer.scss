@@ -1,0 +1,273 @@
+.footer {
+    width: 100%;
+    position: relative;
+    background: $footer-background;
+    color: $footer-color;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+
+    @media screen and (min-width: 80rem) {
+        margin: 0 auto;
+    }
+
+    &__section {
+        flex: auto;
+    }
+
+    &__inner {
+        max-width: $main-max-width;
+        margin: auto;
+        padding: 2.5rem;
+        text-align: center;
+
+        @media screen and (min-width: $bp-small-3) {
+            align-items: flex-start;
+            text-align: left;
+            padding: 3.5rem 2.5rem;
+        }
+    }
+
+    &__main-content {
+        width: 100%;
+
+        @media screen and (min-width: $bp-small-3) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    &__brand {
+        display: block;
+        margin: 0 auto 1rem;
+        width: 20rem;
+        line-height: 0;
+
+        @media screen and (min-width: $bp-small-3) {
+            margin: 0;
+            width: 25rem;
+        }
+
+        @media screen and (min-width: $bp-small-3) and (max-width: $bp-large-2) {
+            flex: 0 0 100%;
+            
+            > img {
+                max-width: 20rem;
+            }
+        }
+    }
+
+    &__nav-container {
+        @media screen and (min-width: $bp-small-3) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: $space;
+        }
+
+        @media screen and (min-width: $bp-small-3) and (max-width: $bp-large-2) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .navbar { // Note: this is not standalone for the footer
+        &__list {
+            @media screen and (max-width: $bp-med) {
+                display: block;
+                position: relative;
+                height: auto;
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            @media screen and (min-width: $bp-small-3) and (max-width: $bp-large-2) {
+                display: flex;
+            }
+        }
+
+        &__action-button {
+            @media screen and (max-width: $bp-med) {
+                margin: $pad-compact;
+            }
+        }
+
+        &__nav {
+            .button--secondary:not(:hover) {
+                color: $footer-color!important;
+            }
+        }
+
+        &__link{
+            border-radius: $border-radius;
+
+            &:hover,
+            &:focus {
+                text-decoration: none!important;
+                background: $brand-med-gray;
+            }
+
+            &:active {
+                text-decoration: none!important;
+                background: $brand-black;
+            }
+
+            &--is-active {
+                color: $brand-peach!important;
+            }
+        }
+    }
+
+    &__text-container {
+
+        @media screen and (min-width: $bp-med) {
+            width: 50%;
+            margin-right: $pad-normal;
+        }
+
+        @media screen and (max-width: $bp-med) {
+            margin: $space 0;
+        }
+    }
+
+    &__text {
+        display: block;
+        max-width: 60rem;
+        @include text(300, $color: $brand-light-gray);
+        
+        @media screen and (max-width: $bp-med) {
+            display: none;
+        }
+    }
+
+    &__text--copyright {
+        opacity: 0.5;
+        @include text(200, $color: $brand-light-gray);
+    }
+
+    &__bottom {
+        display: flex;
+        padding-bottom: 0;
+        @include heading(100, $color: $footer-color, $inverted: true);
+
+        @media screen and (max-width: $bp-small-3) {
+            justify-content: center;
+        }
+
+        li {
+            text-indent: 0;
+            display: inline-flex;     
+            padding-left: 0.5rem;   
+        }
+
+        li:first-child {
+            padding-left: 0;   
+        }
+
+        li:before {
+            content: "•";
+            color: $brand-med-gray;
+            margin-right: 0.5rem;
+        }
+
+        li:first-child:before {
+            content: "";
+            margin-right: 0;
+        }
+    }
+
+    a:not(.button) {
+        color: $footer-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__social-icon-container {
+        display: block;
+        
+        @media screen and (max-width: $bp-small-3) {
+            margin-top: $pad-compact;
+        }
+    }
+}
+
+.footer-subscribe-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: $pad-normal;
+    margin-bottom: $pad-normal;
+    border-bottom: 1px solid rgba($brand-med-gray, 0.5);
+
+    @media screen and (min-width: $bp-small-3) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__text-container {
+        display: flex;
+        align-items: center;
+        margin-right: $pad-normal;
+
+        @media screen and (max-width: $bp-small-3) {
+            flex-direction: column;
+            margin-bottom: $pad-compact;
+        }
+    }
+
+    &__icon,
+    &__link {
+        color: $brand-peach;
+    }
+
+    &__link { 
+        text-align: left;
+    }
+
+    &__icon {
+        margin-bottom: $pad-compact;
+
+        @media screen and (min-width: $bp-small-3) {
+            margin-bottom: 0;
+            margin-right: $pad-normal;
+        }
+    }
+
+    &__blurb {
+        @include heading(400, $color: $footer-color, $inverted: true);
+    }
+}
+
+.footer-github-cta {
+    background: $footer-github-bg;
+    padding: $pad-normal;
+    display: flex;
+    border-radius: $border-radius;
+    text-align: left;
+
+    @media screen and (min-width: $bp-med) {
+        max-width: 45rem;
+        width: 50%;
+    }
+
+    &__icon {
+        color: $brand-med-gray;
+        flex: 1 0 10%;
+        margin-right: 5%;
+    }
+    
+    &__content {
+        flex: 1 0 70%;
+    }
+
+    &__blurb {
+        @include heading(400, $color: $footer-color, $inverted: true);
+    }
+
+    &__link {
+        font-family: $font-family-header;
+        font-weight: map-get($font-weights, normal);
+    }
+}

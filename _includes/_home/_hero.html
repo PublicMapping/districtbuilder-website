@@ -1,0 +1,37 @@
+<section class="section section--hero section--highlight section--centered">
+    <div class="section__inner">
+        <div class="section__text-container">
+            <h1 class="section__title">
+                <span class="section__mini-title">
+                    {% include curved-mini-title.html
+                        text = page.hero.mini-title
+                    %}
+                </span>
+                <i class="section__icon {{ page.hero.icon }} fa-sm"></i>
+                <span class="section__big-title">
+                    {{ page.hero.title }}
+                </span>
+            </h1>
+            
+            <div class="section__blurb">
+                {{ page.hero.blurb }}
+            </div>
+        </div>
+
+        <div 
+            class="section__image"
+            role="img"
+            style="background-image:url('{{ page.hero.image-url }}')"
+            aria-label="{{ page.hero.image-alt }}">
+        </div>
+    </div>
+
+    {% if page.hero.cta %}
+        {%  include call-to-action.html 
+            cta-blurb = page.hero.cta.blurb
+            cta-icon = page.hero.cta.icon
+            cta-button-text = page.hero.cta.button-text
+            cta-button-url = page.hero.cta.button-url
+            cta-button-style = page.hero.cta.button-style %}
+    {% endif %}
+</section>

@@ -1,0 +1,48 @@
+<section id="section-resources" class="section section--highlight section--centered">
+    <div class="section__inner">
+        <div class="section__text-container">
+            <h2 class="section__title">
+                <span class="section__mini-title">
+                    {% include curved-mini-title.html
+                        text = page.resources.mini-title
+                    %}
+                </span>
+                <i class="section__icon {{ page.resources.icon }} fa-sm"></i>
+                {{ page.resources.title }}
+            </h2>
+            <div class="section__blurb">
+                {{ page.resources.blurb || markdownify }}
+            </div>
+        </div>
+
+        <div class="card-container">
+            {% for article in site.data.articles %}
+                <div class="card">
+                    <div class="card__content">
+                        <div class="card__image-container">
+                            <img 
+                                class="card__image" 
+                                src="
+                                    {% if article.image-url %}
+                                        assets/images/{{ article.image-url }}
+                                    {% else %}
+                                        ./assets/images/no-headshot.svg
+                                    {% endif %}" 
+                                alt="{{ article.image-alt }}">
+                        </div>
+                        <h4 class="card__title">
+                            {{ article.title }}
+                        </h4>
+                        <p class="card__description">
+                            {{ article.blurb || markdownify }}
+                        </p>
+                        <a href="{{ article.article-url }}">
+                            Read 
+                            <i class="fas fa-long-arrow-right fa-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

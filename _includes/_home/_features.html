@@ -1,0 +1,39 @@
+<section id="section-features" class="section">
+    <div class="section__inner">
+        <div class="section__image-text-container">
+            <div class="section__text-container">
+                <h2 class="section__title">
+                    {{ page.features.title }}
+                </h2>
+                <div class="section__blurb">
+                    {{ page.features.blurb || markdownify }}
+                </div>
+                <a href="{{ page.features.button-url }}" class="section__button button button--primary">
+                    {{ page.features.button-text }}
+                </a>
+            </div>
+
+            <div class="section__image-container">
+                <img class="section__image" src="{{ page.features.image-url }}" alt="{{ page.features.image-alt }}">
+            </div>
+        </div>
+
+        <div class="card-container">
+            {% for feature in page.features.feature-list %}
+                <div class="card">
+                    <div class="card__icon-container">
+                        <i class="card__icon {{ feature.icon }} fa-lg"></i>
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">
+                            {{ feature.title }}
+                        </h3>
+                        <h3 class="card__blurb" markdown="1">
+                            {{ feature.blurb }}
+                        </h3>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

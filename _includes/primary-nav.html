@@ -1,0 +1,36 @@
+<nav class="navbar__nav" role="navigation">
+  <ul class="navbar__list" role="tablist">
+  {% for nav in site.data.nav %}
+    {% if nav.subpages != null %}
+      <li class="navbar__list-item {% if page.url contains nav.href %}navbar__list-item--selected{% endif %}" role="presentation">
+        <a href="{{ nav.url | prepend: site.baseurl }}" class="navbar__link navbar__link--has-children js-nav-dropdown-trigger {% if page.url contains nav.href %}navbar__list-item--selected{% endif %}">
+            <span class="navbar__text">{{ nav.title }}</span>
+            <i class="navbar__icon"></i>
+        </a>
+        <ul class="sublist js-nav-dropdown {% if page.url contains nav.href %}navbar__link--is-active{% endif %}">
+        {% for subpage in nav.subpages %}
+          <li class="sublist__item">
+            <a class="sublist__link {% if page.url == subpage.href %}sublist--selected{% endif %}" href="{{ subpage.href | prepend: site.baseurl }}">{{ subpage.title }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+    {% else %} 
+      <li class="navbar__list-item">
+        <a href="{{ nav.href | prepend: site.baseurl }}" class="navbar__link {% if page.url == nav.href %}navbar__link--is-active{% endif %}">{{ nav.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+    <li class="navbar__list-item">
+      <a href="{{ site.register_link }}" class="navbar__action-button button button--primary">
+        Sign up
+      </a>
+    </li>
+    <li class="navbar__list-item">
+      <a href="{{ site.login_link }}" class="navbar__action-button button button--secondary">
+        <i class="fas fa-lock-alt fa-sm button__icon"></i>
+        Log in
+      </a>
+    </li>
+  </ul>
+</nav><!-- end primary-nav -->

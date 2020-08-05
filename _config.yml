@@ -19,20 +19,32 @@
 # in the templates via {{ site.myvariable }}.
 
 title: DistrictBuilder
-email: support@districtbuilder.org
+email: info@azavea.com
 description: >- # this means to ignore newlines until "baseurl:"
-  We’re hard at work on an all-new DistrictBuilder, the free and open redistricting tool for everyone. 
-  Pick any state, draw your map, and make your voice heard for fair districts. Down to block level. 
+  DistrictBuilder is a free redistricting tool that empowers the public to draw better maps. Pick any 
+  state, draw your map, and make your voice heard for fair districts. Down to block level. 
   All with an intuitive interface powered by a decade of redistricting experience.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username: jekyll
+twitter_username: DistrictBuilder
+github_url: https://github.com/PublicMapping/publicmapping.github.com
+blog: https://medium.com/districtbuilder
+subscribe_link: http://eepurl.com/g1E-eb
+register_link: https://app.districtbuilder.org/register
+login_link: https://app.districtbuilder.org/login
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+include:
+  - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -43,9 +55,17 @@ plugins:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - .gitignore
+  - .vagrant/
   - deployment
   - scripts
+  - .ruby-version
   - docker-compose.yml
   - Dockerfile
+  - Gemfile
+  - Gemfile.lock
   - Vagrantfile
+  - LICENSE
   - netlify.toml
+  - README.md
+  - node_modules

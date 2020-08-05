@@ -1,0 +1,49 @@
+.p-thank-you {
+    background: $brand-light-gray;
+
+    .content {
+        position: relative;
+        
+        &__inner {
+            display: block;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            background: darken($brand-meadow, 12%);
+            padding: $pad-spacious $pad-normal $pad-comfortable;
+            border-radius: $border-radius;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                background: darken($brand-meadow, 15%);
+                height: 4rem;
+                position: absolute;
+                border-radius: $border-radius $border-radius 0 0;
+                top: 2px;
+                right: 2px;
+                left: 2px;
+                z-index: 2;
+            }
+        }
+
+        h1,
+        p {
+            color: $brand-light-gray;
+        }
+
+        .thank-you__icon {
+            color: $brand-meadow;
+        }
+
+        p:first-child {
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+    }
+}

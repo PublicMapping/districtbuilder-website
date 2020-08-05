@@ -1,0 +1,72 @@
+.call-to-action {
+    position: relative;
+    margin: auto;
+    max-width: $main-max-width;
+    z-index: 2;
+    width: 100%;
+    margin: $pad-comfortable 0;
+    padding: $pad-medium;
+    background: $brand-dark-gray;
+
+    @media screen and (min-width: $bp-small-2) {
+        padding: $pad-normal;
+    }
+
+    @media screen and (min-width: $bp-med) {
+        padding: $pad-comfortable;
+    }
+
+    &__icon {
+        color: $brand-peach;
+
+        @media screen and (max-width: $bp-small-2) {
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: $bp-med) {
+            margin-bottom: $pad-compact;
+        }
+    }
+
+    &__inner {
+        max-width: map-get($text-max-width, x-large);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $bp-med) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__blurb {
+        @include heading(400, $color: $white, $inverted: true);
+        text-align: center;
+        
+        @media screen and (min-width: $bp-med) {
+            text-align: left;
+            margin: 0 auto 0 $pad-medium;
+        }
+    }
+
+    &__button {
+        max-width: 15rem;
+        margin: $pad-small auto 0;
+
+        @media screen and (min-width: $bp-med) {
+            flex: 0 0 15rem;
+            margin: 0 0 0 $pad-small;
+            max-width: none;
+        }
+    }
+}
+
+.call-to-action--light {
+    background: $brand-light-gray;
+
+    .call-to-action__blurb {
+        color: $brand-black;
+    }
+}

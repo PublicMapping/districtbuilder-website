@@ -1,25 +1,50 @@
 ---
-layout: compress
+page_class: l-page
 ---
 
 <!DOCTYPE html>
-<html data-current="{{ page.section }}" lang="en">
-  {% include head.html %}
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KCTXTQB"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    {% include header.html %}
-    <main>
-      {{ content }}
-    </main>
-    {% include footer.html %}
-  </body>
+<html>
+    {% include head.html %}
+    <body 
+        {% if page.page_class %} 
+            class="{{- page.page_class }} {{ layout.page_class -}}" 
+        {% endif %}>
+        
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVKTSL4"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        
+        <div class="main">
+            <main class="main__inner">
+                {% include navbar.html %}
+                {% include hero.html %}
+                <div class="section">
+                    <div class="content">
+                        <header class="header">
+                            <p class="header__blurb">
+                                {{ page.intro }}
+                            </p>
+                        </header>
+                        
+                        <div class="content__inner">
+                            <!-- page content -->
+                            {{ content }}
+                            <!-- page content -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- call-to-action -->
+                {% if page.cta-blurb %}
+                    {% include call-to-action.html 
+                        cta-blurb = page.cta-blurb
+                    %}
+                {% endif %}
+                <!-- call-to-action -->
+            </main>
+            {% include footer.html %}
+        </div>
+    </body>
 </html>
+>>>>>>> Finished site, minus some content

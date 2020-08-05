@@ -1,0 +1,33 @@
+{% if page.hero != null %}
+<section class="section section--hero section--highlight section--centered">
+    <div class="section__inner">
+        <div class="section__text-container">
+            <h1 class="section__title">
+                {% if page.hero.mini-title %}
+                    <span class="section__mini-title">
+                        {% include curved-mini-title.html
+                            text = page.hero.mini-title
+                        %}
+                    </span>
+                {% endif %}
+
+                {% if page.hero.icon %}
+                    <i class="section__icon {{ page.hero.icon }} fa-sm"></i>
+                {% endif %}
+
+                {% if page.hero.icon %}
+                    <span class="section__big-title">
+                        {{ page.hero.title }}
+                    </span>
+                {% endif %}
+            </h1>
+            
+            {% if page.hero.blurb %}
+            <div class="section__blurb">
+                {{ page.hero.blurb }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}

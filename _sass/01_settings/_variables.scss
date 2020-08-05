@@ -1,0 +1,135 @@
+/*------------------------------------*\
+        #BREAKPOINTS
+\*------------------------------------*/
+
+/**
+ * Breakpoints used in media queries
+ */
+$bp-small: 24em;
+$bp-small-2: 29.75em;
+$bp-small-3: 39.8em;
+$bp-med: 46.8em;
+$bp-med-2: 48em;
+$bp-large: 50em;
+$bp-large-2: 56em;
+$bp-xl: 62em;
+
+/*------------------------------------*\
+        #PADDING
+\*------------------------------------*/
+
+$space: 1rem;
+$pad-tiny: 2px;
+$pad-small: 0.5rem;
+$pad-compact: 1rem;
+$pad-medium: 1.4rem;
+$pad-normal: 2rem; /* 1 */
+$pad-comfortable: 3rem;
+$pad-spacious: 6rem;
+$pad-large: 8rem;
+
+$space-bullet-offset: 1.6rem; /* 2 */
+
+/*------------------------------------*\
+        #COMPONENTS
+\*------------------------------------*/
+/* * * *
+ * Overall Styles
+ * * * */
+$main-max-width: 100rem;
+$text-max-width: (
+    small: 35rem,
+    normal: 50rem,
+    medium: 60rem,
+    large: 80rem,
+    x-large: 95rem
+);
+
+$body-background: $white;
+$selection-background: rgba($primary, 0.7);
+$selection-color: $white;
+
+$link-color: $primary;
+$link-color-inverted: $white;
+$link-underline-color: $brand-med-gray;
+$link-icon-color: $primary;
+
+$rule-color: $brand-flour-500;
+$rule-color-invert: $brand-med-gray;
+$rule-border: 1px solid $rule-color;
+
+$border-radius: 2px;
+$border-radius-big: 10px;
+$box-shadow: 0 0 25px rgba($brand-dark-gray, 0.15);
+$box-shadow-darker: 0 0 25px rgba($brand-dark-gray, 0.5);
+
+$list-bullet-font-size: 0.5rem;
+$list-bullet-color: $brand-dark-gray;
+
+$image-background-color: rgba($black, 0.25);
+
+/* * * *
+ * Zindex
+ * * * */
+$z-index-navbar: 60;
+$z-index-navbar: 15;
+
+/* * * *
+ * Navbar
+ * * * */
+$nav-color: $brand-black;
+$nav-background: $white;
+
+$a-link-background: $brand-black;
+$a-link-color: $brand-black;
+$a-box-shadow-color: $brand-dark-gray;
+
+$nav-mobile-color: $brand-black;
+$nav-mobile-font-size: 16px;
+$nav-mobile-background: $white;
+
+/* * * *
+ * Section
+ * * * */
+$section-background: $brand-flour;
+$section-background-invert: $brand-dark-gray;
+
+/* * * *
+ * Hero
+ * * * */
+$hero-background-default: $brand-flour;
+$hero-background: $section-background-invert;
+$hero-home-color: $brand-flour;
+$hero-rule-color: $rule-color-invert;
+
+/* * * *
+ * Footer
+ * * * */
+$footer-background: $brand-dark-gray;
+$footer-color: $white;
+$footer-github-bg: $brand-black;
+
+/* * * *
+ * Interaction
+ * * * */
+$focus-state: 0 0 0 3px rgba(lighten($primary, 10%), .4);
+
+/* * * *
+ * Shadows
+ * * * */
+$shadow-default: 0 24px 32px rgba($black, .1);
+
+/* * * *
+ * Buttons
+ * * * */
+$button-color-default: $white;
+$button-font-family: $font-family-header;
+$button-weight-default: map-get( $font-weights, medium );
+$button-background-default: $brand-gray;
+
+/* * * *
+ * Cards
+ * * * */
+$card-background: $white;
+$card-title-color: $brand-black;
+$card-border-color: $brand-light-gray;

@@ -1,0 +1,270 @@
+.card-container {
+    @media all and (min-width: $bp-small-3) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media all and (min-width: $bp-small-3) and (max-width: $bp-xl) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: $pad-comfortable;
+    text-indent: 0;
+
+    @media screen and (min-width: $bp-small-3) and (max-width: $bp-med) {
+        flex: 0 1 48%;
+        margin-right: 2%;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width: $bp-med) {
+        flex: 0 1 31%;
+        margin-right: 2%;
+        margin-bottom: $pad-normal;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width: $bp-xl) {
+        margin-right: $pad-normal;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    &::before {
+        content: "";
+        display: none;
+    }
+
+    &__link {
+        // This is so the whole card is clickable
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__header {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+
+        &::after {
+            content: "";
+            display: block;
+            padding-bottom: 70%;
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__icon-container {
+        border-radius: 100%;
+        padding: $pad-medium;
+        background-color: rgba($brand-peach, 0.2);
+        margin-right: $pad-normal;
+    }
+
+    &__icon {
+        color: $brand-tomato-red;
+        line-height: 0;
+    }
+
+    &__title {
+        @include heading(200);
+        margin-bottom: 0.25rem;
+    }
+
+    &__blurb {
+        @include text(200);
+    }
+
+    &__image-container {
+        overflow: hidden;
+        line-height: 0;
+        border-radius: $border-radius;
+        border: 1px solid $brand-gray;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__user-info {
+        display: flex;
+        align-items: center;
+        margin-top: $pad-small;
+    }
+
+    &__user-avatar {
+        width: 25px;
+        height: 25px;
+        flex: 0 0 25px;
+        margin-right: $pad-small;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 100%;
+        border: 1px solid #EDE7E0;
+    }
+
+    &__user-name {
+        @include heading(200);
+    }
+}
+
+.card--fancy {
+    background: $card-background;
+    border-radius: $border-radius;
+    transition: transform 0.15s ease-in;
+
+    &:hover {
+        transform: scale(1.025);
+        box-shadow: $box-shadow;
+    }
+
+    .card__content {
+        padding: $pad-comfortable;
+    }
+
+    .card__title {
+        @include heading(300);
+        
+        text-align: center;
+    }
+
+    .card__link {
+        color: $base;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.card-container--large {
+    flex-direction: column;
+
+    .card__image-container {
+        position: relative;
+        flex: 0 0 40%;
+        line-height: 0;
+    }
+
+    .card {
+        background: $white;
+        border: 1px solid $brand-light-gray;
+        border-radius: $border-radius;
+        padding: $pad-normal;
+        margin-bottom: $pad-medium;
+
+        @media all and (min-width: $bp-small-3) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @media all and (min-width: $bp-xl) {
+            padding: $pad-small;
+            margin-bottom: $pad-spacious;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .card__content {
+            padding: $pad-normal 0 0 0;
+            max-width: map-get($text-max-width, normal);
+            margin: auto;
+
+            @media all and (min-width: $bp-small-3) {
+                padding: 0 0 0 $pad-comfortable;
+            }
+        }
+    }
+
+    .card:nth-child(even) {
+
+        @media all and (min-width: $bp-small-3) {
+            flex-direction: row-reverse;
+        }
+
+        .card__content {
+            @media all and (min-width: $bp-small-3) {
+                padding: 0 $pad-comfortable 0 0;
+            }
+        }
+    }
+}
+
+.card--link {
+    &:hover,
+    &:focus {
+        @include elevation($elevation: 4);
+
+        z-index: 9;
+        transform: scale(1.025) translateY(-2%);
+        opacity: 1;
+
+        .card__button {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.card--prompt {
+    border-radius: $border-radius;
+    position: relative;
+    background: $brand-black;
+    height: 50%;
+
+    &::after {
+        content: "";
+        display: block;
+        padding-bottom: 86.5%;
+    }
+
+    .card__content {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .card__prompt {
+        @include text(500, $color: $brand-off-white);
+        text-align: center;
+        margin-bottom: $pad-normal;
+        padding: $pad-normal $pad-normal 0;
+    }
+}

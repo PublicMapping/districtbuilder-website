@@ -1,0 +1,90 @@
+<section id="section-testimonials" class="section section--highlight section--centered">
+    <div class="section__inner">
+        <div class="section__text-container">
+            <h2 class="section__title">
+                <span class="section__mini-title">
+                    {% include curved-mini-title.html
+                        text = page.testimonials.mini-title
+                    %}
+                </span>
+                <i class="section__icon {{ page.testimonials.icon }} fa-sm"></i>
+                {{ page.testimonials.title }}
+            </h2>
+        </div>
+
+        {% if site.data.testimonials %}
+        <div class="testimonial-container">
+            {% for testimonial in site.data.testimonials %}
+                <div class="testimonial">
+                    <div 
+                        class="testimonial__avatar"
+                        role="img"
+                        style="background-image:url(
+                        {% if testimonial.headshot-url %}
+                            {{ testimonial.headshot-url }}
+                        }
+                        {% else %}
+                            './assets/images/no-headshot.svg'
+                        {% endif %}
+                        )"
+                        aria-label="{{ testimonial.headshot-alt }}"
+                    >
+                    </div>
+                    <figure class="testimonial__content">
+                        <blockquote class="testimonial__quote">
+                            {{ testimonial.quote }}
+                        </blockquote>
+                        <figcaption class="testimonial__credit">
+                            {% if testimonial.twitter-handle %}
+                                <a href="https://twitter.com/{{ testimonial.twitter-handle }}"> 
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                    {{ testimonial.twitter-handle }}
+                                </a>
+                            {% else %}
+                                <span> 
+                                    {{ testimonial.name }}
+                                </span>
+                                    {% if testimonial.role %}
+                                 <span class="divider"> • </span>
+                                 {{ testimonial.role || markdownify}}
+                                {% endif %}
+                            {% endif %}    
+                        </figcaption>
+                    </figure>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.advocacy-group-logos %}
+        <div class="advocacy-group-container">
+            <div class="section__header">
+                <div class="section__icon-divider">
+                    <div class="section__icon-container">
+                        <i class="section__icon {{ page.advocacy-groups.icon }} fa-lg"></i>
+                    </div>
+                </div>
+                <h2 class="section__title">
+                    {{ page.advocacy-groups.title }}
+                </h2>
+            </div>
+
+            <div class="advocacy-group-logo-container">
+                {% for logo in site.data.advocacy-group-logos %}
+                <a class="advocacy-group-logo" href="{{ logo.org-url }}">
+                    <img class="advocacy-group-logo__image" src="{{ logo.logo-url }}" alt="{{ logo.name }} logo.">
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+
+        {% include call-to-action.html 
+            cta-blurb="**Fight for fair and transparent redistricting.** DistrictBuilder empowers you to draw a better map."
+            cta-button-text="Try it out"
+            cta-button-url=site.register_link
+            cta-button-style="blue"
+        %}
+    </div>
+</section>
