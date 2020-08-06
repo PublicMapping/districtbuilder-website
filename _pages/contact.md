@@ -13,7 +13,7 @@ js_dependencies:
 # NO EDITING ABOVE THIS LINE
 # # # # # #
 
-seo_description: "DistrictBuilder puts the power of drawing electoral maps in the hands of the people. Redistricting can be a transparent process that represents communities fairly and prevents gerrymandering."
+seo_description: ""
 title: "Contact us"
 
 # # # # # #

@@ -270,6 +270,6 @@
 
     &__link {
         font-family: $font-family-header;
-        font-weight: map-get($font-weights, normal);
+        font-weight: map-get($font-weights, medium);
     }
 }

@@ -197,7 +197,7 @@
     background: transparent;
     border: none;
     font-family: $button-font-family;
-    font-weight: map-get($font-weights, normal);
+    font-weight: map-get($font-weights, medium);
     color: $primary;
     font-size: inherit;
     text-decoration: underline;

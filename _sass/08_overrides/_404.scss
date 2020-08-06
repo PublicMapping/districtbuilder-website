@@ -13,7 +13,7 @@
   color: $secondary;
   display: block;
   margin-bottom: -60px;
-  font-weight: 800;
+  font-weight: map-get($font-weights, bold);
   text-align: center;
 }
 

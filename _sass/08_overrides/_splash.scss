@@ -455,7 +455,7 @@
   h5,
   h6 {
     font-family: freight-sans-pro, frank-new, sans-serif;
-    font-weight: 900;
+    font-weight: map-get($font-weights, bold);
   }
 
   body {
@@ -547,7 +547,7 @@
     color: #000;
 
     > a {
-      font-weight: normal;
+      font-weight: map-get($font-weights, medium);
     }
   }
 

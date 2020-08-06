@@ -2,11 +2,9 @@ $font-family: freight-sans-pro, sans-serif;
 $font-family-header: frank-new, sans-serif;
 
 $font-weights: (
-    light: 300,
-    normal: 400,
-    medium: 500,
-    semibold: 600,
-    bold: 700
+    light: 300, // New Frank, no i
+    medium: 500, // New Frank & Freight Sans Pro, i
+    bold: 700 // New Frank & Freight Sans Pro, no i
 );
 
 $default-font-size-text: 300;
@@ -26,25 +24,25 @@ $text-settings: (
     100: (
         font-family: $font-family,
         color: map-get($font-colors, normal),
-        font-weight: map-get($font-weights, normal),
+        font-weight: map-get($font-weights, medium),
         font-size: map-get($font-sizes, 100),
         line-height: 1.5,
     ),
     200: (
         color: map-get($font-colors, normal),
-        font-weight: map-get($font-weights, normal),
+        font-weight: map-get($font-weights, medium),
         font-size: map-get($font-sizes, 200),
         line-height: 1.5,
     ),
     300: (
         color: map-get($font-colors, normal),
-        font-weight: map-get($font-weights, normal),
+        font-weight: map-get($font-weights, medium),
         font-size: map-get($font-sizes, 300),
         line-height: 1.5,
     ),
     400: (
         color: map-get($font-colors, normal),
-        font-weight: map-get($font-weights, normal),
+        font-weight: map-get($font-weights, medium),
         font-size: map-get($font-sizes, 400),
         line-height: 1.5,
     ),
@@ -60,7 +58,7 @@ $heading-settings: (
     100: (
         color: map-get($font-colors, normal),
         font-family: $font-family-header,
-        font-weight: map-get($font-weights, semibold),
+        font-weight: map-get($font-weights, bold),
         font-size: map-get($font-sizes, 100),
         line-height: 1.2,
         text-transform: uppercase,
@@ -87,7 +85,7 @@ $heading-settings: (
     400: (
         color: map-get($font-colors, dark),
         font-family: $font-family-header,
-        font-weight: map-get($font-weights, normal),
+        font-weight: map-get($font-weights, medium),
         font-size: map-get($font-sizes, 400),
         line-height: 1.2,
         text-transform: none,
@@ -96,7 +94,7 @@ $heading-settings: (
     500: (
         color: map-get($font-colors, dark),
         font-family: $font-family-header,
-        font-weight: map-get($font-weights, normal),
+        font-weight: map-get($font-weights, medium),
         font-size: map-get($font-sizes, 500),
         line-height: 1.2,
         text-transform: none,

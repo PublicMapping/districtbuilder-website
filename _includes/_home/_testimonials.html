@@ -44,10 +44,10 @@
                                 <span> 
                                     {{ testimonial.name }}
                                 </span>
-                                    {% if testimonial.role %}
-                                 <span class="divider"> • </span>
-                                 {{ testimonial.role || markdownify}}
-                                {% endif %}
+                            {% endif %}
+                            {% if testimonial.role %}
+                               <span class="divider"> • </span>
+                               {{ testimonial.role || markdownify}}
                             {% endif %}    
                         </figcaption>
                     </figure>

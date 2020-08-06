@@ -1,7 +1,6 @@
-#- name: 
-#  role: 
-#  link:
-#  quote: 
-#  headshot-url:
-#  headshot-alt:
-#  twitter-handle: 
+#- name: "Bruce Gilbert"
+#  role: "UX Designer"
+#  quote: "Maecenas sed diam eget risus varius blandit sit amet non magna."
+#  headshot-url: ".assets/images/bruce_gilbert_headshot.jpg"
+#  headshot-alt: "Man in blue shirt in front of white wall."
+#  twitter-handle: "brucegilbert"
