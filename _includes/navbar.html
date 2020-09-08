@@ -1,3 +1,13 @@
+{% if page.banner %}
+{% include banner.html 
+           intent = page.banner.intent
+           blurb = page.banner.blurb
+           icon = page.banner.icon
+           button-text = page.banner.button.text
+           button-url = page.banner.button.url
+           button-style = page.banner.button.style
+        %}
+{% endif %}
 <div class="navbar" role="navigation" aria-label="Main">
     <div class="navbar__inner">
         <a href="/" class="navbar__brand" title="DistrictBuilder home">
