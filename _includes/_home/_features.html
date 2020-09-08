@@ -14,7 +14,11 @@
             </div>
 
             <div class="section__image-container">
-                <img class="section__image" src="{{ page.features.image-url }}" alt="{{ page.features.image-alt }}">
+                <picture class="section__image">
+                    <source media="(max-width: 799px)" srcset="{{ page.features.image-url-sm }}">
+                    <source media="(min-width: 800px) and (max-width: 1200px)" srcset="{{ page.features.image-url-med }}">
+                    <img src="{{ page.features.image-url }}" alt="{{ page.features.image-alt }}">
+                </picture>
             </div>
         </div>
 

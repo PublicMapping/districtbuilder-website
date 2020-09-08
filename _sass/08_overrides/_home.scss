@@ -123,9 +123,9 @@
                     height: 50rem;
                     width: 50vw;
                     -webkit-mask: url(../assets/images/brick-border.svg) left / 4.25rem repeat-y,
-                                  url(../assets/images/rect.svg) bottom right / calc(100% - 4.25rem) repeat-y;
+                                  url(../assets/images/rect.svg) right / calc(100% - 4.25rem) repeat-y;
                     mask: url(../assets/images/brick-border.svg) left / 4.25rem repeat-y,
-                          url(../assets/images/rect.svg) bottom right / calc(100% - 4.25rem) repeat-y;
+                          url(../assets/images/rect.svg) right / calc(100% - 4.25rem) repeat-y;
                 }
             }
         }
@@ -193,10 +193,6 @@
                     width: 80vw;
                     margin-right: -20vw; 
                 }
-            }
-
-            &__image {
-                box-shadow: $box-shadow;
             }
 
             &__button {
