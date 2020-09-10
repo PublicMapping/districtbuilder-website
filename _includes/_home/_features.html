@@ -39,5 +39,16 @@
                 </div>
             {% endfor %}
         </div>
+
+            {% if page.features.note %}
+            {% include note.html 
+                       intent = page.features.note.intent
+                       blurb = page.features.note.blurb
+                       icon = page.features.note.icon
+                       button-text = page.features.note.button.text
+                       button-url = page.features.note.button.url
+                       button-style = page.features.note.button.style
+                    %}
+            {% endif %}
     </div>
 </section>

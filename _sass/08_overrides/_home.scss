@@ -132,6 +132,13 @@
     }
 
     #section-features {
+        .note {
+
+            @media screen and (min-width: $bp-med-2) {
+                margin-top: $pad-compact;
+            }
+        }
+
         .section {
             &__title {
                 @include heading(400, $color: $brand-tomato-red);
@@ -166,7 +173,7 @@
                     border-bottom: none;
                     flex-direction: row;
                     align-items: center;
-                    padding: $pad-spacious 0;
+                    padding: $pad-spacious 0 0;
                     text-align: left;
                 }
             }

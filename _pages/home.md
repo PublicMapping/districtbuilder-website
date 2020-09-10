@@ -19,7 +19,7 @@ title: "Home"
 banner:
   intent: "alert"
   icon: "fas fa-sparkles"
-  blurb: "We’re thrilled to launch the new DistrictBuilder, but there’s more to come. Subscribe to be the first to know when we push an update."
+  blurb: "We’re thrilled to launch the new DistrictBuilder, but [there’s more to come.](https://github.com/PublicMapping/db-roadmap) Subscribe to be the first to know when we push an update."
   button:
     url: "http://eepurl.com/g1E-eb"
     text: "Subscribe"
@@ -61,6 +61,9 @@ features:
     - title: "Build beautiful maps"
       blurb: "Rapidly draw visually engaging and informative maps in our modern interface."
       icon: "fal fa-hammer"
+  note:
+    icon: "fas fa-construction fa-2x"
+    blurb: "We plan to make DistrictBuilder the most useful redistricting tool it can be. View our [product roadmap](https://github.com/PublicMapping/db-roadmap) to find out what exciting features are coming soon."
 # features section
 
 # testimonials section

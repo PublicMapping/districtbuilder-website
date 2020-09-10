@@ -1,0 +1,70 @@
+.note {
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: $pad-normal;
+    background: rgba($brand-plum, 0.1);
+    border-radius: $border-radius-big;
+
+    &__icon {
+        color: $brand-plum;
+
+        @media screen and (max-width: $bp-med) {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 9.5rem;
+            transform: skew(10deg, 10deg);
+            background: rgba($brand-plum, 0.2);
+            left: -2rem;
+            top: -2rem;
+            bottom: -2rem;
+        }
+    }
+
+    &__inner {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $bp-med) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__blurb {
+        @include text(300, $color: $black);
+        line-height: 1.1;
+        
+        @media screen and (min-width: $bp-med) {
+            text-align: left;
+            margin: 0 auto 0 $pad-comfortable;
+        }
+    }
+
+    &__button {
+        @include heading(200, $color: $black);
+
+        @media screen and (min-width: $bp-med) {
+            margin: 0 0 0 $pad-compact;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    a {
+       color: $black;
+       text-decoration: underline;
+    }
+}
