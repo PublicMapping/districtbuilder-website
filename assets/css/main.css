@@ -539,3 +539,15 @@ h2 {
 .beta-heading {
   margin-top: 0;
 }
+
+.button {
+  background-color: #618faf;
+  padding: 14px;
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+}
+
+a {
+  color: #618faf;
+}
