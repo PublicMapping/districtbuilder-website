@@ -548,6 +548,10 @@ h2 {
   display: inline-block;
 }
 
+.button:hover {
+  color: #fff !important;
+}
+
 a {
   color: #618faf;
 }
