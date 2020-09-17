@@ -88,12 +88,13 @@
         </div>
 
         {% include call-to-action.html 
-            id="community"
-            cta-blurb="**Ask the right questions.** DistrictBuilder helps you understand the impact of partisan gerrymandering on redistricting"
-            cta-button-text="Sign up"
-            cta-button-style="blue"
-            cta-button-url=site.register_link
-            style="light"
+            icon = page.community.cta.icon
+            id = "community"
+            cta-blurb = page.community.cta.blurb
+            cta-button-text = page.community.cta.button-text
+            cta-button-url = page.community.cta.button-url
+            cta-button-style = page.community.cta.button-style
+            style = page.community.cta.style
         %}
     </div>
 </section>

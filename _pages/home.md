@@ -63,7 +63,7 @@ features:
       icon: "fal fa-hammer"
   note:
     icon: "fas fa-construction fa-2x"
-    blurb: "We plan to make DistrictBuilder the most useful redistricting tool it can be. View our [product roadmap](https://github.com/PublicMapping/db-roadmap) to find out what exciting features are coming soon."
+    blurb: "We’re making DistrictBuilder the most useful redistricting tool it can be. View our [product roadmap](https://github.com/PublicMapping/db-roadmap) to find out what exciting features are coming soon."
 # features section
 
 # testimonials section
@@ -74,6 +74,11 @@ testimonials:
 advocacy-groups:
   icon: "fas fa-person-sign"
   title: "Advocacy groups are using DistrictBuilder to lead change"
+  cta:
+    blurb: "**Fight for fair and transparent redistricting.** DistrictBuilder empowers you to draw a better map."
+    button-text: "Try it out"
+    button-url: "https://app.districtbuilder.org/register"
+    button-style: "blue"
 # testimonials section
 
 # community section
@@ -88,6 +93,12 @@ community:
       url: "mailto:support@districtbuilder.com"
       icon: "fas fa-paper-plane"
       style: "secondary"
+  cta:
+    style: "light"
+    blurb: "**Ask the right questions.** DistrictBuilder helps you understand the impact of partisan gerrymandering on redistricting"
+    button-text: "Sign up"
+    button-url: "https://app.districtbuilder.org/register"
+    button-style: "blue"
 # community section
 
 # resources section

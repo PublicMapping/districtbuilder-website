@@ -79,13 +79,14 @@
         </div>
         {% endif %}
 
-
         {% include call-to-action.html 
-            id="advocacy-groups"
-            cta-blurb="**Fight for fair and transparent redistricting.** DistrictBuilder empowers you to draw a better map."
-            cta-button-text="Try it out"
-            cta-button-url=site.register_link
-            cta-button-style="blue"
+            icon = page.advocacy-groups.cta.icon
+            id = "advocacy-groups"
+            cta-blurb = page.advocacy-groups.cta.blurb
+            cta-button-text = page.advocacy-groups.cta.button-text
+            cta-button-url = page.advocacy-groups.cta.button-url
+            cta-button-style = page.advocacy-groups.cta.button-style
+            style = page.advocacy-groups.cta.style
         %}
     </div>
 </section>
