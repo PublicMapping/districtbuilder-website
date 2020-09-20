@@ -1,5 +1,7 @@
 <section id="section-testimonials" class="section section--highlight section--centered">
     <div class="section__inner">
+    
+        {% if page.testimonials.title %}
         <div class="section__text-container">
             <h2 class="section__title">
                 <span class="section__mini-title">
@@ -11,6 +13,7 @@
                 {{ page.testimonials.title }}
             </h2>
         </div>
+        {% endif %}
 
         {% if site.data.testimonials %}
         <div class="testimonial-container">
@@ -58,6 +61,7 @@
 
         {% if site.data.advocacy-group-logos %}
         <div class="advocacy-group-container">
+            {% if page.advocacy-groups.title %}
             <div class="section__header">
                 <div class="section__icon-divider">
                     <div class="section__icon-container">
@@ -68,6 +72,7 @@
                     {{ page.advocacy-groups.title }}
                 </h2>
             </div>
+            {% endif %}
 
             <div class="advocacy-group-logo-container">
                 {% for logo in site.data.advocacy-group-logos %}

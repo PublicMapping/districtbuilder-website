@@ -15,34 +15,34 @@
             </div>
         </div>
 
-        <div class="card-container">
+        <ul class="card-container">
             {% for article in site.data.articles %}
-                <div class="card">
-                    <div class="card__content">
-                        <div class="card__image-container">
-                            <img 
-                                class="card__image" 
-                                src="
-                                    {% if article.image-url %}
-                                        assets/images/{{ article.image-url }}
-                                    {% else %}
-                                        ./assets/images/no-headshot.svg
-                                    {% endif %}" 
-                                alt="{{ article.image-alt }}">
-                        </div>
-                        <h3 class="card__title">
+                <li class="card card--fancy">
+                    <h3 class="card__title">
+                        <a class="card__link" href="{{ article.article-url }}">
                             {{ article.title }}
-                        </h3>
-                        <p class="card__description">
-                            {{ article.blurb || markdownify }}
-                        </p>
-                        <a href="{{ article.article-url }}">
-                            Read 
-                            <i class="fas fa-long-arrow-right fa-sm"></i>
                         </a>
+                    </h3>
+                    <div class="card__image-container">
+                        <img 
+                            class="card__image" 
+                            src="
+                                {% if article.image-url %}
+                                    assets/images/{{ article.image-url }}
+                                {% else %}
+                                    ./assets/images/no-headshot.svg
+                                {% endif %}" 
+                            alt="{{ article.image-alt }}">
                     </div>
-                </div>
+                    <div class="card__description">
+                        {{ article.blurb || markdownify }}
+                    </div>
+                    <div class="card__cta" aria-hidden="true">
+                        Read more
+                        <i class="far fa-long-arrow-right fa-sm"></i>
+                    </div>
+                </li>
             {% endfor %}
-        </div>
+        </ul>
     </div>
 </section>
