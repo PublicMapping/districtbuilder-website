@@ -17,9 +17,10 @@
   [headers.values]
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com use.typekit.net;
+      connect-src 'self' https://www.google-analytics.com;
+      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com use.typekit.net https://www.google-analytics.com;
       style-src 'self' 'unsafe-inline' use.typekit.net p.typekit.net;
-      img-src 'self' www.googletagmanager.com p.typekit.net;
+      img-src 'self' https://www.googletagmanager.com p.typekit.net https://www.google-analytics.com;
       font-src 'self' data://* use.typekit.net;
       """
     X-Frame-Options = "DENY"
