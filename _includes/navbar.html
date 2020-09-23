@@ -1,0 +1,25 @@
+{% if page.banner %}
+{% include banner.html 
+           intent = page.banner.intent
+           blurb = page.banner.blurb
+           icon = page.banner.icon
+           button-text = page.banner.button.text
+           button-url = page.banner.button.url
+           button-style = page.banner.button.style
+        %}
+{% endif %}
+<div class="navbar" role="navigation" aria-label="Main">
+    <div class="navbar__inner">
+        <a href="/" class="navbar__brand" title="DistrictBuilder home">
+            <img src="{{ site.baseurl }}/assets/images/districtbuilder_RGB.svg" alt="DistrictBuilder logo">
+        </a>
+        
+        <button id="js-menubutton" class="button button--secondary navbar__menu-button" aria-expanded="false" aria-haspopup="true" aria-label="Mobile Navigation Trigger">
+            <i class="fas fa-bars button__icon"></i>
+        </button>
+
+        <div id="js-menu" class="navbar__nav-container" hidden>
+            {% include primary-nav.html %}
+        </div>
+    </div>
+</div>

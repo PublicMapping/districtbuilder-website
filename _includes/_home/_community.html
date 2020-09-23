@@ -1,0 +1,101 @@
+{% if site.community-maps.yml %}
+<section id="section-community" class="section section--centered">
+    <div class="section__inner">
+        <div class="section__text-container">
+            <h2 class="section__title">
+                <span class="section__mini-title">
+                    {% include curved-mini-title.html
+                        text = page.community.mini-title
+                    %}
+                </span>
+                <i class="section__icon {{ page.community.icon }} fa-sm"></i>
+                {{ page.community.title }}
+            </h2>
+            <div class="section__blurb">
+                {{ page.community.blurb || markdownify }}
+            </div>
+            <div class="section__action-buttons">
+            {% for button in page.community.buttons %}
+                <a id="g-{{ button.text | replace: ' ', '-'  | downcase }}" class="button 
+                {% if button.style %}
+                    button--{{ button.style }}
+                {% else %}
+                    button--primary
+                {% endif %}
+                " href="{{ button.url }}">
+                    {% if button.icon %}
+                        <i class="button__icon {{ button.icon }} fa-sm"></i>
+                    {% endif %}
+                    {{ button.text }}
+                </a>
+            {% endfor %}
+            </div>
+        </div>
+        
+        <div class="card-container">
+            {% for map in site.data.community-maps %}
+                <div class="card">
+                    <div class="card__content">
+                        <div class="card__image-container">
+                            {% if map.url %}
+                            <a href="{{ map.url }}" class="button button--ghost">
+                                View map
+                            </a>
+                            {% endif %}
+                            <img src="{{ map.image-url }}" class="card__image">
+                        </div>
+
+                        {% if map.url %}
+                            <a href="{{ map.url }}" class="card__title">
+                                {{ map.title }}
+                            </a>
+                        {% else %}
+                            <div class="card__title">
+                                {{ map.title }}
+                            </div>
+                        {% endif %}
+
+                        <div class="card__user-info">
+                            <div class="card__user-avatar" 
+                                 role="img" 
+                                 style="background-image:url(
+                                {% if map.user-avatar %}
+                                    {{ map.user-avatar }}
+                                }
+                                {% else %}
+                                    './assets/images/no-headshot.svg'
+                                {% endif %}
+                                )"
+                                aria-label="{{ map.user-name }}’s avatar">
+                            </div>
+                            <span class="card__user-name">
+                                {{ map.user-name }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="card card--prompt">
+                <div class="card__content">
+                    <div class="card__prompt">
+                        What have you been building?
+                    </div>
+                    <a id="g-community-share-cta" class="button button--ghost" href="mailto:{{ site.email }}">
+                        Share
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {% include call-to-action.html 
+            icon = page.community.cta.icon
+            id = "community"
+            cta-blurb = page.community.cta.blurb
+            cta-button-text = page.community.cta.button-text
+            cta-button-url = page.community.cta.button-url
+            cta-button-style = page.community.cta.button-style
+            style = page.community.cta.style
+        %}
+    </div>
+</section>
+{% endif %}

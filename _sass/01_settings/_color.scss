@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+
+/**
+ * Grayscale
+ */
+$brand-black: #141414;
+$brand-dark-gray: #2c2c2c;
+$brand-med-gray: #8a8a8a;
+$brand-gray: #d6d8da;
+$brand-light-gray: #eef0f2;
+$brand-off-white: #f8f9fa;
+
+// Primary colors
+$brand-dark-royal-blue: #1a2b69;
+$brand-tomato-red: #f06543;
+$brand-iceberg: #6d98ba;
+$brand-flour: #fff8ef;
+
+// Flour scale
+$brand-flour-100: #F5F3EF;
+$brand-flour-200: #fff8ef;
+$brand-flour-300: #E2DED9;
+$brand-flour-400: #C5C1BC;
+$brand-flour-500: #9f9a95;
+$brand-flour-600: #88796C;
+$brand-flour-700: #725A4B;
+$brand-flour-800: #5C3F2F;
+$brand-flour-900: #4C2A1C;
+
+// Secondary colors
+$brand-goldenrod: #eec643;
+$brand-meadow: #09bc8a;
+$brand-plum: #eda2f2;
+$brand-peach: #ffc08e;
+ 
+/* * * *
+ * Base
+ * * * */
+$primary: $brand-tomato-red;
+$secondary: $brand-iceberg; 
+$base: $brand-black; // For fonts
+
+$black: #000;
+$white: #fff;
+ 
+/* * * *
+ * Fonts
+ * * * */
+$font-colors: (
+    normal: $brand-dark-gray,
+    dark: $brand-black,
+);

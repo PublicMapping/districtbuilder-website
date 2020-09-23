@@ -1,0 +1,45 @@
+<form class="districtbuilder-contact-form"  name="DistrictBuilder Contact Form" action="" method="POST" novalidate="novalidate">
+    <div class="form-group form-group__fist-name">
+    <label for="firstname">First Name *</label>
+    <input id="firstname" class="form-control" maxlength="40" name="firstname" value="" type="text" required="required" pattern=".*[^ ].*">
+    </div>
+    <div class="form-group form-group__last-name">
+     <label for="lastname">Last Name *</label>
+    <input id="lastname" class="form-control" maxlength="80" name="lastname" type="text" value="" required="required" pattern=".*[^ ].*">
+    </div>
+    <div class="form-group form-group__email">
+    <label for="email">Email *</label>
+    <input id="email" class="form-control" maxlength="100" name="email" value="" type="email" required="required">
+  </div>
+  <div class="form-group form-group__phone">
+     <label for="phone">Phone</label>
+   <input id="phone" class="form-control" maxlength="40" name="phone" value="">
+  </div>
+  <div class="form-group form-group__organization">
+    <label for="company">Organization</label>
+    <input id="company" class="form-control" name="company" type="text" value="">
+  </div>
+  <div class="form-group form-group__message">
+    <label for="message">Message</label>
+    <textarea id="message" class="form-control" name="message" value=""></textarea>
+  </div>
+  <div class="contact-method">
+    <label class="just-checking">Leave the following fields empty/unchecked</label>
+    <input 
+      type="text" 
+      class="just-checking contact-method-fullname"
+      name="contact-method-fullname"
+      tabindex="-1" 
+      autocomplete="off"
+      aria-hidden="true">
+    <input 
+      type="text" 
+      class="just-checking contact-method-phone" 
+      name="contact-method-phone"
+      tabindex="-1" 
+      autocomplete="off"
+      aria-hidden="true">
+  </div>
+  <input name="hs_context" class="hs_context" type="hidden" value="">
+  <input type="submit" value="Submit" class="button button--primary contact-form-submit" disabled>
+</form>

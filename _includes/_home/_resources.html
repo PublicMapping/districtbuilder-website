@@ -1,0 +1,48 @@
+<section id="section-resources" class="section section--highlight section--centered">
+    <div class="section__inner">
+        <div class="section__text-container">
+            <h2 class="section__title">
+                <span class="section__mini-title">
+                    {% include curved-mini-title.html
+                        text = page.resources.mini-title
+                    %}
+                </span>
+                <i class="section__icon {{ page.resources.icon }} fa-sm"></i>
+                {{ page.resources.title }}
+            </h2>
+            <div class="section__blurb">
+                {{ page.resources.blurb || markdownify }}
+            </div>
+        </div>
+
+        <ul class="card-container">
+            {% for article in site.data.articles %}
+                <li class="card card--fancy">
+                    <h3 class="card__title">
+                        <a class="card__link" href="{{ article.article-url }}">
+                            {{ article.title }}
+                        </a>
+                    </h3>
+                    <div class="card__image-container">
+                        <img 
+                            class="card__image" 
+                            src="
+                                {% if article.image-url %}
+                                    assets/images/{{ article.image-url }}
+                                {% else %}
+                                    ./assets/images/no-headshot.svg
+                                {% endif %}" 
+                            alt="{{ article.image-alt }}">
+                    </div>
+                    <div class="card__description">
+                        {{ article.blurb || markdownify }}
+                    </div>
+                    <div class="card__cta" aria-hidden="true">
+                        Read more
+                        <i class="far fa-long-arrow-right fa-sm"></i>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

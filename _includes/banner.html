@@ -1,0 +1,15 @@
+<div class="banner 
+        {% if include.intent %}
+            banner--{{ include.intent }}
+        {% endif %}
+        ">
+    <div class="banner__inner">
+        <i class="banner__icon {{ include.icon }}"></i>
+        <div class="banner__blurb">
+            {{ include.blurb || markdownify }}
+        </div>
+        <a href="{{ include.button-url }}" class="banner__link">
+            {{ include.button-text }}
+        </a>
+    </div>
+</div>

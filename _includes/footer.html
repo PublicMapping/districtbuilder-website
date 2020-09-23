@@ -1,0 +1,78 @@
+<footer class="footer" aria-label="Footer">
+    <div class="footer__inner">
+        <div class="footer-subscribe-cta">
+            <div class="footer-subscribe-cta__text-container">
+                <i class="footer-subscribe-cta__icon fal fa-envelope-open-text fa-lg"></i>
+                <div class="footer-subscribe-cta__blurb">
+                    <strong>Keep up to date</strong> with the fight for fair and transparent redistricting.
+                </div>
+            </div>
+            
+            <a id="g-subscribe-footer-button" href="{{ site.subscribe_link }}" class="footer-subscribe-cta__link link-button">
+                Subscribe to our newsletter
+            </a>
+        </div>
+
+        <div class="footer__nav-container">
+            <a href="/" class="footer__brand">
+                <img src="{{ site.baseurl }}/assets/images/districtbuilder_white.svg" alt="DistrictBuilder logo">
+            </a>
+
+            {% include primary-nav.html %}
+
+            <a id="g-footer-twitter-link" class="footer__social-icon-container link-button" href="https://twitter.com/{{ site.twitter_username }}">
+                <i class="footer__social-icon fab fa-twitter fa-med"></i>
+                Follow us on Twitter
+            </a>
+        </div>
+
+        <div class="footer__main-content">
+            <div class="footer__text-container">
+                <p class="footer__text">
+                    How districts are drawn determines who gets elected. DistrictBuilder is a free redistricting tool that empowers the public to draw better maps.
+                </p>
+
+                <p class="footer__text--copyright">
+                    © 2010 - {{ 'now' | date: "%Y" }} Built by <a href="https://www.azavea.com">Azavea</a> with Dr. Michael P. McDonald & Dr. Micah Altman. Supported by <a href="http://www.publicmapping.org/">Public Mapping Project.</a>
+                </p>
+
+                <ul class="footer__bottom">
+                    <li>
+                        <a href="https://azavea.com/terms-of-use/"> 
+                            Terms of Use
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://azavea.com/privacy-policy/"> 
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-github-cta">
+                <i class="footer-github-cta__icon fab fa-github fa-4x"></i>
+                <div class="footer-github-cta__content">
+                    <p class="footer-github-cta__blurb">
+                        <strong>Help us improve.</strong> DistrictBuilder is fully open source, and we could use your help.
+                    </p>
+                    <a id="g-github-button" href="{{ site.github_url }}" class="footer-github-cta__link">
+                        Contribute
+                        <i class="fas fa-long-arrow-right fa-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6397011.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+{% if page.js_dependencies %}
+    {% for dependency in page.js_dependencies %}
+    <script src="{{ site.baseurl }}/assets/javascript/{{ dependency }}"></script>
+    {% endfor %}
+{% endif %}  
+<script src="{{ site.baseurl }}/assets/javascript/main.js"></script>

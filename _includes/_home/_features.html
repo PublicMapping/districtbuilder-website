@@ -1,0 +1,60 @@
+<section id="section-features" class="section">
+    <div class="section__inner">
+        <div class="section__image-text-container">
+            <div class="section__text-container">
+                <h2 class="section__title">
+                    {{ page.features.title }}
+                </h2>
+                <div class="section__blurb">
+                    {{ page.features.blurb || markdownify }}
+                </div>
+                <a id="g-features-section-cta" href="{{ page.features.button-url }}" class="section__button button button--primary">
+                    {{ page.features.button-text }}
+                </a>
+            </div>
+
+            <div class="section__image-container">
+                <picture class="section__image">
+                    <source media="(max-width: 799px)" srcset="{{ page.features.image-url-sm }}">
+                    <source media="(min-width: 800px) and (max-width: 1200px)" srcset="{{ page.features.image-url-med }}">
+                    <img src="{{ page.features.image-url }}" alt="{{ page.features.image-alt }}">
+                </picture>
+            </div>
+        </div>
+
+        <div class="card-container">
+            {% for feature in page.features.feature-list %}
+                <div class="card">
+                    <div class="card__icon-container">
+                        {% if feature.status == "coming-soon" %}
+                            <div class="card__tag">
+                                <span>Soon!</span>
+                                <i class="card__tag-bg fas fa-certificate fa-2x"></i>
+                            </div>
+                        {% endif %}
+                        <i class="card__icon {{ feature.icon }} fa-lg"></i>
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">
+                            {{ feature.title }}
+                        </h3>
+                        <h3 class="card__blurb" markdown="1">
+                            {{ feature.blurb }}
+                        </h3>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+            {% if page.features.note %}
+            {% include note.html 
+                       intent = page.features.note.intent
+                       blurb = page.features.note.blurb
+                       icon = page.features.note.icon
+                       button-text = page.features.note.button.text
+                       button-url = page.features.note.button.url
+                       button-style = page.features.note.button.style
+                    %}
+            {% endif %}
+    </div>
+</section>

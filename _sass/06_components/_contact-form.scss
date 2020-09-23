@@ -1,0 +1,40 @@
+.contact-card {
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  box-shadow: 0 10px 24px 0 rgba(0,0,0,0.10);
+  border-radius: 4px;
+  padding: 1.5rem;
+  position: relative;
+
+  @media(min-width: 800px) {
+    padding: 2rem 4rem;
+    min-width: 60%;
+  }
+}
+
+.districtbuilder-contact-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1 1 auto;
+  flex-basis: 40%;
+  margin: 8px!important;
+
+  @media(max-width: 600px) {
+    flex-basis: 100%;
+  }
+
+  &__message {
+    flex-basis: 100%;
+  }
+}
+
+.contact-form-submit {
+  margin: 8px;
+
+  @media(max-width: 800px) {
+    width: 100%;
+  }
+}
