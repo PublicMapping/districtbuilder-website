@@ -11,7 +11,6 @@
         background-size: cover;
         background-position: center center;
         position: relative;
-        
 
         &::after {
             content: "";
@@ -24,7 +23,7 @@
             left: 0;
             position: absolute;
             z-index: 1;
-            background-image: linear-gradient(transparent, rgba(black, 0.2));
+            background-image: linear-gradient(transparent, rgba(black, 0.6));
         }
 
         .section__inner {
@@ -40,18 +39,21 @@
 
         .section__mini-title,
         .section__blurb,
+        .section__title,
         .section__icon {
             color: white;
             fill: white;
+        }
+
+        .section__mini-title,
+        .section__blurb,
+        .section__title {
+            text-shadow: 0 0 4px rgba(black, 0.5);
         }
     }
 
     .section:not(.section--hero) {
         padding: 0 $pad-normal $pad-spacious;
-
-        @media screen and (min-width: $bp-small-3) {
-            
-        }
     }
 
     .contact-card {

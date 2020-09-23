@@ -23,7 +23,7 @@ title: "Contact us"
 hero: 
   mini-title: "Contact us"
   icon: "fas fa-paper-plane"
-  blurb: "Questions or feedback? We’d love to hear from you."
+  title: "Questions or feedback? We’d love to hear from you."
 # hero section
 
 ---
