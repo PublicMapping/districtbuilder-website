@@ -53,13 +53,13 @@ features:
   button-url: "https://app.districtbuilder.org/register"
   feature-list:
     - title: "Uncover inequalities"
-      blurb: "Create custom communities of interest and visualize the effects of gerrymandering."
+      blurb: "Evaluate population demographics and visualize the effects of gerrymandering."
       icon: "fal fa-search"
     - title: "Build beautiful maps"
       blurb: "Rapidly draw visually engaging and informative maps in our modern interface."
       icon: "fal fa-hammer"
     - title: "Engage your audience"
-      blurb: "Easily export your custom map, embed in an article, or share on social media."
+      blurb: "Easily export your custom map and share in an article, on social media, or anywhere online."
       icon: "fal fa-users-class"
       status: "coming-soon"
   note:
