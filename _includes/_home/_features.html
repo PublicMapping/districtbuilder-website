@@ -26,6 +26,12 @@
             {% for feature in page.features.feature-list %}
                 <div class="card">
                     <div class="card__icon-container">
+                        {% if feature.status == "coming-soon" %}
+                            <div class="card__tag">
+                                <span>Soon!</span>
+                                <i class="card__tag-bg fas fa-certificate fa-2x"></i>
+                            </div>
+                        {% endif %}
                         <i class="card__icon {{ feature.icon }} fa-lg"></i>
                     </div>
                     <div class="card__content">

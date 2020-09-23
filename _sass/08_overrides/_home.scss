@@ -123,9 +123,9 @@
                     height: 50rem;
                     width: 50vw;
                     -webkit-mask: url(../assets/images/brick-border.svg) left / 4.25rem repeat-y,
-                                  url(../assets/images/rect.svg) right / calc(100% - 4.25rem) repeat-y;
+                                  url(../assets/images/rect.svg) right / calc(100% - 4.1rem) repeat-y;
                     mask: url(../assets/images/brick-border.svg) left / 4.25rem repeat-y,
-                          url(../assets/images/rect.svg) right / calc(100% - 4.25rem) repeat-y;
+                          url(../assets/images/rect.svg) right / calc(100% - 4.1rem) repeat-y;
                 }
             }
         }
@@ -133,7 +133,6 @@
 
     #section-features {
         .note {
-
             @media screen and (min-width: $bp-med-2) {
                 margin-top: $pad-compact;
             }

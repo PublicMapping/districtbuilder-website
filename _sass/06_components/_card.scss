@@ -55,6 +55,7 @@
         padding: $pad-medium;
         background-color: rgba($brand-peach, 0.2);
         margin-right: $pad-normal;
+        position: relative;
     }
 
     &__icon {
@@ -62,17 +63,53 @@
         line-height: 0;
     }
 
-    &__title {
-        @include heading(200);
-        margin-bottom: 0.25rem;
+    &__tag {
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        transform: rotate(-10deg);
+
+        span {
+            font-family:$font-family-header;
+            font-weight: map-get($font-weights, medium);
+            color: $white;
+            font-size: 8px;
+            text-transform: uppercase;
+            border-radius: $border-radius;
+            position: absolute;
+            line-height: 1;
+            text-align: center;
+            text-shadow: 0 0px 1px rgba(black, 0.35);
+            margin-top: 50%;
+            margin-left: 50%;
+            transform: translate(-50%,-50%);
+           
+            @include light-on-dark();
+        }
+    }
+
+    &__tag-bg {
+        color: darken($brand-plum, 5%);
+        line-height: 1.1;
+    }
+
+    @supports (-moz-appearance:none) {
+        .card__tag-bg { 
+            line-height: 1;
+        } 
     }
 
     &__content {
         position: relative;
     }
 
+    &__title {
+        @include heading(200);
+        margin-bottom: 0.25rem;
+    }
+
     &__blurb {
-        @include text(200);
+        @include text(300);
     }
 
     &__user-info {
