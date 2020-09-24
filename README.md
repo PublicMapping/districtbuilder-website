@@ -6,7 +6,6 @@ A guide that contains visual assets (logos, color palettes, logo doâ€™s and donâ
  3. [Editing the site configuration](#editing-the-site-configuration)
  4. [Editing Pages](#editing-pages)
  5. [Data files](#data-files)
- 6. [Copy Paste Components](#copy-paste-components)
 
 
 
