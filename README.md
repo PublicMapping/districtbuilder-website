@@ -213,33 +213,3 @@ Advocacy groups that we are working with.
   logo-url: "/assets/images/oraganization_logo.png"
   ...
 ```
-
-## Copy paste components
-Copy paste components are built using the built-in `_includes` functionality of Jekyll. More information about `_includes` [here.](https://jekyllrb.com/docs/includes/)
-
-Most copy/paste components are very simple to set up. This is what one looks like in a markdown page:
-```
-{% include copy-paste.html
-  description = "Copy this text"
-%}
-```
-
-Including links, line breaks or Markdown elements in your copy/paste component is a little more complicated. First you need to insert your Markdown/HTML block in a [capture:](https://shopify.github.io/liquid/tags/variable/)
-
-```
-{% capture your_markdown_text %}
-  [youremail@azavea.com](mailto:youremail@azavea.com)  
-{% endcapture %}
-```
-
-Now we have a variable to work with for our copy/paste. The next step is to properly convert the variable’s Markdown so we can pass it to our copy/paste component. We can simply [assign](https://shopify.github.io/liquid/tags/variable/) the same variable to a markdownified version of itself:
-```
-{% assign your_markdown_text = your_markdown_text | markdownify %}
-```
-
-Finally, you pass the variable that you’ve created above into the description:
-```
-{% include copy-paste.html
-  description = your_markdown_text
-%}
-```
