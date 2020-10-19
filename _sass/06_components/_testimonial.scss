@@ -38,6 +38,7 @@
 
     &__quote {
         @include text(300);
+        margin-bottom: $pad-compact;
 
         @media screen and (min-width: $bp-large-2) {
             @include text(400);
@@ -45,8 +46,9 @@
     }
 
     &__credit {
-        display: inline-flex;
+        display: inline-block;
         @include heading(200);
+        line-height: 1.5;
 
         > .divider {
             padding: 0 $pad-small;
