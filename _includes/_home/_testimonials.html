@@ -25,7 +25,6 @@
                         style="background-image:url(
                         {% if testimonial.headshot-url %}
                             {{ testimonial.headshot-url }}
-                        }
                         {% else %}
                             './assets/images/no-headshot.svg'
                         {% endif %}
@@ -48,10 +47,17 @@
                                     {{ testimonial.name }}
                                 </span>
                             {% endif %}
+                            <div class="testimonial__role">
                             {% if testimonial.role %}
-                               <span class="divider"> • </span>
-                               {{ testimonial.role || markdownify}}
-                            {% endif %}    
+                               {{ testimonial.role}}
+                            {% endif %}   
+                            {% if testimonial.company %}
+                               at
+                               {% if testimonial.company-url %}<a href="{{ testimonial.company-url }}">{% endif %}
+                               {{ testimonial.company }}
+                               {% if testimonial.company-url %}</a>{% endif %}
+                            {% endif %}  
+                            </div> 
                         </figcaption>
                     </figure>
                 </div>

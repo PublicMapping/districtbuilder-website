@@ -68,6 +68,10 @@ features:
 # features section
 
 # testimonials section
+testimonials:
+  mini-title: "Kind words"
+  icon: "fas fa-comments"
+  title: "What the redistricting community is saying"
 advocacy-groups:
   icon: "fas fa-person-sign"
   title: "Advocacy groups are using DistrictBuilder to lead change"
