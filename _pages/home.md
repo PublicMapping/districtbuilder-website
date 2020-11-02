@@ -10,7 +10,7 @@ partials_location: "_home/"
 # NO EDITING ABOVE THIS LINE
 # # # # # #
 
-title: "Home"
+title: "The Free and Open Source Redistricting Tool"
 
 # # # # # #
 # Page copy

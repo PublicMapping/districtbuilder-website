@@ -16,22 +16,23 @@
     <!-- Primary Meta Tags -->
     <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
     <meta name="title" content="{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}">
-    <meta name="description" content="{% if page.seo_description %}{{ page.seo_description }}{% endif %}">
+    <meta name="description" content="{% if page.seo_description %}{{ page.seo_description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="Copyright" content="Copyright © 2010 - {{ 'now' | date: '%Y' }} Azavea. All Rights Reserved.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.baseurl }}">
+    <meta property="og:url" content="https://www.districtbuilder.org">
     <meta property="og:title" content="{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}">
-    <meta property="og:description" content="{% if page.seo_description %}{{ page.seo_description }}{% endif %}">
-    <meta property="og:image" content="./assets/meta-tags-image.jpg">
+    <meta property="og:description" content="{% if page.seo_description %}{{ page.seo_description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="https://www.districtbuilder.org/assets/meta/meta_image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ site.baseurl }}">
+    <meta property="twitter:url" content="https://www.districtbuilder.org">
+    <meta property="twitter:site" content="@districtbuilder">
     <meta property="twitter:title" content="{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}">
-    <meta property="twitter:description" content="{% if page.seo_description %}{{ page.seo_description }}{% endif %}">
-    <meta property="twitter:image" content="./assets/meta-tags-image.jpg">
+    <meta property="twitter:description" content="{% if page.seo_description %}{{ page.seo_description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="twitter:image" content="https://www.districtbuilder.org/assets/meta/meta_image.jpg">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
