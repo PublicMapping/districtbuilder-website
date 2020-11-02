@@ -21,7 +21,7 @@
       script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com use.typekit.net https://www.google-analytics.com https://kit.fontawesome.com https://js.hs-scripts.com https://js.hs-scripts.net https://js.hs-banner.com https://js.hs-analytics.net;
       style-src 'self' 'unsafe-inline' use.typekit.net p.typekit.net https://kit-pro.fontawesome.com https://tagmanager.google.com https://fonts.googleapis.com;
       img-src 'self' https://www.googletagmanager.com p.typekit.net https://www.google-analytics.com https://ssl.gstatic.com https://www.gstatic.com https://track.hubspot.com;
-      font-src 'self' data: use.typekit.net https://kit-pro.fontawesome.com https://fonts.gstatic.com;
+      font-src 'self' data: use.typekit.net https://ka-p.fontawesome.com https://kit-pro.fontawesome.com https://fonts.gstatic.com;
       """
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
