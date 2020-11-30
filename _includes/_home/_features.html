@@ -13,11 +13,15 @@
                 </a>
             </div>
 
+            {% assign baseimage = page.features.image-url %}
+            {% assign imageending = baseimage | split: '.' | last %}
+            {% assign size = baseimage | size | minus: 4 %}
             <div class="section__image-container">
                 <picture class="section__image">
-                    <source media="(max-width: 799px)" srcset="{{ page.features.image-url-sm }}">
-                    <source media="(min-width: 800px) and (max-width: 1200px)" srcset="{{ page.features.image-url-med }}">
-                    <img src="{{ page.features.image-url }}" alt="{{ page.features.image-alt }}">
+                    <source media="(max-width: 799px)" data-srcset="{{ baseimage | slice: 0, size }}@0.5x.{{ imageending }}">
+                    <source media="(min-width: 799px) and (max-width: 1000px)" data-srcset="{{ baseimage | slice: 0, size }}@0.75x.{{ imageending }}">
+                    <source media="(min-width: 1000px)" data-srcset="{{ baseimage }}">
+                    <img data-src="{{ site.baseurl }}/assets/images/projects/{{ baseimage }}" src="{{ baseimage | slice: 0, size }}_tiny.{{ imageending }}" alt="{{ page.features.image-alt }}" class="lazy">
                 </picture>
             </div>
         </div>

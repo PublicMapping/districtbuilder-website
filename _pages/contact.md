@@ -13,7 +13,7 @@ js_dependencies:
 # NO EDITING ABOVE THIS LINE
 # # # # # #
 
-seo_description: ""
+seo_description: "DistrictBuilder is a free and open source redistricting tool. Questions or feedback? We’d love to hear from you."
 title: "Contact us"
 
 # # # # # #

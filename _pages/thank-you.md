@@ -9,7 +9,6 @@ page_class: p-thank-you
 # NO EDITING ABOVE THIS LINE
 # # # # # #
 
-seo_description: ""
 title: "Thank you"
 
 # # # # # #
