@@ -61,7 +61,6 @@ features:
     - title: "Engage your audience"
       blurb: "Easily export your custom map and share in an article, on social media, or anywhere online."
       icon: "fal fa-users-class"
-      status: "coming-soon"
   note:
     icon: "fas fa-construction fa-2x"
     blurb: "We’re making DistrictBuilder the most useful redistricting tool it can be. View our [product roadmap](https://github.com/PublicMapping/db-roadmap) to find out what exciting features are coming soon."
