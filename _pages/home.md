@@ -46,8 +46,6 @@ features:
   title: "Accurate down to the block"
   blurb: "DistrictBuilder’s software gives you access to the same block-level data used in legal redistricting plans — for free. Come to the table with electoral maps that better reflect local communities and lead to fair representation."
   image-url: "./assets/images/DistrictBuilder_Screenshot.png"
-  image-url-sm: "./assets/images/DistrictBuilder_Screenshot__0-50.png"
-  image-url-med: "./assets/images/DistrictBuilder_Screenshot__0-75.png"
   image-alt: "Screenshot of DistrictBuilder."
   button-text: "Start now"
   button-url: "https://app.districtbuilder.org/register"
@@ -61,7 +59,6 @@ features:
     - title: "Engage your audience"
       blurb: "Easily export your custom map and share in an article, on social media, or anywhere online."
       icon: "fal fa-users-class"
-      status: "coming-soon"
   note:
     icon: "fas fa-construction fa-2x"
     blurb: "We’re making DistrictBuilder the most useful redistricting tool it can be. View our [product roadmap](https://github.com/PublicMapping/db-roadmap) to find out what exciting features are coming soon."

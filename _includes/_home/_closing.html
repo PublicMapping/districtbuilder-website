@@ -1,7 +1,15 @@
 <section id="section-closing" class="section section--centered">
     <div class="section__inner">
         <div class="section__image-container">
-            <img class="section__image" src="{{ page.closing.image-url }}" alt="{{ page.closing.image-alt }}">
+            {% assign baseimage = page.closing.image-url %}
+            {% assign imageending = baseimage | split: '.' | last %}
+            {% assign size = baseimage | size | minus: 4 %}
+            <picture class="section__image">
+                <source media="(max-width: 799px)" data-srcset="{{ baseimage | slice: 0, size }}@0.5x.{{ imageending }}">
+                <source media="(min-width: 799px) and (max-width: 1000px)" data-srcset="{{ baseimage | slice: 0, size }}@0.75x.{{ imageending }}">
+                <source media="(min-width: 1000px)" data-srcset="{{ baseimage }}">
+                <img data-src="{{ baseimage }}" src="{{ baseimage | slice: 0, size }}_tiny.{{ imageending }}" alt="{{ page.closing.image-alt }}" class="ection__image lazy">
+            </picture>
         </div>
         <div class="section__text-container">
             <p class="section__blurb" markdown="1">

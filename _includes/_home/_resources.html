@@ -24,15 +24,20 @@
                         </a>
                     </h3>
                     <div class="card__image-container">
-                        <img 
-                            class="card__image" 
-                            src="
-                                {% if article.image-url %}
-                                    assets/images/{{ article.image-url }}
-                                {% else %}
-                                    ./assets/images/no-headshot.svg
-                                {% endif %}" 
-                            alt="{{ article.image-alt }}">
+
+                        {% if article.image-url %}
+                            {% assign baseimage = article.image-url %}
+                            {% assign imageending = baseimage | split: '.' | last %}
+                            {% assign size = baseimage | size | minus: 4 %}
+                            <picture class="section__image">
+                                <source media="(max-width: 799px)" data-srcset="./assets/images/{{ baseimage | slice: 0, size }}@0.5x.{{ imageending }}">
+                                <source media="(min-width: 799px) and (max-width: 1000px)" data-srcset="./assets/images/{{ baseimage | slice: 0, size }}@0.75x.{{ imageending }}">
+                                <source media="(min-width: 1000px)" data-srcset="./assets/images/{{ baseimage }}">
+                                <img data-src="./assets/images/{{ baseimage }}" src="./assets/images/{{ baseimage | slice: 0, size }}_tiny.{{ imageending }}" alt="{{ article.image-alt }}" class="card__image lazy">
+                            </picture>
+                        {% else %}
+                            <img class="card__image" src="./assets/images/no-headshot.svg">
+                        {% endif %}
                     </div>
                     <div class="card__description">
                         {{ article.blurb || markdownify }}

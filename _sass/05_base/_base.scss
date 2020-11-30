@@ -131,3 +131,12 @@ img {
     width: 100%;
     max-width: 100%;
 }
+
+.lazy {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}

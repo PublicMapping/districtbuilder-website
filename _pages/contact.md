@@ -13,7 +13,7 @@ js_dependencies:
 # NO EDITING ABOVE THIS LINE
 # # # # # #
 
-seo_description: ""
+seo_description: "DistrictBuilder is a free and open source redistricting tool. Questions or feedback? We’d love to hear from you."
 title: "Contact us"
 
 # # # # # #
@@ -24,6 +24,8 @@ hero:
   mini-title: "Contact us"
   icon: "fas fa-paper-plane"
   title: "Questions or feedback? We’d love to hear from you."
+  image-url: "./assets/images/photo-journalists-taking-notes.jpg"
+  image-alt: "Journalists at a meeting taking notes."
 # hero section
 
 ---

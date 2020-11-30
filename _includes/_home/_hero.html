@@ -18,10 +18,14 @@
             </div>
         </div>
 
+        {% assign baseimage = page.hero.image-url %}
+        {% assign imageending = baseimage | split: '.' | last %}
+        {% assign size = baseimage | size | minus: 4 %}
         <div 
-            class="section__image"
+            class="section__image lazy"
             role="img"
-            style="background-image:url('{{ page.hero.image-url }}')"
+            data-bg="{{ baseimage }}"
+            style="background-image:url('{{ baseimage | slice: 0, size }}_tiny.{{ imageending }}')"
             aria-label="{{ page.hero.image-alt }}">
         </div>
     </div>
