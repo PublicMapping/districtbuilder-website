@@ -1,5 +1,13 @@
 {% if page.hero != null %}
-<section class="section section--hero section--highlight section--centered">
+
+{% assign baseimage = page.hero.image-url %}
+{% assign imageending = baseimage | split: '.' | last %}
+{% assign size = baseimage | size | minus: 4 %}
+<section 
+    class="section section--hero section--highlight section--centered lazy"
+    data-bg="{{ baseimage }}"
+    style="background-image:url('{{ baseimage | slice: 0, size }}_tiny.{{ imageending }}')"
+    >
     <div class="section__inner">
         <div class="section__text-container">
             <h1 class="section__title">
