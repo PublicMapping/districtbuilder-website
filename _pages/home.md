@@ -21,7 +21,7 @@ banner:
   blurb: "NEW! DistrictBuilder has new organization features that promote public mapping"
   button:
     style: 'plum'
-    url: "http://eepurl.com/g1E-eb"
+    url: "NEEDS-LINK"
     text: "Learn more"
 # banner
 
@@ -69,7 +69,6 @@ features:
         - Engage the public and collect maps they create
         - Custom region support for redistricting anywhere, at every level of government
         - Choose the best maps to feature on your custom-branded Organization page
-
     button:
       text: "Request a demo"
       url: "mailto:info@districtbuilder.com"
