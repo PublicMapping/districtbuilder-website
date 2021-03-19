@@ -1,8 +1,8 @@
-<li class="c-primary-nav__subitem {% if page.subgroup == include.subgroup %}is-active{% endif %}">
-    <a class="c-primary-nav__sublink {% if include.subgroup %}c-primary-nav__sublink--has-children js-nav-dropdown-trigger{% endif %} {% if page.url == include.path %}is-active is-current{% endif %} {% if page.subgroup == include.subgroup %}is-active{% endif %}" href="{% if include.subgroup %}#{% else %}{{ include.path | prepend: site.baseurl}}{% endif %}">
-        <span class="c-primary-nav__text">{{ include.label }}</span>
+<li class="navbar__subitem {% if page.subgroup == include.subgroup %}is-active{% endif %}">
+    <a class="navbar__sublink {% if include.subgroup %}navbar__sublink--has-children js-nav-dropdown-trigger{% endif %} {% if page.url == include.path %}is-active is-current{% endif %} {% if page.subgroup == include.subgroup %}is-active{% endif %}" href="{% if include.subgroup %}#{% else %}{{ include.path | prepend: site.baseurl}}{% endif %}">
+        <span class="navbar__text">{{ include.label }}</span>
         {% if include.subgroup %}
-        <i class="c-icon c-primary-nav__icon icon-right-open"></i>
+        <i class="navbar__icon fas fa-caret-down" aria-label='Open submenu'></i>
         {% endif %}
     </a><!--end c-primary-nav__link-->
     {% if include.subgroup %}

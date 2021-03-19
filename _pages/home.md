@@ -17,12 +17,12 @@ title: "The Free and Open Source Redistricting Tool"
 
 # banner
 banner:
-  intent: "alert"
-  icon: "fas fa-sparkles"
-  blurb: "We’re thrilled to launch the new DistrictBuilder, but [there’s more to come.](https://github.com/PublicMapping/db-roadmap) Subscribe to be the first to know when we push an update."
+  icon: "fas fa-bell-on"
+  blurb: "NEW! DistrictBuilder has new organization features that promote public mapping"
   button:
+    style: 'plum'
     url: "http://eepurl.com/g1E-eb"
-    text: "Subscribe"
+    text: "Learn more"
 # banner
 
 # hero section
@@ -59,9 +59,21 @@ features:
     - title: "Engage your audience"
       blurb: "Easily export your custom map and share in an article, on social media, or anywhere online."
       icon: "fal fa-users-class"
-  note:
-    icon: "fas fa-construction fa-2x"
-    blurb: "We’re making DistrictBuilder the most useful redistricting tool it can be. View our [product roadmap](https://github.com/PublicMapping/db-roadmap) to find out what exciting features are coming soon."
+  sp-cta:
+    image-url: "./assets/images/photo-organization.jpg"
+    image-alt: "Group of people in an office around laptops while a woman presents."
+    mini-title: "New feature"
+    title: "Get the public involved with DistrictBuilder Organizations"
+    blurb: >
+      Public engagement in the redistricting process is key to creating fair districts. With DistrictBuilder Organizations, your redistricting commission, agency, or community group can collect maps and input from the public for redistricting. 
+        - Engage the public and collect maps they create
+        - Custom region support for redistricting anywhere, at every level of government
+        - Choose the best maps to feature on your custom-branded Organization page
+
+    button:
+      text: "Request a demo"
+      url: "mailto:info@districtbuilder.com"
+      style: "plum"
 # features section
 
 # testimonials section

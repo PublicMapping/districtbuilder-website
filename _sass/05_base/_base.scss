@@ -92,15 +92,13 @@ p,
 
 ul {
     margin: 0;
-    padding-left: 0;
+    padding-left: 2rem;
     font-size: inherit;
     list-style-type: disc;
 
     li {
         position: relative;
         margin: 1rem 0;
-        padding-left: 1.45rem;
-        text-indent: -1.45rem;
     }
 }
 
@@ -134,7 +132,7 @@ img {
 
 .lazy {
     opacity: 0;
-    transition: opacity 0.25s;
+    transition: opacity 0.15s;
 }
 
 .lazy.loaded {

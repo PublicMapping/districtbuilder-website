@@ -47,6 +47,7 @@
     border-radius: $border-radius;
     outline: 0;
     cursor: pointer;
+    text-decoration: none;
     transition:
         0.2s ease-in-out box-shadow,
         0.2s ease-in-out color,
@@ -114,6 +115,16 @@
         
         color: $button-color-default;
         background: $brand-iceberg;
+        box-shadow: $box-shadow;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    &--plum {
+        @include button-states($brand-plum, $button-color-default);
+        
+        color: $brand-black;
+        background: $brand-plum;
         box-shadow: $box-shadow;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;

@@ -19,7 +19,7 @@
         justify-content: space-between;
         align-items: center;
         max-width: $main-max-width;
-        padding: $pad-compact $pad-comfortable;
+        padding: $pad-compact 0;
         margin: auto;
 
         @media all and (max-width: $bp-xl) {
@@ -103,6 +103,10 @@
         margin-right: 5px;
     }
 
+    &__icon {
+        color: $brand-med-gray;
+    }
+
     &__brand {
         display: inline-block;
         vertical-align: middle;
@@ -130,6 +134,156 @@
     #desktop-contact {
         display: block;
     }
+}
+
+// Sublist styles
+.sublist {
+    display: none;
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+
+    @media screen and (min-width: $bp-med) {
+        @include elevation( $elevation : 2);
+        display: none;
+        position: absolute;
+        background: $card-background;
+        border-radius: $border-radius;
+        border: 1px solid $card-border-color;
+        width: 45rem;
+        padding: $pad-small;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: $border-radius;
+            width: 0; 
+            height: 0; 
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid $card-background;
+            top: -7px;
+        }
+        
+    }
+
+    &__item {
+        margin: 0;
+
+        .sublist__link {
+            border-bottom: 1px solid $card-border-color;
+        }
+
+        &:last-child {
+            .sublist__link {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__link {
+        border-radius: $border-radius;
+        display: flex;
+        align-items: flex-start;
+        padding: 0 $pad-medium $pad-medium;
+        margin: 0 0 $pad-medium;
+
+        @media screen and (min-width: $bp-med) {
+            padding: $pad-medium $pad-small;
+            margin: $pad-small $pad-medium;
+        }
+
+        &:hover, &:focus {
+            text-decoration: none;
+            background: $brand-off-white;
+        }
+    }
+
+    $icon-container-height: 4rem;
+    &__icon-container {
+        height: $icon-container-height;
+        width: $icon-container-height;
+        flex: 0 0 $icon-container-height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        margin-right: $pad-compact;
+
+        &--yellow {
+            color: $brand-goldenrod;
+            background: rgba($brand-goldenrod, 0.15);
+        }
+
+        &--blue {
+            color: $brand-iceberg;
+            background: rgba($brand-iceberg, 0.15);
+        }
+
+        &--plum {
+            color: $brand-plum;
+            background: rgba($brand-plum, 0.15);
+        }
+
+        &--meadow {
+            color: $brand-meadow;
+            background: rgba($brand-meadow, 0.15);
+        }
+
+        &--peach {
+            color: $brand-peach;
+            background: rgba($brand-peach, 0.15);
+        }
+    }
+
+    &__icon {
+        color: inherit;
+    }
+
+    &__arrow {
+        color: $brand-flour-400;
+    }
+    
+    &__title-container {
+        @include heading(200, $color: $card-title-color);
+        font-weight: map-get($font-weights, medium);
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $pad-small;
+
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 0;
+
+        @media screen and (min-width: $bp-med) {
+            @include text(200);
+        }
+    }
+ 
+    &--has-children {
+        display: block;
+        max-height: 0px;
+        overflow: hidden;
+        background: $brand-med-gray;
+        box-shadow: 0 22px 11px -22px $brand-med-gray inset,
+                    0 -22px 11px -22px $brand-med-gray inset;
+        transition: all 0.25s ease-out;
+    } 
+}
+    
+/**
+ * Nav Sublist styling when parent nav item is active
+ */
+.navbar__list-item.is-active .sublist {
+    display: block;
+    max-height: 800px;
+    padding: 0.3rem 0;
+    transition-timing-function: ease-in;
 }
 
 .azavea-link {
@@ -192,7 +346,6 @@
         .navbar {
             position: relative;
             
-
             &__nav-container {
                 top: 7rem;
                 position: absolute;
@@ -209,7 +362,6 @@
                 align-items: stretch;
                 height: auto;
                 padding: $pad-compact;
-                text-align: center;
                 background: $nav-mobile-background;
                 border-radius: $border-radius;
                 box-shadow: 0 5px 20px 0 rgba($brand-black, 0.3);
@@ -232,7 +384,7 @@
 
             &__link {
                 width: 100%;
-                margin: 0 0 $pad-compact;
+                margin: 0;
                 padding: $pad-medium;
                 color: $nav-mobile-color;
                 font-size: $nav-mobile-font-size;

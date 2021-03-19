@@ -85,6 +85,10 @@
             }
         }
 
+        .sublist {
+            display: block;
+        }
+
         &__action-button {
             @media screen and (max-width: $bp-med) {
                 margin: $pad-compact;
