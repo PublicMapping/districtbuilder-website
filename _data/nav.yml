@@ -1,25 +1,25 @@
 - title: "Resources"
   href: "/resources"
   subpages:
-  - title: "Product roadmap"
-    desc: "Don’t see the features you need? We’re working hard on making DistrictBuilder the best it can be! Check out our roadmap."
-    href: "https://github.com/PublicMapping/db-roadmap"
-    icon:
-      type: 'fas fa-road'
-      color: 'yellow'  
-  - title: "Getting started guide"
-    desc: "Check out our Getting Started Guide to walk you through the basics of mapping on DistrictBuilder."
-    href: "https://github.com/PublicMapping/districtbuilder/wiki/Getting-Started-with-DistrictBuilder"
-    icon:
-      type: 'fas fa-book'
-      color: 'blue'  
-  - title: "Blog"
-    desc: "Explore questions of proportionality, competitiveness, contiguity, and more!"
-    href: "https://medium.com/districtbuilder"
-    icon:
-      type: 'fas fa-glasses'
-      color: 'plum' 
+    - title: "Product roadmap"
+      desc: "Don’t see the features you need? We’re working hard on making DistrictBuilder the best it can be! Check out our roadmap."
+      href: "https://github.com/PublicMapping/db-roadmap"
+      icon:
+        type: "fas fa-road"
+        color: "yellow"
+    - title: "Getting started guide"
+      desc: "Check out our Getting Started Guide to walk you through the basics of mapping on DistrictBuilder."
+      href: "https://github.com/PublicMapping/districtbuilder/wiki/Getting-Started-with-DistrictBuilder"
+      icon:
+        type: "fas fa-book"
+        color: "blue"
+    - title: "Blog"
+      desc: "Explore questions of proportionality, competitiveness, contiguity, and more!"
+      href: "https://medium.com/districtbuilder"
+      icon:
+        type: "fas fa-glasses"
+        color: "plum"
 - title: "Organizations"
-  href: "NEEDS-LINK"
+  href: "https://medium.com/districtbuilder/engage-your-audience-with-a-custom-organization-page-e041e2127d28"
 - title: "Contact"
   href: "/contact"

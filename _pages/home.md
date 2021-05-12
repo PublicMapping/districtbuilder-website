@@ -20,13 +20,13 @@ banner:
   icon: "fas fa-bell-on"
   blurb: "NEW! DistrictBuilder has new organization features that promote public mapping"
   button:
-    style: 'plum'
-    url: "NEEDS-LINK"
+    style: "plum"
+    url: "https://medium.com/districtbuilder/engage-your-audience-with-a-custom-organization-page-e041e2127d28"
     text: "Learn more"
 # banner
 
 # hero section
-hero: 
+hero:
   mini-title: "Together"
   icon: "fas fa-map"
   title: "We can build a better map"
@@ -119,14 +119,13 @@ resources:
 # resources section
 
 # closing call-to-action section
-closing: 
+closing:
   image-url: "./assets/images/photo-protestors-with-journalists.jpg"
   image-alt: "Protestor talking to journalist on the street."
   blurb: "Build the map that demands fair representation"
   button-text: "Start now"
   button-url: "https://app.districtbuilder.org/register"
 # closing call-to-action section
-
 ---
 
 {% include {{ page.partials_location }}home.html %}
