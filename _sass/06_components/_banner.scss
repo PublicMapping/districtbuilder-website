@@ -5,10 +5,10 @@
     width: 100%;
     margin: 0;
     padding: $pad-medium $pad-normal;
-    background: $brand-dark-royal-blue;
+    background: $brand-black;
 
     &__icon {
-        color: $brand-flour-100;
+        color: $brand-plum;
 
         @media screen and (max-width: $bp-med) {
             display: none;
@@ -24,16 +24,18 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            max-width: $main-max-width;
         }
     }
 
     &__blurb {
         @include text(300, $color: $white, $inverted: true);
+        margin-bottom: $pad-compact;
         line-height: 1.1;
         
         @media screen and (min-width: $bp-med) {
+            margin: 0 auto 0 $pad-compact;
             text-align: left;
-            margin: 0 auto 0 $pad-medium;
         }
     }
 
@@ -42,16 +44,14 @@
 
         @media screen and (min-width: $bp-med) {
             margin: 0 0 0 $pad-compact;
+            flex: 0 0 auto;
         }
     }
 
     p {
         margin-bottom: 0;
-    }
-
-    a {
-       color: $white;
-       text-decoration: underline;
+        color: $brand-light-gray;
+        font-family: $font-family-header;
     }
 }
 

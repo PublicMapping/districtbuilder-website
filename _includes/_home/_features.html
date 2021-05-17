@@ -50,6 +50,19 @@
             {% endfor %}
         </div>
 
+            {% if page.features.sp-cta %}
+            {% include sp-call-to-action.html 
+                       image-url = page.features.sp-cta.image-url
+                       image-alt = page.features.sp-cta.image-alt
+                       mini-title = page.features.sp-cta.mini-title
+                       title = page.features.sp-cta.title
+                       blurb = page.features.sp-cta.blurb
+                       button-text = page.features.sp-cta.button.text
+                       button-url = page.features.sp-cta.button.url
+                       button-style = page.features.sp-cta.button.style
+                    %}
+            {% endif %}
+
             {% if page.features.note %}
             {% include note.html 
                        intent = page.features.note.intent

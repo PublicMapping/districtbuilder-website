@@ -1,0 +1,39 @@
+{% assign baseimage = include.image-url %}
+{% assign imageending = baseimage | split: '.' | last %}
+{% assign size = baseimage | size | minus: 4 %}
+<div id="
+    {% if include.id %}
+        g-{{ include.id }}-cta
+    {% endif %}
+    " 
+     class="sp-call-to-action">
+    <div class="sp-call-to-action__inner">
+        <div class="sp-call-to-action__image lazy"
+            data-bg="{{ baseimage }}"
+            style="background-image:url('{{ baseimage | slice: 0, size }}_tiny.{{ imageending }}')"
+            role="img"
+            aria-label="{{ include.image-alt }}"></div>
+        
+        <div class="sp-call-to-action__text-container">
+            <h3 class="sp-call-to-action__title">
+                <span class="sp-call-to-action__mini-title">
+                    {{ include.mini-title }}
+                </span>
+                <span class="sp-call-to-action__big-title">
+                    {{ include.title }}
+                </span>
+            </h3>
+            <div class="sp-call-to-action__blurb">
+                {{ include.blurb | markdownify }}
+            </div>
+            <a href="{{ include.button-url }}" class="sp-call-to-action__button button 
+            {% if include.button-style %}
+                button--{{ include.button-style }}
+            {% else %}
+                button--secondary
+            {% endif %}">
+                {{ include.button-text }}
+            </a>
+        </div>
+    </div>
+</div>

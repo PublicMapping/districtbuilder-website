@@ -18,7 +18,26 @@
                 <img src="{{ site.baseurl }}/assets/images/districtbuilder_white.svg" alt="DistrictBuilder logo">
             </a>
 
-            {% include primary-nav.html %}
+            <nav class="navbar__nav">
+                <ul class="navbar__list">
+                    <li class="navbar__list-item">
+                        <a href="{{ '/contact' | prepend: site.baseurl }}" class="navbar__link {% if page.url == '/contact' %}navbar__link--is-active{% endif %}">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="navbar__list-item">
+                      <a href="{{ site.register_link }}" class="navbar__action-button button button--primary g-register-button">
+                        Sign up
+                      </a>
+                    </li>
+                    <li class="navbar__list-item">
+                      <a href="{{ site.login_link }}" class="navbar__action-button button button--secondary g-login-button">
+                        <i class="fas fa-lock-alt fa-sm button__icon"></i>
+                        Log in
+                      </a>
+                    </li>
+                </ul>
+            </nav>
 
             <a id="g-footer-twitter-link" class="footer__social-icon-container link-button" href="https://twitter.com/{{ site.twitter_username }}">
                 <i class="footer__social-icon fab fa-twitter fa-med"></i>

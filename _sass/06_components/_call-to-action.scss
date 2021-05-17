@@ -7,6 +7,7 @@
     margin: $pad-comfortable 0;
     padding: $pad-medium;
     background: $brand-dark-gray;
+    border-radius: $border-radius;
 
     @media screen and (min-width: $bp-small-2) {
         padding: $pad-normal;
@@ -68,5 +69,97 @@
 
     .call-to-action__blurb {
         color: $brand-black;
+    }
+}
+
+//////////////////////////// 
+// Big Call to Action
+////////////////////////////
+.sp-call-to-action {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    max-width: $main-max-width;
+    z-index: 2;
+    width: 100%;
+    margin: $pad-comfortable 0;
+    background: $brand-dark-gray;
+    border-radius: $border-radius;
+
+    @media screen and (min-width: $bp-med) {
+        flex-direction: row;
+    }
+
+    &__image {
+        height: 100%;
+        flex: 0 0 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media screen and (min-width: $bp-med) {
+            height: 100%;
+            width: 50%;
+            transform: scaleX(-1);
+            -webkit-mask: url(../assets/images/brick-border.svg) left / 4.25rem repeat-y,
+                          url(../assets/images/rect.svg) right / calc(100% - 4.1rem) repeat-y;
+            mask: url(../assets/images/brick-border.svg) left / 4.25rem repeat-y,
+                  url(../assets/images/rect.svg) right / calc(100% - 4.1rem) repeat-y;
+        }
+
+        @media screen and (max-width: $bp-med-2) {
+            min-height: 40vw;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: $border-radius;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $bp-med) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__text-container {
+        padding: 4.5rem $pad-comfortable;
+    }
+
+    &__mini-title {
+        @include heading(300, $color: $brand-plum, $inverted: true);
+        display: block;
+        margin-bottom: $pad-small;
+
+        @media screen and (max-width: $bp-med) {
+            margin-bottom: $pad-compact;
+        }
+    }
+
+    &__title {
+        margin-bottom: $pad-medium;
+        @include heading(600, $color: $white, $inverted: true);
+    }
+
+    &__blurb {
+        margin-bottom: $pad-comfortable;
+
+        > * {
+            @include text(400, $color: $white, $inverted: true);
+        }
+    }
+
+    &__button {
+        flex: 0 0 15rem;
+        margin: $pad-small auto 0;
+
+        @media screen and (min-width: $bp-med) {
+            margin: 0 0 0 $pad-small;
+        }
     }
 }
