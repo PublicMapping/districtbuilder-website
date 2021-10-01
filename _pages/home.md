@@ -67,7 +67,7 @@ features:
     blurb: >
       Public engagement in the redistricting process is key to creating fair districts. With DistrictBuilder Organizations, your redistricting commission, agency, or community group can collect maps and input from the public for redistricting. 
         - Engage the public and collect maps they create, with unlimited users
-        - Custom region support for redistricting anywhere, at every level of government
+        - Custom region support for redistricting anywhere, at every level of government - city, county, school district or state
         - Choose the best maps to feature on your custom-branded Organization page
     button:
       text: "Request a demo"
