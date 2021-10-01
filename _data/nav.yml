@@ -14,7 +14,7 @@
         type: "fas fa-book"
         color: "blue"
     - title: "Blog"
-      desc: "Explore our latest features and learn about redistricting!"
+      desc: "Explore our latest features and learn about redistricting, gerrymandering analysis and more!"
       href: "https://medium.com/districtbuilder"
       icon:
         type: "fas fa-glasses"
