@@ -14,7 +14,7 @@
         type: "fas fa-book"
         color: "blue"
     - title: "Blog"
-      desc: "Explore questions of proportionality, competitiveness, contiguity, and more!"
+      desc: "Explore our latest features and learn about redistricting!"
       href: "https://medium.com/districtbuilder"
       icon:
         type: "fas fa-glasses"
