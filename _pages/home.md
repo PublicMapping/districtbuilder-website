@@ -18,7 +18,7 @@ title: "The Free and Open Source Redistricting Tool"
 # banner
 banner:
   icon: "fas fa-bell-on"
-  blurb: "NEW! Map Across America has started. Our redistricting competition is accepting submissions through November 1st"
+  blurb: "NEW! Map Across America redistricting competition is accepting submissions through November 1st"
   button:
     style: "plum"
     url: "https://medium.com/districtbuilder/engage-your-audience-with-a-custom-organization-page-e041e2127d28"
