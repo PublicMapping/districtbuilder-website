@@ -71,7 +71,7 @@ features:
         - Choose the best maps to feature on your custom-branded Organization page
     button:
       text: "Request a demo"
-      url: "mailto:info@districtbuilder.com"
+      url: "mailto:support@districtbuilder.org"
       style: "plum"
 # features section
 
