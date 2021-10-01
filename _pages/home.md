@@ -21,7 +21,7 @@ banner:
   blurb: "NEW! Map Across America redistricting competition is accepting submissions through November 1st"
   button:
     style: "plum"
-    url: "https://medium.com/districtbuilder/engage-your-audience-with-a-custom-organization-page-e041e2127d28"
+    url: "https://medium.com/districtbuilder/map-across-america-a-national-redistricting-competition-6ad02d18826c"
     text: "Learn more"
 # banner
 
