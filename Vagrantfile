@@ -17,6 +17,7 @@ Vagrant.configure("2") do |config|
     ansible.compatibility_mode = "2.0"
     ansible.install_mode = "pip_args_only"
     ansible.pip_args = "ansible==#{ANSIBLE_VERSION}"
+    ansible.pip_install_cmd = "curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | sudo python"
     ansible.playbook = "deployment/ansible/publicmapping.yml"
     ansible.galaxy_role_file = "deployment/ansible/roles.yml"
     ansible.galaxy_roles_path = "deployment/ansible/roles"
