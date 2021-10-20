@@ -236,17 +236,19 @@
             }
 
             .advocacy-group-logo {
-                filter: brightness(0.6);
+                filter: saturate(0);
                 max-width: 20rem;
                 display: inline-block;
 
                 @media screen and (max-width: $bp-small-2) { 
                     margin: $pad-compact auto;
+                    width: 20rem;
                 }
 
                 @media screen and (min-width: $bp-small-2) { 
                     flex: 0 0 45%;
                     margin-right: 5%;
+                    margin-bottom: 4px;
 
                     &:last-child {
                         margin-right: 0;
@@ -254,7 +256,12 @@
                 }
 
                 &:hover {
-                    filter: brightness(0.5);
+                    filter: saturate(0) brightness(0.8);
+                }
+
+                & > img {
+                    max-height: 65px;
+                    width: auto;
                 }
             }
 
