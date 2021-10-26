@@ -1,6 +1,18 @@
 - name: "Committee of 70"
   org-url: https://seventy.org/
-  logo-url: /assets/images/committee-of-seventy-logo-2x.png
+  logo-url: /assets/images/logo_seventy.png
 - name: "Draw The Lines PA"
   org-url: https://drawthelinespa.org/
-  logo-url: /assets/images/drawtheline_logo.svg
+  logo-url: /assets/images/logo_dtl.png
+- name: "New York Law School"
+  org-url: https://www.nyls.edu/
+  logo-url: /assets/images/logo_nyc-law.png
+- name: "BEBR"
+  org-url: https://www.bebr.ufl.edu/
+  logo-url: /assets/images/logo_bebr.png
+- name: "Dane County, WI"
+  org-url: https://www.countyofdane.com/
+  logo-url: /assets/images/logo_dane_county.png
+- name: "Fair Districts New Jersey"
+  org-url: https://www.fairdistrictsnj.org/
+  logo-url: /assets/images/logo_fdnj.png

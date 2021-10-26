@@ -82,7 +82,7 @@ testimonials:
   title: "What the redistricting community is saying"
 advocacy-groups:
   icon: "fas fa-person-sign"
-  title: "Advocacy groups are using DistrictBuilder to lead change"
+  title: "Organizations are using DistrictBuilder to engage the public in redistricting"
   cta:
     blurb: "**Fight for fair and transparent redistricting.** DistrictBuilder empowers you to draw a better map."
     button-text: "Try it out"
