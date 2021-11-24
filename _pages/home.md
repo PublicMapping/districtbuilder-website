@@ -22,7 +22,7 @@ banner:
   button:
     style: "plum"
     url: "https://medium.com/districtbuilder/map-across-america/home"
-    text: "Learn more"
+    text: "See the maps"
 # banner
 
 # hero section
