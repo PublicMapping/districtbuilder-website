@@ -18,7 +18,7 @@ title: "The Free and Open Source Redistricting Tool"
 # banner
 banner:
   icon: "fas fa-bell-on"
-  blurb: "Check out the winners of #MapAcrossAmerica redistricting contest!"
+  blurb: "Check out winners of the #MapAcrossAmerica redistricting contest!"
   button:
     style: "plum"
     url: "https://medium.com/districtbuilder/map-across-america/home"
