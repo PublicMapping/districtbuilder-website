@@ -18,10 +18,10 @@ title: "The Free and Open Source Redistricting Tool"
 # banner
 banner:
   icon: "fas fa-bell-on"
-  blurb: "NEW! We offer custom redistricting training seminars tailored for your organization"
+  blurb: "Check out the winners of #MapAcrossAmerica redistricting contest!"
   button:
     style: "plum"
-    url: "https://medium.com/districtbuilder/schedule-a-redistricting-training-webinar-for-your-organization-ba6b4feba46a"
+    url: "https://medium.com/districtbuilder/map-across-america/home"
     text: "Learn more"
 # banner
 
