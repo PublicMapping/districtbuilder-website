@@ -99,7 +99,7 @@ community:
     - text: "Draw your own"
       url: "https://app.districtbuilder.org/register"
     - text: "Share your project"
-      url: "mailto:support@districtbuilder.com"
+      url: "mailto:support@districtbuilder.org"
       icon: "fas fa-paper-plane"
       style: "secondary"
   cta:
