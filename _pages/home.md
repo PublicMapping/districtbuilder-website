@@ -71,7 +71,7 @@ features:
         - Choose the best maps to feature on your custom-branded Organization page
     button:
       text: "Request a demo"
-      url: "mailto:support@districtbuilder.org"
+      url: "mailto:districtbuilder@azavea.com"
       style: "plum"
 # features section
 
@@ -99,7 +99,7 @@ community:
     - text: "Draw your own"
       url: "https://app.districtbuilder.org/register"
     - text: "Share your project"
-      url: "mailto:support@districtbuilder.org"
+      url: "mailto:districtbuilder@azavea.com"
       icon: "fas fa-paper-plane"
       style: "secondary"
   cta:
