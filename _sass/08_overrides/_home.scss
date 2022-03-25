@@ -130,6 +130,49 @@
             }
         }
     }
+    
+    #section-valueprop {
+	    margin-top: 6rem;
+	    
+	    .section {
+            &__title {
+                @include heading(400, $color: $brand-tomato-red);
+                max-width: 600px;
+                font-weight: map-get( $font-weights, medium );
+                text-align: center;
+                margin: 0 auto;
+
+                @media screen and (min-width: $bp-small-2) {
+                    @include heading(600, $color: $brand-tomato-red);
+                }
+
+                @media screen and (min-width: $bp-med-2) {
+                    @include heading(700, $color: $brand-tomato-red);
+                }
+            }
+            &__blurb {
+	            	margin: 20px auto 50px;;
+	            	text-align: center;
+	            
+                @media screen and (max-width: $bp-large) {
+                    margin: 20px auto;
+                }
+            }
+      }
+      .card-container {
+	    	.card {
+		    	flex-direction: column;
+		    	
+		    	img {
+			    	max-width: 137px;
+			    	margin: 0 auto 10px;
+		    	}
+		    	.card__blurb {
+			    	text-align: center;
+		    	}
+	    	}
+	    }
+    }
 
     #section-features {
         .note {
@@ -184,6 +227,14 @@
                     margin-top: 0;
                     padding-right: $pad-spacious;
                 }
+                
+                &__inverted {
+	                @media screen and (min-width: $bp-large) {
+	                    margin-top: 0;
+	                    padding-right: 0;
+	                    padding-left: $pad-spacious;
+	                }
+                }
             }
 
             &__blurb {
@@ -198,6 +249,14 @@
                 @media screen and (min-width: $bp-large) { 
                     width: 80vw;
                     margin-right: -20vw; 
+                }
+                
+                &__inverted {
+	                @media screen and (min-width: $bp-large) {
+	                  width: 80vw;
+	                  margin-right: 0;
+                    margin-left: -20vw;
+	                }
                 }
             }
 
@@ -436,7 +495,7 @@
             }
 
             &__button {
-                width: 15rem;
+                //width: 15rem;
                 max-width: 100%;
             }
         }

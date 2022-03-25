@@ -1,0 +1,28 @@
+{% if page.value-prop.title %}
+<section id="section-valueprop" class="section">
+    <div class="section__inner">
+        <div class="section__text-container">
+            <div class="section__text-container">
+                <h2 class="section__title">
+                    {{ page.value-prop.title }}
+                </h2>
+                <div class="section__blurb">
+                    {{ page.value-prop.blurb || markdownify }}
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            {% for value in page.value-prop.value-list %}
+            		{% assign baseimage = value.image-url %}
+		            {% assign imageending = baseimage | split: '.' | last %}
+		            {% assign size = baseimage | size | minus: 4 %}
+                <div class="card">
+	                <img data-src="{{ site.baseurl }}{{ baseimage }}" src="{{ baseimage | slice: 0, size }}_tiny.{{ imageending }}" alt="{{ value.image-alt }}" class="lazy">
+	                <h3 class="card__blurb" markdown="1">{{ value.blurb }}</h3>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

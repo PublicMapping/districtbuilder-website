@@ -20,6 +20,6 @@
         type: "fas fa-glasses"
         color: "plum"
 - title: "Organizations"
-  href: "https://medium.com/districtbuilder/engage-your-audience-with-a-custom-organization-page-e041e2127d28"
+  href: "/organizations"
 - title: "Contact"
   href: "/contact"

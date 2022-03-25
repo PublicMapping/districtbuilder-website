@@ -8,9 +8,11 @@
                 <div class="section__blurb">
                     {{ page.features.blurb || markdownify }}
                 </div>
+                {% if page.features.button-text %}
                 <a id="g-features-section-cta" href="{{ page.features.button-url }}" class="section__button button button--primary">
                     {{ page.features.button-text }}
                 </a>
+                {% endif %}
             </div>
 
             {% assign baseimage = page.features.image-url %}
@@ -71,6 +73,18 @@
                        button-text = page.features.note.button.text
                        button-url = page.features.note.button.url
                        button-style = page.features.note.button.style
+                    %}
+            {% endif %}
+            
+            {% if page.features.secondary-feature %}
+            {% include secondary-feature.html 
+                       image-url = page.features.secondary-feature.image-url
+                       image-alt = page.features.secondary-feature.image-alt
+                       title = page.features.secondary-feature.title
+                       blurb = page.features.secondary-feature.blurb
+                       button-text = page.features.secondary-feature.button-text
+                       button-url = page.features.secondary-feature.button-url
+                       button-style = page.features.secondary-feature.button-style
                     %}
             {% endif %}
     </div>
