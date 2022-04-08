@@ -57,7 +57,7 @@
         margin: $pad-small auto 0;
 
         @media screen and (min-width: $bp-med) {
-            flex: 0 0 15rem;
+            //flex: 0 0 15rem;
             margin: 0 0 0 $pad-small;
             max-width: none;
         }

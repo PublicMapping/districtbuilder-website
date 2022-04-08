@@ -59,36 +59,14 @@ features:
     - title: "Engage your audience"
       blurb: "Easily export your custom map and share in an article, on social media, or anywhere online."
       icon: "fal fa-users-class"
-  sp-cta:
-    image-url: "./assets/images/photo-organization.jpg"
+  secondary-feature:
+    image-url: "./assets/images/DistrictBuilder_ScreenshotOrganization.png"
     image-alt: "Group of people in an office around laptops while a woman presents."
-    mini-title: "New feature"
-    title: "Get the public involved with DistrictBuilder Organizations"
-    blurb: >
-      Public engagement in the redistricting process is key to creating fair districts. With DistrictBuilder Organizations, your redistricting commission, agency, or community group can collect maps and input from the public for redistricting. 
-        - Engage the public and collect maps they create, with unlimited users
-        - Custom region support for redistricting anywhere, at every level of government - city, county, school district or state
-        - Choose the best maps to feature on your custom-branded Organization page
-    button:
-      text: "Request a demo"
-      url: "mailto:districtbuilder@azavea.com"
-      style: "plum"
+    title: "Build your community with Organization Pages"
+    blurb: "Organizations give groups of concerned citizens, nonprofits, or redistricting commissions the tools to create their own community on DistrictBuilder and engage the public in the redistricting process. It's a place to map collaboratively, highlight the group's goals, showcase maps that the community has created, or display official proposed maps."
+    button-text: "Create an organization"
+    button-url: "/organizations"
 # features section
-
-# testimonials section
-testimonials:
-  mini-title: "Kind words"
-  icon: "fas fa-comments"
-  title: "What the redistricting community is saying"
-advocacy-groups:
-  icon: "fas fa-person-sign"
-  title: "Organizations are using DistrictBuilder to engage the public in redistricting"
-  cta:
-    blurb: "**Fight for fair and transparent redistricting.** DistrictBuilder empowers you to draw a better map."
-    button-text: "Try it out"
-    button-url: "https://app.districtbuilder.org/register"
-    button-style: "blue"
-# testimonials section
 
 # community section
 community:

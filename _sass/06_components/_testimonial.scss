@@ -7,6 +7,12 @@
     }
 }
 
+.advocacy-group-container {
+	//@media screen and (max-width: $bp-large) {
+		margin-bottom: $pad-large;
+	//}
+}
+
 .testimonial {
     display: flex;
     margin-bottom: $pad-normal;
